@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<theme>
+  <general>
+    <theme_name><![CDATA[EM0122 Glory Theme Layout 06]]></theme_name>
+    <identifier><![CDATA[em0122_layout06]]></identifier>
+    <base_theme><![CDATA[em0122]]></base_theme>
+    <package><![CDATA[em0122]]></package>
+    <template><![CDATA[em0122_layout06]]></template>
+    <layout><![CDATA[em0122_layout06]]></layout>
+    <skin><![CDATA[em0122_layout06]]></skin>
+    <default_theme><![CDATA[]]></default_theme>
+    <path><![CDATA[layout_06_hover.jpg]]></path>
+    <is_clone><![CDATA[0]]></is_clone>
+  </general>
+  <settings>
+    <config_json><![CDATA[{"general_disable_responsive":"1","general_right_to_left":"0","general_right_to_left_preview":"","general_fluid_layout":"0","general_fluid_layout_preview":"","general_box_wide":"wide","general_box_wide_preview":"","general_wideslide_full":"0","general_wideslide_full_preview":"","general_header_style":"style06","general_header_style_preview":"","general_header_mobile":"1","general_currency_style":"hover","general_currency_style_preview":"","general_language_style":"hover","general_language_style_preview":"","general_sticky_cart":"1","general_sticky_search":"1","general_disable_default_nav":"0","general_freezed_top_menu":"1","general_disable_hover_login":"1","general_cat_search":"0","general_disable_footer_links":"1","general_show_popup":"2","general_popup_video":"0","general_disable_ajaxaddto":"1","general_disable_frontend_variation":"1","general_admin_toolbar":"0","general_disable_collapse":"1","general_disable_animate_loading":"0","general_animate_header":"fadeInDown","general_animate_left":"fadeInDown","general_animate_right":"fadeInDown","general_animate_main":"fadeInDown","general_animate_footer":"fadeInDown","css_additional_css_file":"style_default.css,theme_layout06.less","css_custom_css":"","fonts_google_font_key":"AIzaSyCZ6wqklkyJFXWvoxvA5Zv0SGzHTd6JbbI","fonts_google_fonts":["Lato","Quicksand"],"fonts_font_family":"null","fonts_google_fonts_weights":"200,300,400,500,600,700,800","fonts_general_font":"normal 13px\/1.55 Lato,Arial,Helvetica,sans-serif","fonts_h1_font":"500 30px\/1.25 Quicksand,Arial,Helvetica,sans-serif","fonts_h2_font":"500 20px\/1.25 Lato,Arial,Helvetica,sans-serif","fonts_h3_font":"500 18px\/1.25 Lato,Arial,Helvetica,sans-serif","fonts_h4_font":"500 16px\/1.55 Lato,Arial,Helvetica,sans-serif","fonts_h5_font":"500 14px\/1.55 Lato,Arial,Helvetica,sans-serif","fonts_h6_font":"500 12px\/1.55 Lato,Arial,Helvetica,sans-serif","typo_general_page_bg_color":"#ffffff","typo_general_page_bg_image":"","typo_general_page_bg_position":"0 0","typo_general_page_bg_repeat":"repeat","typo_general_page_bg_attachment":"fixed","typo_general_box_shadow":"0 0 5px #c4c4c3","typo_general_rounded_corner":"0","header_header_bg_color":"#ffffff","header_header_bg2_color":"#fdfdfd","header_header_bg3_color":"#47c0b9","header_header_bg4_color":"#3f383a","header_header_bg_image":"blank.gif","header_header_bg_position":"0 0","header_header_bg_repeat":"repeat","header_header_text_color":"#fff","header_header_text2_color":"rgba(40,40,40,1.00)","header_header_text3_color":"#666666 ","header_header_text4_color":"#47c0b9","header_header_line_color":"#e3e3e3","menu_topmenu_bg_color":"rgba(63,56,58,1.00)","menu_topmenu_hover_bg_color":"#47c0b9","menu_topmenu_text_color":"#ffffff","menu_topmenu_hover_text_color":"#ffffff","menu_topmenu_line_color":"#000000","menu_topmenu_font":"600 13px\/1.55 Lato,Arial,Helvetica,sans-serif","menu_vnav_bg_color":"#f8f8f8","menu_vnav_hover_bg_color":"#ffffff","menu_vnav_text_color":"#666666","menu_vnav_hover_text_color":"#47c0b9","menu_vnav_line_color":"#666666","menu_vnav_font":"600 12px\/1.55 Lato,Arial,Helvetica,sans-serif","menu_dropmenu_bg_color":"#ffffff","menu_dropmenu_text_color":"#666666","menu_dropmenu_text2_color":"#47c0b9","menu_dropmenu_line_color":"#eaeaea","menu_dropmenu_font":"500 13px\/1.55 Lato,Arial,Helvetica,sans-serif","menu_mobile_menu_bg_color":"#3d3b48","menu_mobile_menu_line_color":"#494854","menu_mobile_menu_text_color":"#ffffff","menu_mobile_menu_hover_text_color":"#47c0b9","body_body_bg_color":"#ffffff","body_body_bg2_color":"rgba(255,255,255,1.00)","body_body_bg3_color":"#47c0b9","body_body_bg4_color":"#f8f8f8","body_body_bg5_color":"rgba(0,55,130,1.00)","body_body_bg6_color":"#fa4141","body_body_bg_image":"blank.gif","body_body_bg_position":"0 0","body_body_bg_repeat":"repeat","body_body_text_color":"#666666","body_body_text2_color":"#3c3b48","body_body_text3_color":"#ffffff","body_body_text4_color":"#47c0b9","body_body_text5_color":"#d3d3d3","body_body_text6_color":"#bebebe","body_body_text7_color":"#68ac5f","body_body_text8_color":"#666666","body_body_line_color":"#ebebeb","body_body_line2_color":"#47c0b9","body_body_line3_color":"#dcdee2","body_body_line4_color":"rgba(248,248,248,1.00)","footer_footer_bg_color":"#3f383a","footer_footer_bg_image":"blank.gif","footer_footer_bg_position":"0 0","footer_footer_bg_repeat":"repeat","footer_footer_bg2_color":"#f8f8f8","footer_footer_bg3_color":"#272425","footer_footer_text_color":"#f8f8f8","footer_footer_text2_color":"#666666","footer_footer_text3_color":"#c5c5c5","footer_footer_line_color":"#eaeaea","footer_footer_line2_color":"#47c0b9","buttons_btn1_bg_color":"#ffffff","buttons_btn1_text_color":"#bebebe","buttons_btn1_line_color":"#ebebeb","buttons_btn1_font":"500 10px\/1.35 Lato,Arial,Helvetica,sans-serif","buttons_btn2_bg_color":"#ffffff","buttons_btn2_text_color":"#3f383a","buttons_btn2_line_color":"#3f383a","buttons_btn2_font":"500 10px\/1.35 Lato,Arial,Helvetica,sans-serif","buttons_btn3_bg_color":"#47c0b9","buttons_btn3_text_color":"#ffffff","buttons_btn3_line_color":"#47c0b9","buttons_btn3_font":"500 10px\/1.35 Lato,Arial,Helvetica,sans-serif","buttons_btn4_bg_color":"#3f383a","buttons_btn4_text_color":"rgba(255,255,255,1.00)","buttons_btn4_line_color":"#3f383a","buttons_btn4_font":"500 10px\/1.35 Open sans,Arial,Helvetica,sans-serif","buttons_btn5_bg_color":"transparent","buttons_btn5_text_color":"rgba(255,255,255,1.00)","buttons_btn5_line_color":"#ffffff","buttons_btn5_font":"500 10px\/1.35 Open sans,Arial,Helvetica,sans-serif","products_grid_onecolumn":"4","products_grid_twocolumns":"3","products_grid_threecolumns":"2","products_grid_desktop_small_onecolumn":"4","products_grid_desktop_small_twocolumns":"3","products_grid_desktop_small_threecolumns":"2","products_grid_tablet_onecolumn":"3","products_grid_tablet_twocolumns":"2","products_grid_tablet_threecolumns":"2","products_grid_items_mobile":"1","products_grid_image_ratio":"0","products_grid_custom_width":"270","products_grid_custom_height":"320","products_grid_alt_img":"image","products_grid_config_hover":"enable","products_grid_align_center":"1","products_grid_show_thumbnail":"1","products_grid_show_label":"1","products_grid_show_product_name":"1","products_grid_auto_product_name":"1","products_grid_show_desc":"0","products_grid_show_price":"1","products_grid_show_reviews":"1","products_grid_show_addtocart":"2","products_grid_show_addto":"2","products_list_gutter":"","products_list_image_ratio":"0","products_list_custom_width":"270","products_list_custom_height":"320","products_list_alt_img":"","products_list_show_product_name":"1","products_list_show_thumbnail":"1","products_list_show_desc":"1","products_list_show_price":"1","products_list_show_reviews":"1","products_list_show_addtocart":"1","products_list_show_addto":"1","products_list_show_label":"1","product_detail_product_view_preview":"","product_detail_primary_column_width":"9","product_detail_base_image_width":"800","product_detail_base_image_height":"800","product_detail_secondary_column_width":"9","product_detail_tertiary_column_width":"6","product_detail_primary_two_column_width":"9","product_detail_base_two_image_width":"600","product_detail_base_two_image_height":"600","product_detail_secondary_two_column_width":"9","product_detail_tertiary_two_column_width":"6","product_detail_primary_three_column_width":"12","product_detail_base_three_image_width":"800","product_detail_base_three_image_height":"800","product_detail_secondary_three_column_width":"12","product_detail_tertiary_three_column_width":"24","product_detail_show_sku":"0","product_detail_viewmode":"lightbox","product_detail_cloud_zoom_width":"","product_detail_cloud_zoom_height":"","product_detail_use_tabs":"1","product_detail_disable_social":"0","product_detail_buttons":["twitter","facebook","linkedin"],"moreview_width":"100","moreview_height":"119","moreview_enable_slider":"1","moreview_slider_items":"4","moreview_slider_items_desktop":"4","moreview_slider_items_desktop_small":"3","moreview_slider_items_tablet":"3","moreview_slider_items_mobile":"3","moreview_slider_navigation":"1","moreview_slider_pagination":"0","moreview_slider_pagination_numbers":"0","related_display":"replace_empty","related_position":"beside_tabs","related_width":"200","related_height":"237","related_enable_slider":"1","related_slider_items":"1","related_slider_items_desktop":"1","related_slider_items_desktop_small":"1","related_slider_items_tablet":"1","related_slider_items_mobile":"1","related_slider_navigation":"1","related_slider_pagination":"0","related_slider_pagination_numbers":"0","upsell_display":"replace_empty","upsell_width":"200","upsell_height":"237","upsell_enable_slider":"1","upsell_slider_items":"3","upsell_slider_items_desktop":"3","upsell_slider_items_desktop_small":"2","upsell_slider_items_tablet":"2","upsell_slider_items_mobile":"1","upsell_slider_navigation":"1","upsell_slider_pagination":"0","upsell_slider_pagination_numbers":"0","position_catalog_shopby":"left","position_catalog_leftnav":"left","position_catalog_search_layer":"left","position_catalog_related":"left","position_compare":"left","position_poll":"left","position_popular_tags":"left","position_wishlist_sidebar":"left","position_reorder_sidebar":"left","crossell_display":"replace_empty","crossell_width":"270","crossell_height":"320","crossell_enable_slider":"1","crossell_slider_items":"4","crossell_slider_items_desktop":"4","crossell_slider_items_desktop_small":"3","crossell_slider_items_tablet":"2","crossell_slider_items_mobile":"1","crossell_slider_navigation":"1","crossell_slider_pagination":"0","crossell_slider_pagination_numbers":"0","image_sidebar_width":"","image_sidebar_height":"","image_shopping_cart_width":"","image_shopping_cart_height":"","flashtag_enabled":"0","flashtag_count":"100","flashtag_max":"20","flashtag_min":"12","flashtag_maxcolor":"#646464","flashtag_normal":"#646464","flashtag_hover":"#646464","ajaxcart_auto_close":"","snippets_enable":"1","snippets_review":"1","snippets_price":"1","snippets_breadcrumbs":"1","snippets_description":"1","thumbnail":null,"typo_general_page_bg_file":null,"header_header_bg_file":null,"body_body_bg_file":null,"footer_footer_bg_file":null}]]></config_json>
+    <excluded_blocks><![CDATA[em0122-main-home-deal-tabs&em0122-main-home-product-tabs&em0122-area04-home-video&em0122-main-home-featured-categories&em0122-main-home-banner03&em0122-area17-home-trending-products&em0122-area17-home-banner02&em0122-home-area-left-banner&em0122-area01-home-main-slideshow]]></excluded_blocks>
+  </settings>
+  <sample_data>
+    <flexible_block>
+      <fblock>
+        <package_theme><![CDATA[em0122/em0122_layout06]]></package_theme>
+        <title><![CDATA[EM0122 Glory Theme - Layout 06 - Area Header - All - Call Us]]></title>
+        <identifier><![CDATA[em0122-layout06-all-area-header-call-us]]></identifier>
+        <additional_cache_tags><![CDATA[]]></additional_cache_tags>
+        <layout_handle><![CDATA[default]]></layout_handle>
+        <position><![CDATA[em_area_header_02]]></position>
+        <layout_attribute><![CDATA[]]></layout_attribute>
+        <layout_handle_2><![CDATA[]]></layout_handle_2>
+        <position_2><![CDATA[]]></position_2>
+        <layout_attribute_2><![CDATA[]]></layout_attribute_2>
+        <layout_handle_3><![CDATA[]]></layout_handle_3>
+        <position_3><![CDATA[]]></position_3>
+        <layout_attribute_3><![CDATA[]]></layout_attribute_3>
+        <custom_layout_handle><![CDATA[]]></custom_layout_handle>
+        <custom_position><![CDATA[]]></custom_position>
+        <layout_attribute_custom><![CDATA[]]></layout_attribute_custom>
+        <schedule_pattern><![CDATA[every day]]></schedule_pattern>
+        <schedule_from_time><![CDATA[]]></schedule_from_time>
+        <schedule_to_time><![CDATA[]]></schedule_to_time>
+        <category_ids><![CDATA[]]></category_ids>
+        <cms_page><![CDATA[-1]]></cms_page>
+        <order><![CDATA[]]></order>
+        <status><![CDATA[1]]></status>
+        <display_pc><![CDATA[1]]></display_pc>
+        <display_tablet><![CDATA[1]]></display_tablet>
+        <display_mobile><![CDATA[1]]></display_mobile>
+        <content><![CDATA[<div class="em-box-bkg  call-us">
+<p class="h4 em-ads-call">Call us now: <span>{{config path="general/store_information/phone"}}</span></p>
+<img class="img-responsive" alt="em-sample-alt" src="{{skin url='images/media/home/em_callus.jpg'}}" />
+</div>]]></content>
+        <conditions><![CDATA[a:6:{s:4:"type";s:34:"catalogrule/rule_condition_combine";s:9:"attribute";N;s:8:"operator";N;s:5:"value";s:1:"1";s:18:"is_value_processed";N;s:10:"aggregator";s:3:"all";}]]></conditions>
+        <from_date><![CDATA[]]></from_date>
+        <to_date><![CDATA[]]></to_date>
+      </fblock>
+      <fblock>
+        <package_theme><![CDATA[em0122/em0122_layout06]]></package_theme>
+        <title><![CDATA[EM0122 Glory Theme - Layout 06 - Main - Home - New Arrival]]></title>
+        <position><![CDATA[content]]></position>
+        <custom_position><![CDATA[]]></custom_position>
+        <schedule_pattern><![CDATA[every day]]></schedule_pattern>
+        <schedule_from_time><![CDATA[]]></schedule_from_time>
+        <schedule_to_time><![CDATA[]]></schedule_to_time>
+        <category_ids><![CDATA[]]></category_ids>
+        <identifier><![CDATA[em0122-layout06-main-home-new-arrival]]></identifier>
+        <layout_handle><![CDATA[cms_index_index]]></layout_handle>
+        <custom_layout_handle><![CDATA[]]></custom_layout_handle>
+        <additional_cache_tags><![CDATA[]]></additional_cache_tags>
+        <layout_handle_2><![CDATA[]]></layout_handle_2>
+        <position_2><![CDATA[]]></position_2>
+        <layout_handle_3><![CDATA[]]></layout_handle_3>
+        <position_3><![CDATA[]]></position_3>
+        <layout_attribute><![CDATA[]]></layout_attribute>
+        <layout_attribute_2><![CDATA[]]></layout_attribute_2>
+        <layout_attribute_3><![CDATA[]]></layout_attribute_3>
+        <layout_attribute_custom><![CDATA[]]></layout_attribute_custom>
+        <cms_page><![CDATA[-1]]></cms_page>
+        <order><![CDATA[0]]></order>
+        <status><![CDATA[1]]></status>
+        <display_pc><![CDATA[1]]></display_pc>
+        <display_tablet><![CDATA[1]]></display_tablet>
+        <display_mobile><![CDATA[1]]></display_mobile>
+        <content><![CDATA[<div class="em-line-01 em-new-arrival">{{widget type="filterproducts/list" type_filter="3" limit_count="4" order_by="name asc" frontend_title="New Arrival" show="thumb,name,sku,review,price,addtocart,addto" thumbnail_width="190" thumbnail_height="230" choose_template="em_filterproducts/top-list-homepage.phtml" slider_enable="1" slider_items="4" slider_items_desktop="4" slider_items_desktop_small="3" slider_items_tablet="2" slider_items_mobile="1" slider_speed="800" slider_rewindspeed="800" slider_navigation="1"}}</div>]]></content>
+        <conditions><![CDATA[a:6:{s:4:"type";s:34:"catalogrule/rule_condition_combine";s:9:"attribute";N;s:8:"operator";N;s:5:"value";s:1:"1";s:18:"is_value_processed";N;s:10:"aggregator";s:3:"all";}]]></conditions>
+        <from_date><![CDATA[]]></from_date>
+        <to_date><![CDATA[]]></to_date>
+      </fblock>
+      <fblock>
+        <package_theme><![CDATA[em0122/em0122_layout06]]></package_theme>
+        <title><![CDATA[EM0122 Glory Theme - Layout 06 - Main - Home - Products]]></title>
+        <identifier><![CDATA[em0122-layout06-main-home-products]]></identifier>
+        <additional_cache_tags><![CDATA[]]></additional_cache_tags>
+        <layout_handle><![CDATA[cms_index_index]]></layout_handle>
+        <position><![CDATA[content]]></position>
+        <layout_attribute><![CDATA[]]></layout_attribute>
+        <layout_handle_2><![CDATA[]]></layout_handle_2>
+        <position_2><![CDATA[]]></position_2>
+        <layout_attribute_2><![CDATA[]]></layout_attribute_2>
+        <layout_handle_3><![CDATA[]]></layout_handle_3>
+        <position_3><![CDATA[]]></position_3>
+        <layout_attribute_3><![CDATA[]]></layout_attribute_3>
+        <custom_layout_handle><![CDATA[]]></custom_layout_handle>
+        <custom_position><![CDATA[]]></custom_position>
+        <layout_attribute_custom><![CDATA[]]></layout_attribute_custom>
+        <schedule_pattern><![CDATA[every day]]></schedule_pattern>
+        <schedule_from_time><![CDATA[]]></schedule_from_time>
+        <schedule_to_time><![CDATA[]]></schedule_to_time>
+        <category_ids><![CDATA[]]></category_ids>
+        <cms_page><![CDATA[-1]]></cms_page>
+        <order><![CDATA[5]]></order>
+        <status><![CDATA[1]]></status>
+        <display_pc><![CDATA[1]]></display_pc>
+        <display_tablet><![CDATA[1]]></display_tablet>
+        <display_mobile><![CDATA[1]]></display_mobile>
+        <content><![CDATA[<div class="col-sm-8 em-line-01 em-featured">{{widget type="filterproducts/list" type_filter="1" featured="em_featured" limit_count="4" order_by="name asc" frontend_title="Featured Products" show="thumb,name,review,price,addtocart,addto" thumbnail_width="80" thumbnail_height="95" choose_template="em_filterproducts/sample_list.phtml"}}</div>
+<div class="col-sm-8 em-line-01 em-sale-off">{{widget type="filterproducts/list" type_filter="4" limit_count="4" order_by="name asc" frontend_title="Sale off" show="thumb,name,review,price,addtocart,addto" thumbnail_width="80" thumbnail_height="95" choose_template="em_filterproducts/sample_list.phtml"}}</div>
+<div class="col-sm-8 em-line-01 em-top-rated">{{widget type="filterproducts/list" type_filter="6" limit_count="4" order_by="name asc" frontend_title="Top rate" show="thumb,name,review,price,addtocart,addto" thumbnail_width="80" thumbnail_height="95" choose_template="em_filterproducts/sample_list.phtml"}}</div>]]></content>
+        <conditions><![CDATA[a:6:{s:4:"type";s:34:"catalogrule/rule_condition_combine";s:9:"attribute";N;s:8:"operator";N;s:5:"value";s:1:"1";s:18:"is_value_processed";N;s:10:"aggregator";s:3:"all";}]]></conditions>
+        <from_date><![CDATA[]]></from_date>
+        <to_date><![CDATA[]]></to_date>
+      </fblock>
+      <fblock>
+        <package_theme><![CDATA[em0122/em0122_layout06]]></package_theme>
+        <title><![CDATA[EM0122 Glory Theme - Layout 06 - Area 16 - Home - Brands Slider]]></title>
+        <identifier><![CDATA[em0122-layout06-area16-home-brands-slider]]></identifier>
+        <additional_cache_tags><![CDATA[]]></additional_cache_tags>
+        <layout_handle><![CDATA[cms_index_index]]></layout_handle>
+        <position><![CDATA[em_area16]]></position>
+        <layout_attribute><![CDATA[]]></layout_attribute>
+        <layout_handle_2><![CDATA[]]></layout_handle_2>
+        <position_2><![CDATA[]]></position_2>
+        <layout_attribute_2><![CDATA[]]></layout_attribute_2>
+        <layout_handle_3><![CDATA[]]></layout_handle_3>
+        <position_3><![CDATA[]]></position_3>
+        <layout_attribute_3><![CDATA[]]></layout_attribute_3>
+        <custom_layout_handle><![CDATA[]]></custom_layout_handle>
+        <custom_position><![CDATA[]]></custom_position>
+        <layout_attribute_custom><![CDATA[]]></layout_attribute_custom>
+        <schedule_pattern><![CDATA[every day]]></schedule_pattern>
+        <schedule_from_time><![CDATA[]]></schedule_from_time>
+        <schedule_to_time><![CDATA[]]></schedule_to_time>
+        <category_ids><![CDATA[]]></category_ids>
+        <cms_page><![CDATA[-1]]></cms_page>
+        <order><![CDATA[]]></order>
+        <status><![CDATA[1]]></status>
+        <display_pc><![CDATA[1]]></display_pc>
+        <display_tablet><![CDATA[1]]></display_tablet>
+        <display_mobile><![CDATA[1]]></display_mobile>
+        <content><![CDATA[<div class="em-wrapper-brands em-line-01 hidden-xs col-sm-24">
+<div class="widget-title em-widget-title">
+<h3><span>Brand &amp; Client</span></h3>
+</div>
+<div class="slider-style06">
+<ul class="em-slider em-slider-navigation-icon" data-emslider-autoplay="true" data-emslider-navigation="true" data-emslider-items="4" data-emslider-desktop="4" data-emslider-desktop-small="4" data-emslider-tablet="3" data-emslider-mobile="2">
+<li><a title="em-sample-title" href="#"><img class="img-responsive" alt="em-sample-alt" src="{{skin url='images/media/home/brand/em_brand01.png'}}" /></a></li>
+<li><a title="em-sample-title" href="#"><img class="img-responsive" alt="em-sample-alt" src="{{skin url='images/media/home/brand/em_brand02.png'}}" /></a></li>
+<li><a title="em-sample-title" href="#"><img class="img-responsive" alt="em-sample-alt" src="{{skin url='images/media/home/brand/em_brand03.png'}}" /></a></li>
+<li><a title="em-sample-title" href="#"><img class="img-responsive" alt="em-sample-alt" src="{{skin url='images/media/home/brand/em_brand04.png'}}" /></a></li>
+<li><a title="em-sample-title" href="#"><img class="img-responsive" alt="em-sample-alt" src="{{skin url='images/media/home/brand/em_brand01.png'}}" /></a></li>
+<li><a title="em-sample-title" href="#"><img class="img-responsive" alt="em-sample-alt" src="{{skin url='images/media/home/brand/em_brand02.png'}}" /></a></li>
+<li><a title="em-sample-title" href="#"><img class="img-responsive" alt="em-sample-alt" src="{{skin url='images/media/home/brand/em_brand03.png'}}" /></a></li>
+<li><a title="em-sample-title" href="#"><img class="img-responsive" alt="em-sample-alt" src="{{skin url='images/media/home/brand/em_brand04.png'}}" /></a></li>
+</ul>
+</div>
+</div>]]></content>
+        <conditions><![CDATA[a:6:{s:4:"type";s:34:"catalogrule/rule_condition_combine";s:9:"attribute";N;s:8:"operator";N;s:5:"value";s:1:"1";s:18:"is_value_processed";N;s:10:"aggregator";s:3:"all";}]]></conditions>
+        <from_date><![CDATA[]]></from_date>
+        <to_date><![CDATA[]]></to_date>
+      </fblock>
+      <fblock>
+        <package_theme><![CDATA[em0122/em0122_layout06]]></package_theme>
+        <title><![CDATA[EM0122 Glory Theme - Layout 06 - Area 17 - Home - Daily Deal]]></title>
+        <position><![CDATA[em_area17]]></position>
+        <custom_position><![CDATA[]]></custom_position>
+        <schedule_pattern><![CDATA[every day]]></schedule_pattern>
+        <schedule_from_time><![CDATA[]]></schedule_from_time>
+        <schedule_to_time><![CDATA[]]></schedule_to_time>
+        <category_ids><![CDATA[]]></category_ids>
+        <identifier><![CDATA[em0122-layout06-area17-home-daily-deal]]></identifier>
+        <layout_handle><![CDATA[cms_index_index]]></layout_handle>
+        <custom_layout_handle><![CDATA[]]></custom_layout_handle>
+        <additional_cache_tags><![CDATA[]]></additional_cache_tags>
+        <layout_handle_2><![CDATA[]]></layout_handle_2>
+        <position_2><![CDATA[]]></position_2>
+        <layout_handle_3><![CDATA[]]></layout_handle_3>
+        <position_3><![CDATA[]]></position_3>
+        <layout_attribute><![CDATA[]]></layout_attribute>
+        <layout_attribute_2><![CDATA[]]></layout_attribute_2>
+        <layout_attribute_3><![CDATA[]]></layout_attribute_3>
+        <layout_attribute_custom><![CDATA[]]></layout_attribute_custom>
+        <cms_page><![CDATA[-1]]></cms_page>
+        <order><![CDATA[1]]></order>
+        <status><![CDATA[1]]></status>
+        <display_pc><![CDATA[1]]></display_pc>
+        <display_tablet><![CDATA[1]]></display_tablet>
+        <display_mobile><![CDATA[1]]></display_mobile>
+        <content><![CDATA[<div class="em-line-01 em-area14-deal">{{widget type="multidealpro/widgets" deal_type="1" limit_count="10" order_by="name asc" frontend_title="Today's Deal" thumbnail_width="190" thumbnail_height="230" show_product_name="true" show_price="true" show_clock="true" show_qty="false" show_addtocart="false" show_addto="false" show_label="false" choose_template="custom_template" custom_theme="em_multidealpro/custom_style.phtml"}}</div>]]></content>
+        <conditions><![CDATA[a:6:{s:4:"type";s:34:"catalogrule/rule_condition_combine";s:9:"attribute";N;s:8:"operator";N;s:5:"value";s:1:"1";s:18:"is_value_processed";N;s:10:"aggregator";s:3:"all";}]]></conditions>
+        <from_date><![CDATA[]]></from_date>
+        <to_date><![CDATA[]]></to_date>
+      </fblock>
+      <fblock>
+        <package_theme><![CDATA[em0122/em0122_layout06]]></package_theme>
+        <title><![CDATA[EM0122 Glory Theme - Layout 06 - Area 18 - Home - Banner]]></title>
+        <position><![CDATA[em_area18]]></position>
+        <custom_position><![CDATA[]]></custom_position>
+        <schedule_pattern><![CDATA[every day]]></schedule_pattern>
+        <schedule_from_time><![CDATA[]]></schedule_from_time>
+        <schedule_to_time><![CDATA[]]></schedule_to_time>
+        <category_ids><![CDATA[]]></category_ids>
+        <identifier><![CDATA[em0122-layout06-area18-home-banner]]></identifier>
+        <layout_handle><![CDATA[cms_index_index]]></layout_handle>
+        <custom_layout_handle><![CDATA[]]></custom_layout_handle>
+        <additional_cache_tags><![CDATA[]]></additional_cache_tags>
+        <layout_handle_2><![CDATA[]]></layout_handle_2>
+        <position_2><![CDATA[]]></position_2>
+        <layout_handle_3><![CDATA[]]></layout_handle_3>
+        <position_3><![CDATA[]]></position_3>
+        <layout_attribute><![CDATA[]]></layout_attribute>
+        <layout_attribute_2><![CDATA[]]></layout_attribute_2>
+        <layout_attribute_3><![CDATA[]]></layout_attribute_3>
+        <layout_attribute_custom><![CDATA[]]></layout_attribute_custom>
+        <cms_page><![CDATA[-1]]></cms_page>
+        <order><![CDATA[1]]></order>
+        <status><![CDATA[1]]></status>
+        <display_pc><![CDATA[1]]></display_pc>
+        <display_tablet><![CDATA[1]]></display_tablet>
+        <display_mobile><![CDATA[1]]></display_mobile>
+        <content><![CDATA[<div class="banner-center img-banner">
+<div class="image em-effect08"><img class="img-responsive retina-img" alt="em-sample-alt" src="{{skin url='images/media/home/em_banner01.jpg'}}" /> <span class="hover_shine">&nbsp; </span></div>
+<div class="image em-effect08"><img class="img-responsive retina-img" alt="em-sample-alt" src="{{skin url='images/media/home/em_ads05.jpg'}}" /> <span class="hover_shine">&nbsp; </span></div>
+</div>]]></content>
+        <conditions><![CDATA[a:6:{s:4:"type";s:34:"catalogrule/rule_condition_combine";s:9:"attribute";N;s:8:"operator";N;s:5:"value";s:1:"1";s:18:"is_value_processed";N;s:10:"aggregator";s:3:"all";}]]></conditions>
+        <from_date><![CDATA[]]></from_date>
+        <to_date><![CDATA[]]></to_date>
+      </fblock>
+      <fblock>
+        <package_theme><![CDATA[em0122/em0122_layout06]]></package_theme>
+        <title><![CDATA[EM0122 Glory Theme - Layout 06 - Area 05 - Home - Ads]]></title>
+        <position><![CDATA[em_area5]]></position>
+        <custom_position><![CDATA[]]></custom_position>
+        <schedule_pattern><![CDATA[every day]]></schedule_pattern>
+        <schedule_from_time><![CDATA[]]></schedule_from_time>
+        <schedule_to_time><![CDATA[]]></schedule_to_time>
+        <category_ids><![CDATA[]]></category_ids>
+        <identifier><![CDATA[em0122-layout06-area05-home-ads]]></identifier>
+        <layout_handle><![CDATA[cms_index_index]]></layout_handle>
+        <custom_layout_handle><![CDATA[]]></custom_layout_handle>
+        <additional_cache_tags><![CDATA[]]></additional_cache_tags>
+        <layout_handle_2><![CDATA[]]></layout_handle_2>
+        <position_2><![CDATA[]]></position_2>
+        <layout_handle_3><![CDATA[]]></layout_handle_3>
+        <position_3><![CDATA[]]></position_3>
+        <layout_attribute><![CDATA[]]></layout_attribute>
+        <layout_attribute_2><![CDATA[]]></layout_attribute_2>
+        <layout_attribute_3><![CDATA[]]></layout_attribute_3>
+        <layout_attribute_custom><![CDATA[]]></layout_attribute_custom>
+        <cms_page><![CDATA[-1]]></cms_page>
+        <order><![CDATA[]]></order>
+        <status><![CDATA[1]]></status>
+        <display_pc><![CDATA[1]]></display_pc>
+        <display_tablet><![CDATA[1]]></display_tablet>
+        <display_mobile><![CDATA[1]]></display_mobile>
+        <content><![CDATA[<div class="row">
+<div class="col-sm-8 first text-center em-box-bkg em-wrapper-ads return-exchange">
+<div class="icon">&nbsp;</div>
+<p class="h3 title">Return &amp; Exchange</p>
+<p class="desc">Vintage pastel tucked t-shirt leather ecru rings cable knit knitwear grunge washed out. Street style gold collar plaited black white shirt neutral cuff seam Maison Martin Margiela.</p>
+</div>
+<div class="col-sm-8 text-center em-box-bkg em-wrapper-ads shipping">
+<div class="icon">&nbsp;</div>
+<p class="h3 title">Free Shipping</p>
+<p class="desc">Givenchy knot ponytail slipper bomber chunky sole slip dress C&eacute;line. Loafer Jil Sander Vasari oversized sweatshirt sneaker black lilac 90s skirt rings. Sports luxe button up navy blue tee denim shorts.</p>
+</div>
+<div class="col-sm-8 last text-center em-box-bkg em-wrapper-ads member-discount">
+<div class="icon">&nbsp;</div>
+<p class="h3 title">Member Discount</p>
+<p class="desc">Flats Cara D. dress knitwear leather tote. Round sunglasses midi cable knit cami chambray dungaree neutral. Bandeau A.P.C. collarless silhouette strong eyebrows denim floral cuff sandal Paris.</p>
+</div>
+</div>]]></content>
+        <conditions><![CDATA[a:6:{s:4:"type";s:34:"catalogrule/rule_condition_combine";s:9:"attribute";N;s:8:"operator";N;s:5:"value";s:1:"1";s:18:"is_value_processed";N;s:10:"aggregator";s:3:"all";}]]></conditions>
+        <from_date><![CDATA[]]></from_date>
+        <to_date><![CDATA[]]></to_date>
+      </fblock>
+      <fblock>
+        <package_theme><![CDATA[em0122/em0122_layout06]]></package_theme>
+        <title><![CDATA[EM0122 Glory Theme - Layout06 - Area 01 - Home - Main Slideshow]]></title>
+        <position><![CDATA[em_area1]]></position>
+        <custom_position><![CDATA[]]></custom_position>
+        <schedule_pattern><![CDATA[every day]]></schedule_pattern>
+        <schedule_from_time><![CDATA[]]></schedule_from_time>
+        <schedule_to_time><![CDATA[]]></schedule_to_time>
+        <category_ids><![CDATA[]]></category_ids>
+        <identifier><![CDATA[em0122-layout06-area01-home-main-slideshow]]></identifier>
+        <layout_handle><![CDATA[cms_index_index]]></layout_handle>
+        <custom_layout_handle><![CDATA[]]></custom_layout_handle>
+        <additional_cache_tags><![CDATA[]]></additional_cache_tags>
+        <layout_handle_2><![CDATA[]]></layout_handle_2>
+        <position_2><![CDATA[]]></position_2>
+        <layout_handle_3><![CDATA[]]></layout_handle_3>
+        <position_3><![CDATA[]]></position_3>
+        <layout_attribute><![CDATA[]]></layout_attribute>
+        <layout_attribute_2><![CDATA[]]></layout_attribute_2>
+        <layout_attribute_3><![CDATA[]]></layout_attribute_3>
+        <layout_attribute_custom><![CDATA[]]></layout_attribute_custom>
+        <cms_page><![CDATA[-1]]></cms_page>
+        <order><![CDATA[1]]></order>
+        <status><![CDATA[1]]></status>
+        <display_pc><![CDATA[1]]></display_pc>
+        <display_tablet><![CDATA[1]]></display_tablet>
+        <display_mobile><![CDATA[1]]></display_mobile>
+        <content><![CDATA[<div class="em-slideshow">{{widget type="slideshow2/slideshow2" slideshow="6"}}</div>]]></content>
+        <conditions><![CDATA[a:6:{s:4:"type";s:34:"catalogrule/rule_condition_combine";s:9:"attribute";N;s:8:"operator";N;s:5:"value";s:1:"1";s:18:"is_value_processed";N;s:10:"aggregator";s:3:"all";}]]></conditions>
+        <from_date><![CDATA[]]></from_date>
+        <to_date><![CDATA[]]></to_date>
+      </fblock>
+      <fblock>
+        <package_theme><![CDATA[em0122/em0122_layout06]]></package_theme>
+        <title><![CDATA[EM0122 Glory Theme - Area Home Left Navigation - Main Menu]]></title>
+        <position><![CDATA[em0122.left.menu.homepage]]></position>
+        <custom_position><![CDATA[]]></custom_position>
+        <schedule_pattern><![CDATA[every day]]></schedule_pattern>
+        <schedule_from_time><![CDATA[]]></schedule_from_time>
+        <schedule_to_time><![CDATA[]]></schedule_to_time>
+        <category_ids><![CDATA[]]></category_ids>
+        <identifier><![CDATA[em0122-area-home-left-navigation-main-menu]]></identifier>
+        <layout_handle><![CDATA[cms_index_index]]></layout_handle>
+        <custom_layout_handle><![CDATA[]]></custom_layout_handle>
+        <additional_cache_tags><![CDATA[]]></additional_cache_tags>
+        <layout_handle_2><![CDATA[]]></layout_handle_2>
+        <position_2><![CDATA[]]></position_2>
+        <layout_handle_3><![CDATA[]]></layout_handle_3>
+        <position_3><![CDATA[]]></position_3>
+        <layout_attribute><![CDATA[]]></layout_attribute>
+        <layout_attribute_2><![CDATA[]]></layout_attribute_2>
+        <layout_attribute_3><![CDATA[]]></layout_attribute_3>
+        <layout_attribute_custom><![CDATA[]]></layout_attribute_custom>
+        <cms_page><![CDATA[-1]]></cms_page>
+        <order><![CDATA[]]></order>
+        <status><![CDATA[1]]></status>
+        <display_pc><![CDATA[1]]></display_pc>
+        <display_tablet><![CDATA[1]]></display_tablet>
+        <display_mobile><![CDATA[1]]></display_mobile>
+        <content><![CDATA[<div class="menu-wrapper-homepage hidden-xs">
+<div id="menuleftTextHomepage" class="all_categories">
+<div class="menuleftText-title">
+<div class="menuleftText"><span>Mega Menu</span></div>
+</div>
+</div>
+<div class="menuleft">
+<div id="menu-default-homepage" class="mega-menu">{{widget type="megamenupro/megamenupro" menu="6"}}</div>
+</div>
+</div>]]></content>
+        <conditions><![CDATA[a:6:{s:4:"type";s:34:"catalogrule/rule_condition_combine";s:9:"attribute";N;s:8:"operator";N;s:5:"value";s:1:"1";s:18:"is_value_processed";N;s:10:"aggregator";s:3:"all";}]]></conditions>
+        <from_date><![CDATA[]]></from_date>
+        <to_date><![CDATA[]]></to_date>
+      </fblock>
+    </flexible_block>
+    <themeframework>
+      <area>
+        <package_theme><![CDATA[em0122/em0122_layout06]]></package_theme>
+        <name><![CDATA[EM0122 Glory Theme - Layout 06 - Two Columns Left]]></name>
+        <layout><![CDATA[2columns-left]]></layout>
+        <is_active><![CDATA[1]]></is_active>
+        <content><![CDATA[a:14:{i:0;a:6:{s:10:"custom_css";s:16:"container-header";s:10:"inner_html";s:43:"<div class="inner-header">{{content}}</div>";s:10:"outer_html";s:46:"<div class="wrapper-header"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:14:"container_free";s:5:"items";a:1:{i:0;s:6:"header";}}i:1;a:6:{s:10:"custom_css";s:19:"container-slideshow";s:10:"inner_html";s:46:"<div class="inner-slideshow">{{content}}</div>";s:10:"outer_html";s:49:"<div class="wrapper-slideshow"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:3:{i:0;a:11:{s:6:"column";s:1:"6";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:0:"";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:25:"em0122.left.menu.homepage";}}i:1;a:11:{s:6:"column";s:2:"18";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-01";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:8:"em_area1";}}i:2;s:5:"clear";}}i:2;a:6:{s:10:"custom_css";s:18:"container-main-top";s:10:"inner_html";s:45:"<div class="inner-main-top">{{content}}</div>";s:10:"outer_html";s:48:"<div class="wrapper-main-top"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:1:{i:0;a:11:{s:6:"column";s:2:"24";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:14:"em-breadcrumbs";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:3:{i:0;s:11:"breadcrumbs";i:1;s:15:"global_messages";i:2;s:21:"em_navigation_product";}}}}i:3;a:6:{s:10:"custom_css";s:14:"container-main";s:10:"inner_html";s:41:"<div class="inner-main">{{content}}</div>";s:10:"outer_html";s:44:"<div class="wrapper-main"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:3:{i:0;a:11:{s:6:"column";s:2:"18";s:4:"push";s:1:"6";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:11:"em-col-main";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:5:{i:0;s:8:"em_area2";i:1;s:8:"em_area3";i:2;s:9:"em_area14";i:3;s:7:"content";i:4;s:9:"em_area16";}}i:1;a:11:{s:6:"column";s:1:"6";s:4:"push";s:0:"";s:4:"pull";s:2:"18";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:11:"em-col-left";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:3:{i:0;s:9:"em_area17";i:1;s:4:"left";i:2;s:9:"em_area18";}}i:2;s:5:"clear";}}i:4;a:6:{s:10:"custom_css";s:20:"container-main-video";s:10:"inner_html";s:47:"<div class="inner-main-video">{{content}}</div>";s:10:"outer_html";s:50:"<div class="wrapper-main-video"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:14:"container_free";s:5:"items";a:1:{i:0;s:8:"em_area4";}}i:5;a:6:{s:10:"custom_css";s:19:"container-main-blog";s:10:"inner_html";s:46:"<div class="inner-main-blog">{{content}}</div>";s:10:"outer_html";s:49:"<div class="wrapper-main-blog"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:2:{i:0;a:11:{s:6:"column";s:2:"24";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-07";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:8:"em_area7";}}i:1;s:5:"clear";}}i:6;a:6:{s:10:"custom_css";s:23:"container-main-features";s:10:"inner_html";s:50:"<div class="inner-main-features">{{content}}</div>";s:10:"outer_html";s:53:"<div class="wrapper-main-features"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:2:{i:0;a:11:{s:6:"column";s:2:"24";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-08";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:8:"em_area8";}}i:1;s:5:"clear";}}i:7;a:6:{s:10:"custom_css";s:23:"container-main-parallax";s:10:"inner_html";s:50:"<div class="inner-main-parallax">{{content}}</div>";s:10:"outer_html";s:53:"<div class="wrapper-main-parallax"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:14:"container_free";s:5:"items";a:1:{i:0;s:8:"em_area6";}}i:8;a:6:{s:10:"custom_css";s:20:"container-main-ads02";s:10:"inner_html";s:47:"<div class="inner-main-ads02">{{content}}</div>";s:10:"outer_html";s:50:"<div class="wrapper-main-ads02"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:2:{i:0;a:11:{s:6:"column";s:2:"24";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-09";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:8:"em_area9";}}i:1;s:5:"clear";}}i:9;a:6:{s:10:"custom_css";s:18:"container-main-ads";s:10:"inner_html";s:45:"<div class="inner-main-ads">{{content}}</div>";s:10:"outer_html";s:48:"<div class="wrapper-main-ads"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:2:{i:0;a:11:{s:6:"column";s:2:"24";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-05";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:8:"em_area5";}}i:1;s:5:"clear";}}i:10;a:6:{s:10:"custom_css";s:21:"container-main-bottom";s:10:"inner_html";s:48:"<div class="inner-main-bottom">{{content}}</div>";s:10:"outer_html";s:51:"<div class="wrapper-main-bottom"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:4:{i:0;a:11:{s:6:"column";s:1:"8";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-10";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:9:"em_area10";}}i:1;a:11:{s:6:"column";s:1:"8";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-11";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:9:"em_area11";}}i:2;a:11:{s:6:"column";s:1:"8";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-12";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:9:"em_area12";}}i:3;s:5:"clear";}}i:11;a:6:{s:10:"custom_css";s:20:"container-footer-top";s:10:"inner_html";s:47:"<div class="inner-footer-top">{{content}}</div>";s:10:"outer_html";s:50:"<div class="wrapper-footer-top"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:2:{i:0;a:11:{s:6:"column";s:2:"24";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-13";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:9:"em_area13";}}i:1;s:5:"clear";}}i:12;a:6:{s:10:"custom_css";s:16:"container-footer";s:10:"inner_html";s:43:"<div class="inner-footer">{{content}}</div>";s:10:"outer_html";s:46:"<div class="wrapper-footer"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:2:{i:0;a:11:{s:6:"column";s:2:"18";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:14:"em-area-footer";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:6:"footer";}}i:1;a:11:{s:6:"column";s:1:"6";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-15";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:9:"em_area15";}}}}i:13;a:6:{s:10:"custom_css";s:13:"container-end";s:10:"inner_html";s:40:"<div class="inner-end">{{content}}</div>";s:10:"outer_html";s:43:"<div class="wrapper-end"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:14:"container_free";s:5:"items";a:1:{i:0;s:15:"before_body_end";}}}]]></content>
+      </area>
+      <area>
+        <package_theme><![CDATA[em0122/em0122_layout06]]></package_theme>
+        <name><![CDATA[EM0122 Glory Theme - Layout 06 - One Column]]></name>
+        <layout><![CDATA[1column]]></layout>
+        <is_active><![CDATA[1]]></is_active>
+        <content><![CDATA[a:14:{i:0;a:6:{s:10:"custom_css";s:16:"container-header";s:10:"inner_html";s:43:"<div class="inner-header">{{content}}</div>";s:10:"outer_html";s:46:"<div class="wrapper-header"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:14:"container_free";s:5:"items";a:1:{i:0;s:6:"header";}}i:1;a:6:{s:10:"custom_css";s:19:"container-slideshow";s:10:"inner_html";s:46:"<div class="inner-slideshow">{{content}}</div>";s:10:"outer_html";s:49:"<div class="wrapper-slideshow"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:3:{i:0;a:11:{s:6:"column";s:1:"6";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:0:"";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:25:"em0122.left.menu.homepage";}}i:1;a:11:{s:6:"column";s:2:"18";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-01";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:8:"em_area1";}}i:2;s:5:"clear";}}i:2;a:6:{s:10:"custom_css";s:18:"container-main-top";s:10:"inner_html";s:45:"<div class="inner-main-top">{{content}}</div>";s:10:"outer_html";s:48:"<div class="wrapper-main-top"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:1:{i:0;a:11:{s:6:"column";s:2:"24";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:14:"em-breadcrumbs";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:3:{i:0;s:11:"breadcrumbs";i:1;s:15:"global_messages";i:2;s:21:"em_navigation_product";}}}}i:3;a:6:{s:10:"custom_css";s:14:"container-main";s:10:"inner_html";s:41:"<div class="inner-main">{{content}}</div>";s:10:"outer_html";s:44:"<div class="wrapper-main"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:2:{i:0;a:11:{s:6:"column";s:2:"24";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:11:"em-col-main";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:5:{i:0;s:8:"em_area2";i:1;s:8:"em_area3";i:2;s:9:"em_area14";i:3;s:7:"content";i:4;s:9:"em_area16";}}i:1;s:5:"clear";}}i:4;a:6:{s:10:"custom_css";s:20:"container-main-video";s:10:"inner_html";s:47:"<div class="inner-main-video">{{content}}</div>";s:10:"outer_html";s:50:"<div class="wrapper-main-video"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:14:"container_free";s:5:"items";a:1:{i:0;s:8:"em_area4";}}i:5;a:6:{s:10:"custom_css";s:19:"container-main-blog";s:10:"inner_html";s:46:"<div class="inner-main-blog">{{content}}</div>";s:10:"outer_html";s:49:"<div class="wrapper-main-blog"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:2:{i:0;a:11:{s:6:"column";s:2:"24";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-07";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:8:"em_area7";}}i:1;s:5:"clear";}}i:6;a:6:{s:10:"custom_css";s:23:"container-main-features";s:10:"inner_html";s:50:"<div class="inner-main-features">{{content}}</div>";s:10:"outer_html";s:53:"<div class="wrapper-main-features"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:2:{i:0;a:11:{s:6:"column";s:2:"24";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-08";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:8:"em_area8";}}i:1;s:5:"clear";}}i:7;a:6:{s:10:"custom_css";s:23:"container-main-parallax";s:10:"inner_html";s:50:"<div class="inner-main-parallax">{{content}}</div>";s:10:"outer_html";s:53:"<div class="wrapper-main-parallax"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:14:"container_free";s:5:"items";a:1:{i:0;s:8:"em_area6";}}i:8;a:6:{s:10:"custom_css";s:20:"container-main-ads02";s:10:"inner_html";s:47:"<div class="inner-main-ads02">{{content}}</div>";s:10:"outer_html";s:50:"<div class="wrapper-main-ads02"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:2:{i:0;a:11:{s:6:"column";s:2:"24";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-09";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:8:"em_area9";}}i:1;s:5:"clear";}}i:9;a:6:{s:10:"custom_css";s:18:"container-main-ads";s:10:"inner_html";s:45:"<div class="inner-main-ads">{{content}}</div>";s:10:"outer_html";s:48:"<div class="wrapper-main-ads"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:2:{i:0;a:11:{s:6:"column";s:2:"24";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-05";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:8:"em_area5";}}i:1;s:5:"clear";}}i:10;a:6:{s:10:"custom_css";s:21:"container-main-bottom";s:10:"inner_html";s:48:"<div class="inner-main-bottom">{{content}}</div>";s:10:"outer_html";s:51:"<div class="wrapper-main-bottom"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:4:{i:0;a:11:{s:6:"column";s:1:"8";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-10";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:9:"em_area10";}}i:1;a:11:{s:6:"column";s:1:"8";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-11";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:9:"em_area11";}}i:2;a:11:{s:6:"column";s:1:"8";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-12";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:9:"em_area12";}}i:3;s:5:"clear";}}i:11;a:6:{s:10:"custom_css";s:20:"container-footer-top";s:10:"inner_html";s:47:"<div class="inner-footer-top">{{content}}</div>";s:10:"outer_html";s:50:"<div class="wrapper-footer-top"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:2:{i:0;a:11:{s:6:"column";s:2:"24";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-13";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:9:"em_area13";}}i:1;s:5:"clear";}}i:12;a:6:{s:10:"custom_css";s:16:"container-footer";s:10:"inner_html";s:43:"<div class="inner-footer">{{content}}</div>";s:10:"outer_html";s:46:"<div class="wrapper-footer"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:2:{i:0;a:11:{s:6:"column";s:2:"18";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:14:"em-area-footer";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:6:"footer";}}i:1;a:11:{s:6:"column";s:1:"6";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-15";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:9:"em_area15";}}}}i:13;a:6:{s:10:"custom_css";s:13:"container-end";s:10:"inner_html";s:40:"<div class="inner-end">{{content}}</div>";s:10:"outer_html";s:43:"<div class="wrapper-end"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:14:"container_free";s:5:"items";a:1:{i:0;s:15:"before_body_end";}}}]]></content>
+      </area>
+      <area>
+        <package_theme><![CDATA[em0122/em0122_layout06]]></package_theme>
+        <name><![CDATA[EM0122 Glory Theme - Layout 06 - Two Columns Right]]></name>
+        <layout><![CDATA[2columns-right]]></layout>
+        <is_active><![CDATA[1]]></is_active>
+        <content><![CDATA[a:14:{i:0;a:6:{s:10:"custom_css";s:16:"container-header";s:10:"inner_html";s:43:"<div class="inner-header">{{content}}</div>";s:10:"outer_html";s:46:"<div class="wrapper-header"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:14:"container_free";s:5:"items";a:1:{i:0;s:6:"header";}}i:1;a:6:{s:10:"custom_css";s:19:"container-slideshow";s:10:"inner_html";s:46:"<div class="inner-slideshow">{{content}}</div>";s:10:"outer_html";s:49:"<div class="wrapper-slideshow"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:3:{i:0;a:11:{s:6:"column";s:1:"6";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:0:"";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:25:"em0122.left.menu.homepage";}}i:1;a:11:{s:6:"column";s:2:"18";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-01";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:8:"em_area1";}}i:2;s:5:"clear";}}i:2;a:6:{s:10:"custom_css";s:18:"container-main-top";s:10:"inner_html";s:45:"<div class="inner-main-top">{{content}}</div>";s:10:"outer_html";s:48:"<div class="wrapper-main-top"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:1:{i:0;a:11:{s:6:"column";s:2:"24";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:14:"em-breadcrumbs";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:3:{i:0;s:11:"breadcrumbs";i:1;s:15:"global_messages";i:2;s:21:"em_navigation_product";}}}}i:3;a:6:{s:10:"custom_css";s:14:"container-main";s:10:"inner_html";s:41:"<div class="inner-main">{{content}}</div>";s:10:"outer_html";s:44:"<div class="wrapper-main"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:3:{i:0;a:11:{s:6:"column";s:2:"18";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:11:"em-col-main";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:5:{i:0;s:8:"em_area2";i:1;s:8:"em_area3";i:2;s:9:"em_area14";i:3;s:7:"content";i:4;s:9:"em_area16";}}i:1;a:11:{s:6:"column";s:1:"6";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:12:"em-col-right";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:3:{i:0;s:9:"em_area19";i:1;s:5:"right";i:2;s:9:"em_area20";}}i:2;s:5:"clear";}}i:4;a:6:{s:10:"custom_css";s:20:"container-main-video";s:10:"inner_html";s:47:"<div class="inner-main-video">{{content}}</div>";s:10:"outer_html";s:50:"<div class="wrapper-main-video"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:14:"container_free";s:5:"items";a:1:{i:0;s:8:"em_area4";}}i:5;a:6:{s:10:"custom_css";s:19:"container-main-blog";s:10:"inner_html";s:46:"<div class="inner-main-blog">{{content}}</div>";s:10:"outer_html";s:49:"<div class="wrapper-main-blog"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:2:{i:0;a:11:{s:6:"column";s:2:"24";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-07";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:8:"em_area7";}}i:1;s:5:"clear";}}i:6;a:6:{s:10:"custom_css";s:23:"container-main-features";s:10:"inner_html";s:50:"<div class="inner-main-features">{{content}}</div>";s:10:"outer_html";s:53:"<div class="wrapper-main-features"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:2:{i:0;a:11:{s:6:"column";s:2:"24";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-08";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:8:"em_area8";}}i:1;s:5:"clear";}}i:7;a:6:{s:10:"custom_css";s:23:"container-main-parallax";s:10:"inner_html";s:50:"<div class="inner-main-parallax">{{content}}</div>";s:10:"outer_html";s:53:"<div class="wrapper-main-parallax"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:14:"container_free";s:5:"items";a:1:{i:0;s:8:"em_area6";}}i:8;a:6:{s:10:"custom_css";s:20:"container-main-ads02";s:10:"inner_html";s:47:"<div class="inner-main-ads02">{{content}}</div>";s:10:"outer_html";s:50:"<div class="wrapper-main-ads02"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:2:{i:0;a:11:{s:6:"column";s:2:"24";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-09";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:8:"em_area9";}}i:1;s:5:"clear";}}i:9;a:6:{s:10:"custom_css";s:18:"container-main-ads";s:10:"inner_html";s:45:"<div class="inner-main-ads">{{content}}</div>";s:10:"outer_html";s:48:"<div class="wrapper-main-ads"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:2:{i:0;a:11:{s:6:"column";s:2:"24";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-05";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:8:"em_area5";}}i:1;s:5:"clear";}}i:10;a:6:{s:10:"custom_css";s:21:"container-main-bottom";s:10:"inner_html";s:48:"<div class="inner-main-bottom">{{content}}</div>";s:10:"outer_html";s:51:"<div class="wrapper-main-bottom"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:4:{i:0;a:11:{s:6:"column";s:1:"8";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-10";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:9:"em_area10";}}i:1;a:11:{s:6:"column";s:1:"8";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-11";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:9:"em_area11";}}i:2;a:11:{s:6:"column";s:1:"8";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-12";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:9:"em_area12";}}i:3;s:5:"clear";}}i:11;a:6:{s:10:"custom_css";s:20:"container-footer-top";s:10:"inner_html";s:47:"<div class="inner-footer-top">{{content}}</div>";s:10:"outer_html";s:50:"<div class="wrapper-footer-top"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:2:{i:0;a:11:{s:6:"column";s:2:"24";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-13";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:9:"em_area13";}}i:1;s:5:"clear";}}i:12;a:6:{s:10:"custom_css";s:16:"container-footer";s:10:"inner_html";s:43:"<div class="inner-footer">{{content}}</div>";s:10:"outer_html";s:46:"<div class="wrapper-footer"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:2:{i:0;a:11:{s:6:"column";s:2:"18";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:14:"em-area-footer";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:6:"footer";}}i:1;a:11:{s:6:"column";s:1:"6";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-15";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:9:"em_area15";}}}}i:13;a:6:{s:10:"custom_css";s:13:"container-end";s:10:"inner_html";s:40:"<div class="inner-end">{{content}}</div>";s:10:"outer_html";s:43:"<div class="wrapper-end"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:14:"container_free";s:5:"items";a:1:{i:0;s:15:"before_body_end";}}}]]></content>
+      </area>
+      <area>
+        <package_theme><![CDATA[em0122/em0122_layout06]]></package_theme>
+        <name><![CDATA[EM0122 Glory Theme - Layout 06 - Three Columns]]></name>
+        <layout><![CDATA[3columns]]></layout>
+        <is_active><![CDATA[1]]></is_active>
+        <content><![CDATA[a:14:{i:0;a:6:{s:10:"custom_css";s:16:"container-header";s:10:"inner_html";s:43:"<div class="inner-header">{{content}}</div>";s:10:"outer_html";s:46:"<div class="wrapper-header"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:14:"container_free";s:5:"items";a:1:{i:0;s:6:"header";}}i:1;a:6:{s:10:"custom_css";s:19:"container-slideshow";s:10:"inner_html";s:46:"<div class="inner-slideshow">{{content}}</div>";s:10:"outer_html";s:49:"<div class="wrapper-slideshow"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:3:{i:0;a:11:{s:6:"column";s:1:"6";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:0:"";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:25:"em0122.left.menu.homepage";}}i:1;a:11:{s:6:"column";s:2:"18";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-01";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:8:"em_area1";}}i:2;s:5:"clear";}}i:2;a:6:{s:10:"custom_css";s:18:"container-main-top";s:10:"inner_html";s:45:"<div class="inner-main-top">{{content}}</div>";s:10:"outer_html";s:48:"<div class="wrapper-main-top"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:1:{i:0;a:11:{s:6:"column";s:2:"24";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:14:"em-breadcrumbs";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:3:{i:0;s:11:"breadcrumbs";i:1;s:15:"global_messages";i:2;s:21:"em_navigation_product";}}}}i:3;a:6:{s:10:"custom_css";s:14:"container-main";s:10:"inner_html";s:41:"<div class="inner-main">{{content}}</div>";s:10:"outer_html";s:44:"<div class="wrapper-main"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:4:{i:0;a:11:{s:6:"column";s:2:"12";s:4:"push";s:1:"6";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:11:"em-col-main";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:5:{i:0;s:8:"em_area2";i:1;s:8:"em_area3";i:2;s:9:"em_area14";i:3;s:7:"content";i:4;s:9:"em_area16";}}i:1;a:11:{s:6:"column";s:1:"6";s:4:"push";s:0:"";s:4:"pull";s:2:"12";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:11:"em-col-left";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:3:{i:0;s:9:"em_area17";i:1;s:4:"left";i:2;s:9:"em_area18";}}i:2;a:11:{s:6:"column";s:1:"6";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:12:"em-col-right";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:3:{i:0;s:9:"em_area19";i:1;s:5:"right";i:2;s:9:"em_area20";}}i:3;s:5:"clear";}}i:4;a:6:{s:10:"custom_css";s:20:"container-main-video";s:10:"inner_html";s:47:"<div class="inner-main-video">{{content}}</div>";s:10:"outer_html";s:50:"<div class="wrapper-main-video"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:14:"container_free";s:5:"items";a:1:{i:0;s:8:"em_area4";}}i:5;a:6:{s:10:"custom_css";s:19:"container-main-blog";s:10:"inner_html";s:46:"<div class="inner-main-blog">{{content}}</div>";s:10:"outer_html";s:49:"<div class="wrapper-main-blog"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:2:{i:0;a:11:{s:6:"column";s:2:"24";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-07";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:8:"em_area7";}}i:1;s:5:"clear";}}i:6;a:6:{s:10:"custom_css";s:23:"container-main-features";s:10:"inner_html";s:50:"<div class="inner-main-features">{{content}}</div>";s:10:"outer_html";s:53:"<div class="wrapper-main-features"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:2:{i:0;a:11:{s:6:"column";s:2:"24";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-08";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:8:"em_area8";}}i:1;s:5:"clear";}}i:7;a:6:{s:10:"custom_css";s:23:"container-main-parallax";s:10:"inner_html";s:50:"<div class="inner-main-parallax">{{content}}</div>";s:10:"outer_html";s:53:"<div class="wrapper-main-parallax"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:14:"container_free";s:5:"items";a:1:{i:0;s:8:"em_area6";}}i:8;a:6:{s:10:"custom_css";s:20:"container-main-ads02";s:10:"inner_html";s:47:"<div class="inner-main-ads02">{{content}}</div>";s:10:"outer_html";s:50:"<div class="wrapper-main-ads02"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:2:{i:0;a:11:{s:6:"column";s:2:"24";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-09";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:8:"em_area9";}}i:1;s:5:"clear";}}i:9;a:6:{s:10:"custom_css";s:18:"container-main-ads";s:10:"inner_html";s:45:"<div class="inner-main-ads">{{content}}</div>";s:10:"outer_html";s:48:"<div class="wrapper-main-ads"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:2:{i:0;a:11:{s:6:"column";s:2:"24";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-05";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:8:"em_area5";}}i:1;s:5:"clear";}}i:10;a:6:{s:10:"custom_css";s:21:"container-main-bottom";s:10:"inner_html";s:48:"<div class="inner-main-bottom">{{content}}</div>";s:10:"outer_html";s:51:"<div class="wrapper-main-bottom"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:4:{i:0;a:11:{s:6:"column";s:1:"8";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-10";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:9:"em_area10";}}i:1;a:11:{s:6:"column";s:1:"8";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-11";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:9:"em_area11";}}i:2;a:11:{s:6:"column";s:1:"8";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-12";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:9:"em_area12";}}i:3;s:5:"clear";}}i:11;a:6:{s:10:"custom_css";s:20:"container-footer-top";s:10:"inner_html";s:47:"<div class="inner-footer-top">{{content}}</div>";s:10:"outer_html";s:50:"<div class="wrapper-footer-top"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:2:{i:0;a:11:{s:6:"column";s:2:"24";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-13";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:9:"em_area13";}}i:1;s:5:"clear";}}i:12;a:6:{s:10:"custom_css";s:16:"container-footer";s:10:"inner_html";s:43:"<div class="inner-footer">{{content}}</div>";s:10:"outer_html";s:46:"<div class="wrapper-footer"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:12:"container_24";s:5:"items";a:2:{i:0;a:11:{s:6:"column";s:2:"18";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:14:"em-area-footer";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:6:"footer";}}i:1;a:11:{s:6:"column";s:1:"6";s:4:"push";s:0:"";s:4:"pull";s:0:"";s:6:"prefix";s:0:"";s:6:"suffix";s:0:"";s:5:"first";b:0;s:4:"last";b:0;s:10:"custom_css";s:10:"em-area-15";s:10:"inner_html";s:0:"";s:13:"display_empty";b:0;s:5:"items";a:1:{i:0;s:9:"em_area15";}}}}i:13;a:6:{s:10:"custom_css";s:13:"container-end";s:10:"inner_html";s:40:"<div class="inner-end">{{content}}</div>";s:10:"outer_html";s:43:"<div class="wrapper-end"> {{content}}</div>";s:13:"display_empty";b:0;s:4:"type";s:14:"container_free";s:5:"items";a:1:{i:0;s:15:"before_body_end";}}}]]></content>
+      </area>
+    </themeframework>
+    <megamenu/>
+    <slideshows/>
+  </sample_data>
+</theme>

@@ -1,0 +1,48 @@
+.rev_slider_wrapper .tp-rightarrow.default, .rev_slider_wrapper .tp-leftarrow.default{
+		background-image: url("../images/icons-layout02.png");
+}
+.wrapper-main-top, .em-box-custom .wrapper-main-top .container{
+	background-image: url(../images/banner-parallax.png)
+}
+.wrapper-main-bottom{
+	display: none;
+}
+.wrapper-footer-top .container-footer-top .em-area-13 div.first .em-block-title p.h6:after{
+	position: absolute;
+}
+.wrapper-footer-top .container-footer-top .em-area-13 {
+	margin: 65px 0 25px;
+}
+.em-area-07 .em-line-01 .em-latest-news .em-latest-news-item .em-blog-item{
+	height: auto !important;
+}
+.em-area-02 span.hover_shine{
+	display: none;
+}
+.em-area-03 .products-grid div.item .add-to-links{
+	width: 100%;
+}
+.em-area-03 .products-grid div.item .add-to-links li{
+	margin-right: 0;
+	width: 50%;
+}
+.em-area-03 .products-grid div.item .add-to-links li a{
+	width: 100%;
+	text-align: center;
+	border-right: none;
+	border-top: none;	
+}
+.em-area-03 .products-grid div.item .add-to-links li a.link-wishlist{
+	border-left: none;
+}
+.em-area-03 .products-grid div.item button.button.btn-cart{
+	float: none;
+	border: 1px solid;
+	width: auto;
+	padding: 11px 20px;
+}
+@media (max-width: 990px) and (min-width: 768px){
+	.em-area-03 .em-line-01 .widget .products-grid li.item{
+		height: 400px !important;
+	}
+}

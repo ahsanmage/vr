@@ -1,0 +1,104 @@
+@mixin newsletter_clearbutton{
+	.block-subscribe{
+		.actions{
+			float:none;
+			button.button{
+				float:none;
+				display:inline-block;
+				span{
+					float:none;
+					display:inline-block;
+				}
+			}
+		}
+		.input-box{
+			width:100%;
+			float:none;
+			input.input-text{
+				margin-right:0;
+			}
+		}
+		
+	}
+}
+
+/*===========block subscribe=============*/
+.block-subscribe {
+	position: relative;
+	border:none;
+	margin-bottom:35px;
+	padding:0;
+	&:before,&:after{
+		position:static;
+		height:0;
+	}
+	.input-box
+	{
+		width:100%;
+		float:left;
+	}
+	.actions{
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		button.button{
+			margin-right:0px;
+			padding: 12px 25px;
+		}
+	}
+	input.input-text
+	{
+		width:100%;
+		/*margin-bottom:35px;*/
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		height: 40px;
+		line-height: 14px;
+		border: none;
+	}
+}
+
+.newsletter-clearbutton{
+	@include newsletter_clearbutton;
+}
+
+.newsletter-fullbutton{
+	button.button{
+		width:100%;
+	}
+}
+
+.newsletter-boder-input-act{
+	.block-subscribe{
+		/*border:3px solid;
+		padding:2px;
+		@include border-radius(2px);*/
+		border: none;
+		display: inline-block;
+		width: 70%;
+		input.input-text{
+			border:1px solid;
+			height: 40px;
+		}
+		.input-box{
+			width:85%;
+			margin-bottom:20px;
+		}
+		.actions{
+			/*float:right;*/
+			position: static;
+			button.button{
+				margin-bottom:0;
+				float: none;
+			}
+		}
+	}
+}
+
+.em-wrapper-newsletter{
+	margin-bottom:20px;
+}
+.em-newsletter > p{
+	margin-bottom: 25px;
+}

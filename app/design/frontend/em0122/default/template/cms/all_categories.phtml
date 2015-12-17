@@ -1,0 +1,43 @@
+<?php
+	$model	=	Mage::getModel('catalog/category');
+	$rootCategoryId = Mage::app()->getStore()->getRootCategoryId();
+	$category = $model->load($rootCategoryId);	
+	$curId = $this->getRequest()->getParam('cat');
+	
+	$_helper    = $this->helper('catalog/output');
+	
+	$cates	=	Mage::helper('em0122settings')->getCategoriesCustom($category,$curId);
+    $limit = $cates->count();
+?>
+
+<div class="fieldset featured_category_content">
+	<h2 class="legend categories-title"><?php echo $this->__("All Categories")?></h2>
+	<?php $i=0; foreach($cates as $_cate): ?>
+		<?php if ($i%6==0):?>
+			<ul class="category-grid">        
+		<?php endif;?>
+			<?php $_cate	=	Mage::getModel('catalog/category')->load($_cate->getId()); ?>
+			<?php if($_cate->getIsActive() == 1): ?>
+				<li class="item-category col-sm-4">
+					<div class="cate_info">
+						<div class="cate-detail">
+							<h3 class="cate_name">
+								<a href="<?php echo Mage::getModel("catalog/category")->load($_cate->getId())->getUrl() ?>" title="<?php $this->stripTags($_helper->categoryAttribute($_cate, $_cate->getName(), 'name'), null, true) ?>"><?php echo $_helper->categoryAttribute($_cate, $_cate->getName(), 'name') ?></a>
+							</h5>		
+							<?php 
+								$subcates = Mage::helper('em0122settings')->getCategoriesCustom($_cate,$curId);
+							?>
+							<?php foreach($subcates as $_subcates):?>
+								<h5>
+									<a href="<?php echo $_subcates->getUrl() ?>" title="<?php echo $_helper->categoryAttribute($_subcates, $_subcates->getName(), 'name') ?>"><?php echo $_helper->categoryAttribute($_subcates, $_subcates->getName(), 'name') ?></a>
+								</h5>
+							<?php endforeach;?>
+						</div>
+					</div>							                     
+				</li>
+			<?php endif ?>
+		<?php if(($i%6==5)||($i+1==$limit)):?>
+			</ul>
+		<?php endif; $i++;?>
+	<?php endforeach; ?>
+</div>

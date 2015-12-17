@@ -1,0 +1,119 @@
+<?php
+    $setting = Mage::helper('themeframework/settings');
+    $boxwide_selected =  explode(',', $setting->getGeneral_BoxWide());
+    $_checkLayout = str_replace(array('page/','.phtml'),'',Mage::app()->getLayout()->getBlock('root')->getTemplate());
+ 
+	/* Check Homepage */
+    $page = Mage::app()->getFrontController()->getRequest()->getRouteName();
+    $homePage = false;
+    if($page =='cms'){
+        $cmsSingletonIdentifier = Mage::getSingleton('cms/page')->getIdentifier();
+        $homeIdentifier = Mage::app()->getStore()->getConfig('web/default/cms_home_page');
+        if($cmsSingletonIdentifier === $homeIdentifier){
+            $homePage = true;
+        }
+    }
+    /* End Check Homepage */    
+		
+    /* Check for menu left default */
+    $url_menuleft = Mage::helper("core/url")->getCurrentUrl();
+    $url_check_menuleft = "themeframework_admin/area/preview";
+    $pos_menuleft = stripos($url_menuleft, $url_check_menuleft);        
+    /* End Check for menu left default */
+?>
+
+<script type="text/javascript">
+//<![CDATA[    
+    var isMobile = /iPhone|iPod|iPad|Phone|Mobile|Android|hpwos/i.test(navigator.userAgent);
+    var isPhone = /iPhone|iPod|Phone|Android/i.test(navigator.userAgent);
+    var isWindowPhone = '<?php echo $setting->checkWindowsMobileOS()?>';
+    var language = '<?php echo $this->getSkinUrl('images/media/home/language/') ?>';
+    var urlsite = '<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>';
+    var layout = '<?php echo $_checkLayout ?>';
+	var isHomePage = '<?php echo $homePage ?>';
+    var pos_menuleft = '<?php echo $pos_menuleft ?>';
+    var header_style = '<?php echo $setting->getGeneral_HeaderStyle();?>';
+    var product_zoom = null;   
+
+    if (typeof EM == 'undefined') EM = {};
+	EM.SETTING = {
+		STICKY_MENU : '<?php echo $setting->getGeneral_FreezedTopMenu() ?>',
+        USE_TAB : '<?php echo $setting->getProductDetail_UseTabs() ?>',
+        FULL_SLIDESHOW : '<?php echo $setting->getGeneral_WideslideFull()?>',
+        BOX_WIDE : '<?php echo $boxwide_selected[0]?>',
+        DISABLE_VARIATION : '<?php echo $setting->getGeneral_DisableFrontendVariation() ?>',
+        DISABLE_RESPONSIVE : '<?php echo $setting->getGeneral_DisableResponsive(); ?>',
+        AJAXCART_AUTOCLOSE : '<?php echo $setting->getAjaxcart_AutoClose() ? $setting->getAjaxcart_AutoClose() : 0; ?>',
+        FLUID_LAYOUT : '<?php echo $setting->getGeneral_FluidLayout() ?>',
+        POPUP_VIDEO : '<?php echo $setting->getGeneral_PopupVideo() ?>',        
+        DISABLE_AJAX_ADDTO : '<?php echo $setting->getGeneral_DisableAjaxaddto() ?>',
+        ANIMATION_LOADING : '<?php echo $setting->getGeneral_DisableAnimateLoading() ?>',
+        ANIMATE_HEADER : '<?php echo $setting->getGeneral_AnimateHeader('fadeInDown') ?>',  
+        ANIMATE_LEFT : '<?php echo $setting->getGeneral_AnimateLeft('fadeInDown') ?>',
+        ANIMATE_RIGHT : '<?php echo $setting->getGeneral_AnimateRight('fadeInDown') ?>',
+        ANIMATE_MAIN : '<?php echo $setting->getGeneral_AnimateMain('fadeInDown') ?>',
+        ANIMATE_FOOTER : '<?php echo $setting->getGeneral_AnimateFooter('fadeInDown') ?>',  
+        DISABLE_COLLAPSE :  '<?php echo $setting->getGeneral_DisableCollapse() ?>', 
+        STICKY_CART : '<?php echo $setting->getGeneral_StickyCart() ?>',          
+        STICKY_SEARCH : '<?php echo $setting->getGeneral_StickySearch() ?>',
+        RIGHT_TO_LEFT : '<?php echo $setting->getGeneral_RightToLeft() ?>',
+        COLOR_SWATCHES : '<?php echo Mage::getStoreConfig('configswatches/general/enabled') ?>',
+	};
+    
+    var urlSkinsite = '<?php echo $this->getSKinUrl(); ?>';
+    LightboxOptions = Object.extend({
+        fileLoadingImage:        urlSkinsite+'images/loading.gif',     
+        fileBottomNavCloseImage: urlSkinsite+'images/closelabel.png',    
+        overlayOpacity: 0.8,   /* controls transparency of shadow overlay    */
+        animate: true,         /* toggles resizing animations*/
+        resizeSpeed: 7,        /* controls the speed of the image resizing animations (1=slowest and 10=fastest)    */
+        borderSize: 10,         /*if you adjust the padding in the CSS, you will need to update this variable    */
+    	/* When grouping images this is used to write: Image # of #.*/
+    	/* Change it for non-english localization*/
+    	labelImage: "Image",
+    	labelOf: "of"
+    }, window.LightboxOptions || {});	
+    
+//]]>
+</script>
+<?php if ($setting->getFonts_GoogleFonts()): ?>
+<?php 
+	if(!is_array($setting->getFonts_GoogleFonts())){
+		$fontArray = explode(',',$setting->getFonts_GoogleFonts());
+	}else{
+		$fontArray = $setting->getFonts_GoogleFonts();
+	}
+	if ($fontWeights = str_replace(' ','', $setting->getFonts_GoogleFontsWeights()))
+		$fontWeights = ':'.$fontWeights;
+	else 
+		$fontWeights = ':200,200italic,300,300italic,400,400italic,500,500italic,600italic,600italic,700,700italic,800,800italic,900,900italic';
+    if(Mage::app()->getStore()->isCurrentlySecure())
+        $href = "https://fonts.googleapis.com/css";
+    else
+        $href = "http://fonts.googleapis.com/css";
+	foreach($fontArray as $font){
+		echo  "<link href='".$href."?family=".str_replace(' ','+',$font)."$fontWeights&subset=latin,cyrillic-ext,cyrillic,greek-ext,greek,vietnamese,latin-ext' rel='stylesheet' type='text/css'/>";
+	}
+?>
+<?php endif ?>
+
+<!-- Add Css File -->
+<?php    
+    if($additionalCssFilesString = explode(',', Mage::helper('themeframework/managetheme')->getConfigTheme('css_additional_css_file'))){
+        $i=0;
+        foreach($additionalCssFilesString as $add){
+            if (preg_match("/.css/",$add)) {
+                $linkadd[$i] = Mage::getDesign()->getSkinUrl('css/').$add;
+                echo "<link rel='stylesheet' type='text/css' media='all' href='".$linkadd[$i]."'/>";
+            }
+            $i++;
+        }
+    }
+?>
+
+<!-- Add Custom Css -->
+<?php if(Mage::helper('themeframework/managetheme')->getConfigTheme('css_custom_css')):?>
+<style type="text/css">
+    <?php echo Mage::helper('themeframework/managetheme')->getConfigTheme('css_custom_css'); ?>
+</style>
+<?php endif;?>

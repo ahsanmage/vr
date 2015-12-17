@@ -1,0 +1,391 @@
+.em-sidebar .product-name a{
+	text-transform: none;
+}
+.block-sample .em-line-01{
+	margin-bottom: 0;
+	.em-block-title{
+		margin-bottom: 0;
+	}
+}
+.em-line-01{
+	position:relative;
+	margin-bottom:20px;
+	.em-block-title, .em-widget-title, .block-title{
+		margin-bottom:10px;
+		text-transform:uppercase;
+		font-size:100%;
+		/*padding-right:50px;*/
+		h3, strong, h2{
+			margin:0;
+			padding-bottom: 27px;
+			position: relative;
+			&:after{
+				@include line-title();
+				left: 0;
+			}
+		}
+		small{
+			font-size:100%;
+		}	
+	}
+	.deal_title{
+		strong{
+			display: block;
+		}
+	}
+}
+.em_nav	.em-line-01{
+	.em-block-title, .em-widget-title, .block-title{
+		h3, strong, h2{
+			&:after{
+				position: static;
+			}
+		}
+	}
+}
+.em-line-02{
+	border-bottom:2px solid;
+	margin-bottom:20px;
+}
+.multidealpro_products .product-shop{
+	text-align: center;
+}
+/*box style 01*/
+.em-box-01{
+	border:1px solid;
+	padding-top:2px;
+	margin-bottom:20px;
+	& > div{
+		border-top:1px solid;
+		padding:15px;
+	}
+	.widget-title h2,.widget-title h3{
+		text-transform:uppercase;
+		
+	}
+}
+
+/*box style 02*/
+.em-box-02{
+	border:1px solid;
+	& > div{
+		/*padding:15px;*/
+	}
+	.title-box{
+		/*padding: 11px 15px;*/
+		text-transform:uppercase;
+		margin:0;
+		position: relative;
+		padding-bottom: 25px;
+		&:after{
+			@include line-title();
+			left: 0;
+		}
+		h1, h2{ margin-bottom:0}
+	}
+	
+	.em-block-title{
+		border-bottom:1px solid;
+		margin-bottom:7px;
+		& p.h3{margin-bottom:5px;}
+	}
+}
+
+/*box style 03*/
+.em-box-03{
+	border:1px solid;
+	padding:10px;
+	.em-block-title{
+		p.h5{font-weight:700;}
+	}
+}
+
+/*box style bkg*/
+.em-box-bkg{
+	padding:10px 20px;
+	.em-line-01{
+		margin-bottom:0;
+	}
+}
+
+/*box style 043*/
+.em-box-04{
+	padding:20px;
+	margin-bottom:20px;
+	.em-line-01{
+		margin-bottom:0;
+	}
+}
+
+
+/*block sidebar*/
+.em-sidebar{
+	.block{
+		margin-bottom:20px;
+		&.img-banner{ margin-bottm:0;}
+	}
+	.line-right{
+		padding-right:10px;
+	}
+	.line-left{
+		padding-left:10px;
+	}
+}
+
+/*block ads*/
+.block-ads{
+	img.img-responsive{
+		display:inline-block;
+		margin-bottom:20px;
+	}
+}
+
+/*======Block Compare========*/
+.block-compare{
+	#compare-items{
+		li.item{
+			margin-bottom:10px;
+			position:relative;
+			a.product-image{
+				float:left;
+				margin-right:20px;
+				margin-bottom:10px;
+			}
+			.product-shop{
+				overflow:hidden;
+			}
+			.btn-remove{
+				position:absolute;
+				top:5px;
+				left:5px;
+				z-index:1;
+			}
+		}
+		
+	}
+}
+
+ /*======Block Wishlist========*/
+.block-wishlist{
+	li.item{
+		margin-bottom:10px;
+		position:relative;
+		a.product-image{
+			float:left;
+			margin-right:20px;
+			margin-bottom:10px;
+		}
+		.product-details{
+			overflow:hidden;
+		}
+		.btn-remove{
+			position:absolute;
+			top:5px;
+			left:5px;
+			z-index:1;
+		}
+	}
+}
+
+ /*======Block Reorder========*/
+ .block-reorder{
+	.checkbox{
+		float:left;
+		margin-right:5px;
+	}
+ }
+ 
+ /*==========Block Paypal==============*/
+.paypal-logo{
+	margin-bottom:20px;
+}
+
+ /*======Block Poll========*/
+.block-poll{
+	.block-subtitle{
+		margin-bottom:14px;
+	}
+	ul{
+		li{
+			padding:2px 0;
+			input.radio{
+				display:inline-block;
+			}
+		}
+	}
+}
+ 
+
+
+/* Block: Tags & box-tags*/
+.em_block-tag-cloud li ,
+.tags-list li { 
+	display:inline-block; 
+}
+.em_block-tag-cloud li{
+	padding:0 20px 8px 0;
+}
+.tags-list, .em_block-tag-cloud{ 
+	li {
+		padding: 5px 15px;
+		border: 1px solid;
+		margin-bottom: 5px;
+		margin-right: 5px;
+	}
+}
+/*Block Recent*/
+.block-recent{
+	.products-grid li.item{ width:100%}
+	.products-list li.item{
+		margin-bottom:20px;
+	}	
+	.review-details{
+		padding-top:10px
+	}
+}
+
+/*Best Seller*/
+
+/* Block progress*/
+.block-progress{
+	dt{
+		margin: 0;
+		padding: 10px 0;
+		border-bottom: 1px solid;
+	}
+	dd.complete {
+		margin-top: 10px;
+		address{
+			margin-bottom:6px;
+		}
+		a.sample-link:before{
+			@include font-awesome(\f101,100%);
+			padding-right:7px;
+		}
+	}
+}
+
+
+/*fixed sidebar*/
+.em-fixed-sidebar{
+	padding-top:50px;
+	#em-sidbar-nav-panel{
+		padding-bottom:30px;
+		display:inline-block;
+		width:100%;
+	}
+	.em-header-middle{clear:both;}
+}
+
+
+/* Block: Layered Navigation */
+.block-layered-nav{
+	.block-content{
+		> dl{
+			margin-bottm: 0;
+		}
+		dt{
+			text-transform:uppercase;
+			margin-bottom:10px;
+			padding-bottom: 27px;
+			margin-top: 40px;
+			position: relative;
+			&:after{
+				@include line-title();
+				left: 0;
+			}
+		}
+		.tree-filter ol li{
+			padding:4px 0 4px 10px;
+			.icon{
+				margin-top: 15px;
+				margin-left:-20px;
+			}
+		}
+		dd ol.filter.tree-filter{
+			text-transform: uppercase;
+			> li{
+				padding: 0;
+			}
+			.label{
+				display: block;
+				text-align: left;
+				position: relative;
+				border-bottom: 1px solid;
+				@include border-radius(0);
+				padding: 10px 0;
+				span.count-cat {
+					position: absolute;
+					right: 0;
+				}
+			}
+			li.last .label{
+				border: none;
+				padding-bottom: 0;
+			}
+		}
+		dd{
+			ol.img-filter li{
+				padding: 0;
+			}
+			ol li{
+				padding: 0.2em;
+			}
+			position:relative;
+			display:inline-block; width:100%;
+		}
+		#narrow-by-list .filter-act{
+			margin-top:0;
+			position:absolute;
+			top:-57px; 
+			right:0;
+		}
+		.rslider{
+			margin-top: 20px;
+			#range,#track{
+				background:none;
+				height:6px;
+			}
+			#track{
+				border: 1px solid;
+			}
+			.handle{
+				@include changeIcon(22px, 22px, icons, 0px -250px);
+				top:-8px;
+			}
+			.values{
+				margin-bottom:20px;
+				margin-top:15px;
+			}
+		}
+	}
+}
+/*rtl*/
+.em-rtl .block-layered-nav dt:after{
+	left: auto;
+	right: 0;
+}
+/*end rtl*/
+
+/*layout 4 fixed sidebar*/
+.em-fixed-sidebar {
+    display:block;
+    position:fixed!important;
+    top:0;
+    left:0;
+    height:100%;
+    z-index:1;
+    overflow-x:hidden !important;
+    overflow-y:scroll !important;
+    -webkit-overflow-scrolling:touch
+}
+/*block relate*/
+.block-related .product-details.product-shop{
+	text-align: center;
+}
+/*banner*/
+.block.block-banner.em-animated-end {
+	margin-bottom: 30px;
+}
+input[type="radio"], input[type="checkbox"] {
+	margin-right:0.5em!important; vertical-align:middle;}

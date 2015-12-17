@@ -1,0 +1,41 @@
+.rev_slider_wrapper .tp-rightarrow.default, .rev_slider_wrapper .tp-leftarrow.default{
+		background-image: url("../images/icons-layout04.png");
+}
+.em-header-top > div{
+	border-bottom: 1px solid;
+}
+.wrapper-main-parallax, .em-box-custom .wrapper-main-parallax .container-main-parallax, .wrapper-main-top, .em-box-custom .wrapper-main-top .container{
+	background-image: url(../images/banner-parallax.png)
+}
+a.product-image img, a.product-nav img{
+		border: 1px solid;
+}
+.wrapper-main-bottom button.button.btn-cart{
+	width: 100%;
+}
+.wrapper-footer-top .container-footer-top .em-area-13{
+	margin-bottom: 0;
+	text-align: center;
+}
+.em-footer-address{
+	margin-top: 0;
+}
+.em-payment {
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.wrapper-footer-top .container-footer-top .em-area-13 .block-subscribe input.input-text{
+	background-color: transparent;
+}
+.em-footer-address ul li a, .em-footer-address{
+	margin-bottom: 5px;
+	display: inline-block;
+	float: none;
+}
+.em-footer-address address{
+	margin-top: 10px;
+	float:none!important;
+	text-align:center;
+}
+.embase-widget-style01 .owl-carousel{ padding-top:10px;}

@@ -1,0 +1,53 @@
+.em-area-03 .em-top-list .add-to-links li {
+	a.link-compare, a.link-wishlist{
+		.changeAllColor(lighten(@body_text5_color, 5%), lighten(@body_text5_color, 10%), @btn1_bg_color);
+		&:hover{
+			.changeAllColor(@btn1_text_color, lighten(@body_text5_color, 10%), @btn1_bg_color);
+		}
+	}
+}
+.wrapper-main-features .em-area-08 .em-slider-category.owl-theme .owl-controls .owl-buttons div{
+	.changeAllColor(@btn3_text_color, @btn3_text_color, transparent);
+}
+.em-area-07 a.view-more-post:hover{
+	.changeAllColor(@btn2_bg_color; @btn2_line_color; @btn2_text_color);
+}
+.special-price .price{.changeColor(@body_text_color);}
+.wrapper-main-blog{
+	.changeBkg (darken(@body_bg4_color, 1%); @image_bg_url; @body_bg_image; @body_bg_position; @body_bg_repeat);
+	& > .container{
+		.changeBkg (darken(@body_bg4_color, 1%));
+	}
+}
+#em_quickshop_handler, button.button.button-checkout, a.button-link.goto-cart{
+	&:hover{
+		.changeAllColor(@btn2_text_color; @btn2_line_color; @btn2_bg_color);
+	}
+}
+.button3(){
+	&:hover{
+		.changeAllColor(@btn2_text_color, @btn2_line_color, @btn2_bg_color);
+	}
+}
+.btn-edit,
+.btn-remove,
+.btn-remove2{
+	&:before{
+		.changeAllColor(@btn2_text_color; @btn2_line_color; @btn2_bg_color);
+	}
+}
+.em-area-07 .em-line-01 .em-latest-news .em-latest-news-item.col-sm-8 .em-blog-item{
+	.changeBkg(@body_bg_color);
+}
+.wrapper-main-ads .em-area-05 .em-wrapper-ads div.icon:before{
+	.changeColor(@body_text_color);
+}
+.em-footer a{
+	.link(@footer_text_color, @footer_text3_color);
+}
+.block-subscribe input.input-text{
+	.changeLine(@footer_line2_color);
+}
+.wrapper-footer-top .container-footer-top .em-area-13 .col-sm-24 > .em-newsletter .block-subscribe .actions button.button{
+	.link(@footer_text_color, @footer_text3_color);
+}

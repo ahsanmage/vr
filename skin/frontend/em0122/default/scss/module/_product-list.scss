@@ -1,0 +1,261 @@
+.em-blog-image img{ height:auto; width:100%;}
+a.product-image{
+	position:relative; 
+	display:block;
+	text-align:center;
+	img{ height:auto; width:100%;}
+}
+h3.product-name{ margin-bottom:0;}
+.ratings{
+	.rating-box{ 
+		margin-right:10px;
+	}
+	.amount{
+		display:none;
+	}
+}
+div.desc{
+	margin-bottom:15px;
+}
+/* View Type: Grid */
+.products-grid{
+	li.item,div.item{
+		@include transition1;
+		margin:0 0 10px;
+		float:left;
+		/*width:100%;
+		overflow:hidden;*/
+		padding:0px;
+		img{
+			width: 100%;
+			height:auto;
+		}
+		.product-shop{
+			display:inline-block;
+			/*position:relative;*/
+			width:100%;
+			@include transition1;
+			.f-fix{ 
+			}
+		}
+		
+		&:hover{
+			.em-btn-addto{
+				@include opacity(1);
+			}
+			.product-shop{
+			}
+			
+		}
+	}
+}
+
+
+/* View Type: List */
+.products-list{
+	.product-image { 
+		float:left; 
+		margin:0 25px 10px 0; 
+	}
+	.product-shop {
+		overflow:hidden;
+	}
+	div.item{
+		display:inline-block;
+		width:100%;
+		margin-bottom:10px;
+	}
+}
+
+/*=================setting admin=====================*/
+/*single line*/
+.products-grid li.item{
+	.em-productname-single-line{
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	&:hover .em-productname-single-line{
+		white-space: normal;
+	}
+}
+
+
+/*=======category setting hover effect===========*/
+@mixin product-hover1{
+	.products-grid{
+		div.item{
+			.product-image{
+				position: relative;
+				.em-btn-addto{
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					height: 39px;
+				}
+			}
+			button.btn-cart{
+				display:inline-block;
+				margin:0;
+				border-top: none;
+				padding: 11px 90px 12px 5px;
+				width: 100%;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				height: 39px;
+			}
+			.add-to-links{
+				width: 80px;
+				position: absolute;
+				height: 39px;
+				right: 0;
+				li{
+					margin-right: 0;
+					a{
+						border-left: none;
+						border-top: none;
+					}
+				}
+				
+			}
+			.desc{
+				margin-bottom:10px;
+			}
+		}
+	}
+}
+@mixin product-hover{
+	&.products-grid li.item, &.products-grid div.item{
+		@include transition1;
+		.product-image .product-shop .f-fix{
+			padding: 0;
+		}
+		.product-shop{
+			position:relative;
+			display:block;
+			box-sizing: initial;
+			.f-fix{
+				transition: transform .5s ease 0s;
+				-moz-transition: -moz-transform .5s ease 0s;
+				-ms-transition: -ms-transform .5s ease 0s;
+				-webkit-transition: -webkit-transform .5s ease 0s;
+			}
+			.em-element-display-hover{
+				display: none;
+				transform: scale(0,0);
+				-moz-transform: scale(0,0);
+				-webkit-transform: scale(0,0);
+			}
+		}
+
+		&:hover{
+			.product-item{
+				/*@include box-shadow(0 0 5px #cdcdcd);*/
+				@include transition1;
+				.product-shop{
+					.f-fix{
+						@include opacity(1);
+						position:absolute;
+						top:0;
+						left:0;
+						width:100%;
+						top:/*14px*/0;
+						/*padding:10px;*/
+						/*border:1px solid #cdcdcd;*/
+						/*@include box-shadow(0 3px 5px #cdcdcd);*/
+						background:#fff;
+						z-index:2;
+						border-top:0;
+						transform: scale(1,1);
+						-moz-transform: scale(1,1);
+						-webkit-transform: scale(1,1);
+						transition: transform .5s ease 0s;
+						-moz-transition: -moz-transform .5s ease 0s;
+						-ms-transition: -ms-transform .5s ease 0s;
+						-webkit-transition: -webkit-transform .5s ease 0s;
+					}
+				}
+			}
+			.em-element-display-hover{
+				@include transition1;
+				display:block;
+				transform: scale(1,1);
+				-moz-transform: scale(1,1);
+				-webkit-transform: scale(1,1);
+				&.btn-cart,&.add-to-links{
+					display:inline-block;
+				}
+			}
+		}
+	}
+}
+
+/*Enable on all devices*/
+.em-line-01.em-new-arrival div,.em-area-03 div, .em-wrapper-main .em-line-01.top div, .em-wrapper-main .em-line-01.bottom div{
+	@include product-hover;
+}
+
+@mixin product-hover-all{
+	&.products-grid li.item{
+		@include transition1;
+		.product-shop{
+			box-sizing: initial;
+			.f-fix{
+				transition: transform .5s ease 0s;
+				-moz-transition: -moz-transform .5s ease 0s;
+				-ms-transition: -ms-transform .5s ease 0s;
+				-webkit-transition: -webkit-transform .5s ease 0s;
+			}
+			.em-element-display-hover{
+				display: none;
+				transform: scale(0,0);
+				-moz-transform: scale(0,0);
+				-webkit-transform: scale(0,0);
+			}
+		}
+
+		&:hover{
+			.product-item{				
+				@include transition1;
+				> .product-shop{
+					position:relative;
+					display:block;
+					.f-fix{
+						@include opacity(1);
+						position:absolute;
+						top:0;
+						left:0;
+						width:100%;
+						top:0;
+						background:#fff;
+						z-index:2;
+						border-top:0;
+						transform: scale(1,1);
+						-moz-transform: scale(1,1);
+						-webkit-transform: scale(1,1);
+						transition: transform .5s ease 0s;
+						-moz-transition: -moz-transform .5s ease 0s;
+						-ms-transition: -ms-transform .5s ease 0s;
+						-webkit-transition: -webkit-transform .5s ease 0s;
+					}
+				}
+			}
+			.em-element-display-hover{
+				@include transition1;
+				display:block;
+				transform: scale(1,1);
+				-moz-transform: scale(1,1);
+				-webkit-transform: scale(1,1);
+				&.btn-cart,&.add-to-links{
+					display:inline-block;
+				}
+			}
+		}
+	}
+}
+.emcatalog-enable-hover{
+	@include product-hover-all;
+}
+a.product-image.loading-process .em-img-lazy{width:auto;display:inline-block;}   

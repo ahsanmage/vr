@@ -1,0 +1,38 @@
+/*Header Style 01*/
+.pull-right .em-social a{
+	margin-right:10px; 
+	margin-left:0;
+}
+.em-top-links{ 
+	float:right;
+}
+.welcome-msg{ 
+	margin-right:0;
+}
+.em-summary-topcart{ 
+	margin-left:0; 
+}
+.em-top-cart .topcart-popup{ 
+	right:auto; 
+	left:0; 
+	text-align: right;
+}
+.em-language-currency{
+	.block-currency, 
+	.form-language{ 
+		margin-right:0; 
+		margin-left:10px;
+		li,
+		li{ 
+			margin-right:0px; 
+			margin-left:10px;
+		}
+	}
+}
+
+
+/*layout 4*/
+.em-rtl .em-fixed-sidebar{
+	left:auto;
+	right:0;
+}

@@ -1,0 +1,58 @@
+<?php 
+    $storeId = Mage::app()->getStore()->getId();
+	$posts = Mage::getModel('blog/post')->getCollection()
+			->setStoreId($storeId)	
+			->addAttributeToSelect('*')
+			->addAttributeToFilter('status',1)
+			->addAttributeToSort('created_at','DESC');
+    $thumnailWidth = 269;
+	$thumnailHeight = 192;
+    $helper = Mage::helper('cms');
+	$helperBlog = Mage::helper('blog'); 
+    
+?>
+<?php if($posts->count() > 0):?>    
+	<ul class="em-latest-news">
+    <?php $i=1; foreach ($posts as $p): ?>
+		<li class="em-latest-news-item col-sm-12">
+			<div class="em-blog-item">
+				<?php if($p->getImage()):?>
+				<div class="em-blog-image">
+					<a title="em-sample-title" href="<?php echo $p->getPostUrl();?>">
+						<img class="img-responsive img-banner-small" alt="<?php echo $p->getTitle();?>" src="<?php echo $helperBlog->resizeImage($p->getImage(),$thumnailWidth,$thumnailHeight,"emblog/post",'thumbnail');?>"/>
+					</a>
+				</div>
+				<?php endif;?>
+				<div class="em-blog-content">
+					<h5 class="em-blog-title"><a href="<?php echo $p->getPostUrl(false);?>"><?php echo $p->getTitle();?></a></h5>
+					<?php $date = new DateTime($p->getCreatedAt());?>
+					<span class="post-time"><small class="time-stamp"><?php echo $date->format('F j, Y'); ?></small></span>
+					<?php if(!Mage::getStoreConfig('blog/comments_facebook/enabled')):?>
+						<span class="comment-count">
+							<?php echo $this->getLayout()->getBlockSingleton('EM_Blog_Block_Post_List')->getCommentByPost($p->getId())->count(); ?>
+						</span>
+					<?php else:?>
+						<fb:comments-count href=<?php echo $p->getPostUrl(false)?>></fb:comments-count>
+					<?php endif;?>
+					<a class="comment-post-link" href="<?php echo $p->getPostUrl(); ?>" ><?php echo $this->__('Comments')?></a>
+					<?php
+						$content = $p->getPostIntro();
+						if (strlen($content) > 150)
+						{
+							$temp = substr($content, 0, 150);
+							$plit = explode(" ", $temp);
+							$temp = array_slice($plit, 0, count($plit) - 1);
+							$content = implode(" ", $temp);
+						}
+					?>
+					<p class="em-blog-des"><?php echo strip_tags($content)?>&hellip;</p>
+				</div>
+			</div>
+		</li>
+		<?php $i++;?>
+		<?php if ($i==5) break;?>
+    <?php endforeach; ?>
+	</ul>
+<?php else:?>
+    <p class="note-msg"><?php echo $this->__('There are no posts matching the selection.')?></p>
+<?php endif;?>

@@ -1,0 +1,102 @@
+<?php
+	$model	=	Mage::getModel('catalog/category');
+	$rootCategoryId = Mage::app()->getStore()->getRootCategoryId();
+	$category = $model->load($rootCategoryId);	
+	$curId = $this->getRequest()->getParam('cat');
+	
+	$_helper    = $this->helper('catalog/output');
+	
+	$cates	=	Mage::helper('em0122settings')->getCategoriesCustom($category,$curId);
+    $limit = count($cates);
+	//$w 	= $setting->getImageFeaturedCategory_Width(120);
+	//$h 	= $setting->getImageFeaturedCategory_Height(120);
+	$w=370;
+	$h=540;
+?>
+
+<div class="featured_category_content">
+	<ol class="category-grid featured-category-item owl-carousel">        
+		<?php $i = 1; foreach($cates as $_cate): ?>
+			<?php $_cate	=	Mage::getModel('catalog/category')->load($_cate->getId()); ?>
+			<?php if($_cate->getIsActive() == 1): ?>
+				<li class="item-category">
+					<div class="cate_info">
+                        <?php
+                            $_category = Mage::getModel('catalog/category')->load($_cate->getId());
+                            $collection = Mage::getResourceModel('catalog/product_collection')->addCategoryFilter($_category);
+                            Mage::getSingleton('catalog/product_status')->addVisibleFilterToCollection($collection);
+                            Mage::getSingleton('catalog/product_visibility')->addVisibleInCatalogFilterToCollection($collection);
+                            
+                            $products_count =  $collection->count(); 
+                        ?>
+						<?php if(Mage::getModel('catalog/category')->load($_cate->getId())->getThumbnail() != "") : ?>
+								<a href="<?php echo $_cate->getUrl() ?>"	title="<?php echo $_helper->categoryAttribute($_cate, $_cate->getName(), 'name') ?>">
+									<img class="img-responsive" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'catalog/category/'.Mage::getModel('catalog/category')->load($_cate->getId())->getThumbnail(); ?>"	alt="<?php echo $_helper->categoryAttribute($_cate, $_cate->getName(), 'name') ?>" width="<?php echo $w ?>" height="<?php echo $h ?>" />
+								</a> 
+						<?php endif ?>
+						<div class="cate-detail">
+						<h5 class="cate_name"><a href="<?php echo Mage::getModel("catalog/category")->load($_cate->getId())->getUrl() ?>" title="<?php $this->stripTags($_helper->categoryAttribute($_cate, $_cate->getName(), 'name'), null, true) ?>"><?php echo $_helper->categoryAttribute($_cate, $_cate->getName(), 'name') ?></a></h5>
+						<span><?php echo $products_count ?><?php echo $this->__(" products")?></span>
+						</div>
+					</div>							                     
+				</li>
+            <?php endif ?>
+            <?php $i++; ?>
+        <?php endforeach; ?>
+    </ol>
+</div>
+
+<?php if($limit): ?>
+<script type="text/javascript">
+//<![CDATA[
+    (function($) {
+        function em_slider_init_slider_categories(){
+            var owl = $("ol.owl-carousel");
+            if(owl.length){            
+                owl.owlCarousel({
+                    //Basic Speeds
+                    slideSpeed : 800,
+                    rewindSpeed : 800,
+                 
+                    //Autoplay
+                    autoPlay : false,
+                    lazyLoad : false,
+                    stopOnHover : true,
+                    mouseDrag : true,
+                    touchDrag : true,    
+                 
+                    // Navigation
+                    navigation : true,
+                    navigationText : ["<?php echo $this->__('Previous')?>", "<?php echo $this->__('Next')?>"],
+                    pagination : false,
+                    paginationNumbers: false,
+                    
+                    
+                    <?php if(Mage::helper('themeframework/settings')->getGeneral_DisableResponsive(1)!=0):?>
+                        // Responsive 
+                        responsive: true,
+                        items :3, /*items above 1200px browser width*/
+                        itemsDesktop : [1200,3], /*//items between 1199px and 981px*/
+                        itemsDesktopSmall : [992,3],
+                        itemsTablet: [768,2],                
+                        itemsMobile : [480,1],
+                    <?php else:?>
+                        responsive: false,
+                        items : 3, /*items above 1200px browser width*/
+                    <?php endif;?>
+                 
+                    // CSS Styles
+                    baseClass : "owl-carousel",
+                    theme : "owl-theme",
+                    addClassActive : true,
+                    scrollPerPage : false
+              });
+          }
+    	}
+        $(document).ready(function(){            
+            em_slider_init_slider_categories();        
+        });
+    })(jQuery); 
+//]]>
+</script>
+<?php endif;?>

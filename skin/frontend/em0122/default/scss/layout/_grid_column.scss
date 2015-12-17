@@ -1,0 +1,33 @@
+/*Column theme no resize*/
+@media (min-width: 0) {
+  @include make-grid(mb);
+}
+$w:1180px;
+$gitter:35px;
+@for $i from 1 through 6{
+	.emcatalog-desktop-#{$i},
+	.emcatalog-desktop-small-#{$i}{
+		margin-right:-#{$gitter};
+		li.item{
+			width:100% / $i ;
+			margin-bottom:20px;
+			.product-item{
+				margin-right:$gitter;
+			}
+		}
+	}
+}
+@for $i from 1 through 6{
+	.emcatalog-tablet-#{$i},
+	.emcatalog-mobile-#{$i}{
+		margin-right:-10px;
+		li.item{
+			width:100% / $i ;
+			margin-bottom:20px;
+			.product-item{
+				margin-right:10px;
+			}
+		}
+	}
+}
+

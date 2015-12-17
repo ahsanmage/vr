@@ -1,0 +1,97 @@
+.em-col-left,.em-col-right{
+	.em-line-01{
+		.changeLine(@body_line_color);
+		.em-block-title, .em-widget-title, .block-title{	
+			h3, strong, h2{
+				.changeFont(@h5_font);
+				font-weight:600;
+				.changeBkg(@body_bg4_color);
+				.changeLine(@body_line_color);
+			}
+		}
+	}
+}
+
+.em-header-type .em-header-bottom{
+	.changeBkg(@header_bg4_color);
+}
+.em-header-top{
+	border-bottom:1px solid @header_line_color;
+}	
+.header-search{
+	.input_cat{
+		.changeColor(@header_text2_color);
+		.changeLine(@header_line_color);
+	}
+	.form-search{
+		button.button{
+			.changeColor(@header_text2_color);
+		}
+	}
+}
+.em-header-mobile-container  .form-search,
+.form-search{
+	button.button{
+		.changeColor(@header_text2_color);
+		&:hover{
+			.changeColor(@header_text4_color);
+		}
+	}
+	.input_cat,
+	input.input-text {.changeColor(@header_text2_color);};
+}	
+.em-summary-topcart{
+	.changeBkg(@topmenu_hover_bg_color);
+	.changeColor(@topmenu_text_color);
+	&:hover{
+		.changeBkg(@header_bg4_color);
+	}
+	a{ .changeColor(@topmenu_text_color);
+		.em-topcart-price .price{.changeColor(@topmenu_text_color);}
+	}
+}
+.menuleftText{
+	.changeColor(@topmenu_text_color);
+	.changeBkg(@topmenu_hover_bg_color);
+}
+
+.featured_category_content .owl-controls .owl-buttons div{
+	display:block!important;
+}
+.em-area-14 .em-wrapper-main, .wrapper-main .em-wrapper-main{
+	.featured_category_content{
+		.owl-wrapper-outer .owl-item{
+			.cate_info{
+				.cate-detail{
+					.changeColor(@body_text_color);
+					h5 a{
+						.changeColorFont(@body_text_color, @h2_font);
+					}
+					a:hover{
+						.changeColor(@body_text4_color);
+					}
+				}
+			}
+		}
+	}
+}
+.em-area-02{
+	margin-top:30px; margin-bottom:0;
+	.banner-center{ margin-bottom:0;
+	}
+}
+.wrapper-main-bottom .container-main-bottom{ padding:0;}
+.em_nav .vnav .menu-item-depth-0 { border-top:1px solid @body_line_color;}
+.em_nav .vnav .menu-item-depth-0:first-child { border-top:0 none;}
+
+@media (max-width: 767px){
+	.embase-tab-04 .em-main-tabs .owl-theme .owl-controls .owl-buttons div{ position:absolute; top:30%;  border-radius:100%!important;}
+	.cms-index-index .tabs-widget .owl-theme .owl-controls{
+		position:static;
+		.owl-prev{ left:15px; }
+		.owl-next{ right:15px; }
+	}
+}
+
+.menu-item-link.fa:before{ top:4px;}
+.em-language-currency .toolbar-dropdown span:hover{ .changeColor(@header_text_color);}

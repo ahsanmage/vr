@@ -1,0 +1,36 @@
+/*scroll vertical*/
+
+.em-scroll-vertial{
+	height:150px;
+	overflow-y:auto;
+	margin-bottom:20px;
+	.em-container-ads{
+		margin-bottom:15px;
+		.row{
+			margin:0;
+			.col-sm-3:first-child{
+				padding-left:0;
+			}
+		}
+	}	
+	.pull-left{
+		width:140px;
+		margin-right:20px;
+	}
+	.ads-right{
+		overflow:hidden;
+		.em-date{
+			text-transform:uppercase;
+		}
+	}
+	.em-blog-author,
+	.em-date{
+		display:block;
+		margin-top:1px;
+	}
+	.em-blog-title{
+		margin-bottom:8px;
+		font-size:110%;
+	}
+	.em-container-one-ads{margin-bottom:10px;}
+}

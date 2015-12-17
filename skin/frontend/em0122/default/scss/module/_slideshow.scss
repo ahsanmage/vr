@@ -1,0 +1,138 @@
+/*=====================Slideshow====================*/
+.container-slideshow{
+	position:relative;
+	z-index:1;
+	.em-wide-custom{
+		padding:0;
+	}
+	
+	
+}
+.container-slideshow.container-fluid{
+	padding:0;
+	.em-fluid-slideshow{
+		width:100%; left:0;
+	}
+	.row{
+		margin:0;
+	}
+	.col-sm-24{
+		padding:0;
+	}
+}
+.rev_slider_wrapper{
+	.tp-rightarrow.default,
+	.tp-leftarrow.default{
+		background: url(../images/icons.png);
+		position:relative;
+		color:#ffffff;
+		&:before{/*
+			@include font-awesome(\f105,70px);// mixin in mixin/_theme-mixin.scss
+			margin-top:-20px;*/
+ 
+        }
+		&:hover{
+			color:#000000;
+			@include transition1;
+		}
+	}
+	.tp-leftarrow.default{
+		background-position: -269px -77px;
+		&:hover{
+			background-position: -269px -156px;
+		}
+		&:before{/*
+			content: "\f104";*/
+		}
+	}
+	.tp-rightarrow.default{
+		background-position: -376px -78px;
+		&:hover{
+			background-position: -376px -157px;
+		}
+	}
+	/*---------------*/
+	.tp-bullets{
+		bottom:25px !important;
+	}
+	.tp-bullets.simplebullets.round .bullet{
+		@include border-radius(20px); //mixin in bootstrap/_mixins.scss
+		background-image:none;
+		@include bullet-circle-border();// mixin in module/_tab-slider.scss
+		&.selected, &:hover{
+			&:before{
+				width:4px !important;
+				height:4px !important;
+			}
+	}
+	}
+	
+	
+	
+	.tp-caption a.ss-btn-link{
+		
+		span span{ padding:10px 40px 11px; min-width:170px;}
+	}
+	.tp-simpleresponsive .tp-caption.cls_hover_slideshow{ z-index:3}
+}
+
+
+
+/*===================Slideshow fullpage hide content=========================*/
+
+.layout-fullscreen-slideshow.cms-index-index{
+	/*.wrapper-main{
+			margin-top:350px;
+	}*/
+	.wrapper.em-box-custom{
+		background:none;
+		.page{
+			box-shadow:none;
+		}
+	}
+	.wrapper-header{
+		
+	}
+	.full-screen-slideshow{
+		display: block;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: -999;
+		height: 100%;
+		width: 100%;
+		.container{
+			width:100%!important;
+			padding:0;
+			.row{
+				margin:0;
+				.col-sm-24{
+					padding:0;
+				}
+			}
+		}
+	}
+}
+
+/*-------------Button visit store--------------*/
+a.ss-button{
+	display: block;
+	span{
+		display: block;
+		padding: 15px 50px;
+		text-transform: uppercase;
+	}
+}
+
+
+/*Parallax*/
+/*.tp-bgimg.defaultimg {
+	background-attachment: fixed;
+	overflow: hidden;
+	text-align: center;
+	filter: inherit;
+}*/
+
+
+
+

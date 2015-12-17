@@ -1,0 +1,318 @@
+/* ============================================ *
+ * Button
+ * ============================================ */
+button.button,
+.tp-caption a.ss-btn-link, a.button-link.goto-cart, a.view-more, a.em-sample-button, a.view-more-post,#customer-reviews a.viewall{
+	border: 1px solid; 
+	overflow:visible; 
+	width:auto; 
+	margin:0 10px 10px 0;
+	padding:12px 25px;
+	cursor:pointer;
+	float:left;
+	@include transition1;
+	span{
+		text-align:center; 
+		text-transform:uppercase;
+	}
+}
+a.em-sample-button{
+	float: none;
+	display: inline-block;
+	margin: 30px 0;
+}
+button.btn-checkout{
+	/*span span{padding:10px 25px;}*/
+}
+button.btn-proceed-checkout{
+	margin-top: 20px;
+}
+.buttons-set button.btn-checkout{
+	padding: 12px 15%;
+}
+a.button-link{
+	font-size: 85%;
+	float: right;
+	margin-top: 10px;
+	&:before{
+		@include font-awesome(\f0da,12px);
+		margin-right: 5px;
+	}
+}
+/*rtl*/
+.em-rtl a.button-link:before{
+	margin-right: 0;
+	margin-left: 5px;
+}
+/*end rtl*/
+.my-account a.button-link{
+	&:before{
+		@include font-awesome(\f044,12px);
+		margin-right: 5px;
+	}
+	&.btn-link-01:before{
+		@include font-awesome(\f067,12px);
+		margin-right: 5px;
+	}
+}
+.customer-address-index .my-account{
+	li.item a{
+		&:before{
+			@include font-awesome(\f040,12px);
+			margin-right: 5px;
+			color: #1775be;
+		}
+	}
+	.addresses-additional li.item a{
+		&:before{
+			@include font-awesome(\f044,12px);	
+		}
+		&.link-remove:before{
+			@include font-awesome(\f00d,12px);
+		}
+	}
+}
+a.button-link.link-cart{
+	border: 1px solid;
+	span{
+		text-transform: uppercase;
+	}
+}
+a.button-link.goto-cart{
+	float: left;
+	&:before{
+		display: none;
+	}
+}
+/*=====Button Icon=====*/
+@mixin button_icon($padding,$width,$font,$font-size){
+	@include hideText();
+	text-indent:0;
+	padding:$padding;
+	vertical-align:top;
+	width:$width;
+	&:before{
+		@include font-awesome($font,$font-size);
+		margin-right: 0;
+	}
+}
+@mixin button_icon_text($padding,$width,$font,$font-size){
+	padding:$padding;
+	vertical-align:top;
+	width:$width;
+	&:before{
+		@include font-awesome($font,$font-size);
+		margin-right: 10px;
+	}
+}
+/*Button reply blog*/
+#allcomments .comment-button button.button:after{
+	@include font-awesome(\f0da,12px);
+	margin-left: 10px;
+}
+/*End button reply blog*/
+/*=====Button Add To Cart=====*/
+.button-link.link-cart,
+button.button.btn-cart{
+	@include button_icon_text(12px 15px,auto,\f07a,14px);
+	margin-right:5px;
+	float:left;
+	display:inline;
+}
+/*rtl*/
+.em-rtl{
+	.button-link.link-cart,
+	button.button.btn-cart{
+		&:before{
+			margin-right: 0;
+			margin-left: 10px;
+		}
+	}
+}
+/*=====End Button Add To Cart=====*/
+.email-friend a {
+	border: 1px solid; 
+	@include transition1; }
+/*=====Button Add To Wishlist/Compare=====*/
+.link-wishlist,
+.add-to-links li a.link-wishlist{
+	@include button_icon(12px,40px,\f004,14px);
+	border: 1px solid; 
+	@include transition1;
+}
+
+.add-to-links li a.link-compare{
+	@include button_icon(12px,40px,\f079,14px);
+	border: 1px solid; 
+	@include transition1;
+}
+.product-view-detail, .em-add-to-button{ 
+	.button_addto{ display:inline-block;}
+	.add-to-links{
+		/*width: 100%;*/
+		display:inline;
+		li{
+			/*width: 49%;*/
+			a.link-wishlist, a.link-compare{
+				text-transform: uppercase;
+				text-align: center;
+				&:before{ margin-right:0!important;}
+			}
+			a.link-wishlist{
+				@include button_icon_text(12px 12px 13px,100%,\f004,10px);
+			}
+			a.link-compare{
+				@include button_icon_text(12px 12px 13px,100%,\f079,10px);
+			}
+			&:first-child{
+				margin-right:-1px;
+			}
+		}
+	}
+	button.button.btn-cart{
+		/*width: 100%;*/
+		padding: 10px 15px;
+	}
+	> div.product-options-bottom .button_addto{
+		width: 45%;
+	}
+}
+.em-add-to-button .add-to-links li{
+	width: 100%;
+}
+/*rtl*/
+.em-rtl .product-view-detail .add-to-links li{
+	a.link-wishlist, a.link-compare{
+		&:before{
+			margin-right: 0;
+			margin-left: 10px;
+		}
+	}
+}
+/*=====End Button Add To Wishlist/Compare=====*/
+/*=====Button QuickShop=====*/
+#em_quickshop_handler{
+	@include button_icon_text(12px,auto,\f06e,14px);
+	border: 1px solid; 
+}
+/*rtl*/
+.em-rtl #em_quickshop_handler:before{
+	margin-right: 0;
+	margin-left: 10px;
+}
+/*=====End Button QuickShop=====*/
+/*=====Button Back=====*/
+p.back-link a{
+	border: 1px solid; 
+	overflow:visible; 
+	width:auto; 
+	margin:0 10px 10px 0;
+	cursor:pointer;
+	float:left;
+	@include transition1;
+	padding:12px 25px;
+	text-transform:uppercase;
+	small{
+		display:none;
+	}
+}
+/*=====End Button Back=====*/
+
+/*=====Button Remove/Edit=====*/
+.btn-remove,
+.btn-remove2{
+	font-size:0;
+	&:before{
+		@include font-awesome("\f00d",10px);
+		padding:3px 4px;
+		border-width:1px;
+		border-style:solid;
+		@include border-radius(100%);
+	}
+}
+
+/*Button edit*/
+.btn-edit{
+	font-size:0;
+	&:before{
+		@include font-awesome("\f040",10px);
+		padding:3px 4px;
+		border-width:1px;
+		border-style:solid;
+	}
+}
+/*=====End Button Remove/Edit=====*/
+
+/*=====Button Fullwidth=====*/
+/*button fullwidth*/
+button.button-full-width,
+.button-full-width{
+	margin-right:0;
+	width:100%;
+	span{
+		float:none;
+		display:inline-block;
+		width:100%;
+	}
+}
+/*=====End Button Fullwidth=====*/
+
+/*button disable able sidebar left*/
+.menu-trigger{
+	font-size:0;
+	position:fixed;
+	z-index:99;
+	top:10px;
+	left:10px;
+	padding:10px 12px;
+	@include transition1;
+	&:before{
+		@include font-awesome("\f00d",20px);
+	}
+	&.active:before{
+		@include font-awesome("\f039",20px);
+	}
+}
+
+.em-col-left-icon{
+	text-transform: uppercase;
+	padding: 10px 19px;
+	border: 1px solid;
+	margin-bottom: 15px;
+	display:block;
+	&:after{		
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		content: "\f022";
+		font-size: 18px;
+		float:right;
+		margin-left:5px;
+	}
+}
+
+
+/*======Button Ajax======*/
+.ajaxcart a.back,
+.ajaxcart a.next{
+	border: 1px solid; 
+	overflow:visible; 
+	width:auto; 
+	margin:0 10px 10px 0;
+	cursor:pointer;
+	float:left;
+	@include transition1;
+	padding:12px 25px;
+	span{
+		float:left; 
+		text-align:center; 
+		text-transform:uppercase;
+	}
+}
+/*======End Button Ajax======*/
+
+
+

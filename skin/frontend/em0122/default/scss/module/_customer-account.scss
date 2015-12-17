@@ -1,0 +1,329 @@
+/*------------------My account-----------------*/
+/*nav bar*/
+.block-account{
+	.block-content{
+		ul{
+			margin-bottom:0;
+			li{
+				border-bottom: 1px solid;
+				position:relative;
+				a, strong{
+					padding:12px 0;
+					display:inline-block;
+					font-weight:normal;
+					&:before{
+					/*@include font-awesome("\f04d",5px);
+					vertical-align: middle;
+					margin-top: -3px;
+					margin-right:10px;*/
+					}
+				}
+				&:first-child{
+					a, strong{
+						padding-top: 0;
+					}
+				}
+				&:last-child{
+					border-bottom: none;
+				}
+			}
+		}
+	}
+}
+
+/*dashboard*/
+.dashboard{
+	.em-box-02 .page-title{
+		display: block;
+	}
+	.welcome-msg{
+		padding:0 0 40px;
+		p.hello{
+			margin:8px 0 10px;
+			strong{ 
+				text-transform: uppercase;
+			}
+		}
+		p{ margin:0;}
+	}
+	.box-account{
+		position: relative;
+		clear:both;
+		padding:10px 0px 20px;
+		a.button-link.btn-link-01{
+			position: absolute;
+			top: 7px;
+			right: 0;
+		}
+	}
+}
+
+.box-account-content{
+	padding:10px 0;
+	overflow:hidden;
+	.col2-set{ 
+		> div, .box-content > div{
+			border: 1px solid;
+			position: relative;
+			.box-content, address{
+				padding: 20px;
+			}
+			a.button-link{
+				position: absolute;
+				top: 10px;
+				right: 0;
+				padding: 0 20px 20px 0;
+				&.btn-link-01{
+					padding: 0;
+				}
+			}
+			a.sample-link{
+				font-size: 85%;
+			}
+		}
+		> div h3, .box-content > div h4{
+			border-bottom: 1px solid;
+			margin: 0;
+			padding: 15px 20px;
+		}
+		> div.box{
+			position: static;
+			border: none;
+			.box-content{
+				padding: 0;
+			}
+			.box-title h3{
+				background: none;
+				border-bottom: none;
+				padding: 0 0 20px;;
+			}
+		}
+		
+	}	
+	
+}
+/*account info*/
+.my-account{
+	.em-box-02{
+		border: none;
+		background: none;
+	}
+	.data-table{
+		margin-bottom:10px;
+	}
+	
+	.box{
+		border:none;
+		padding:0;
+		address{
+			margin-bottom:0;
+		}
+	}
+	.col2-set:first-child{
+		margin-bottom:20px;
+	}
+	.box-content,
+	.box-title{
+		h3, h4{
+			text-transform:uppercase;
+			margin:6px 0 13px;
+		}
+	}
+	.box-content{
+		p{
+			margin-bottom:0;
+		}
+
+	}
+	.product-name a{
+		text-transform: none;
+	}
+}
+
+/*RECENT REVIEWS - RECENT TAGS */
+.dashboard {
+	.box-reviews,
+	.box-tags{
+		.number{
+			float:left; 
+			margin:0px -20px 0 0; 
+		}
+		.details{
+			margin-left:20px;
+		}
+		li.item{
+			padding:7px 0 10px;
+		}
+	}
+	.box-reviews{
+		.ratings{ 
+			display:inline-block;
+			clear:both;
+			margin-top:0;
+			strong{ display:none}
+		}
+	}
+	.box-tags{
+		li.item {
+			strong{
+				font-weight:normal; 
+				float:left; 
+				display:inline;
+			}
+			li{
+				float:left; 
+				display:inline; 
+				padding-left:5px;
+			}
+		}
+	}
+}
+
+/*Account Information*/
+.fieldset .legend{ 
+	text-transform:uppercase;
+	padding-bottom: 25px;
+	&:after{
+		@include line-title();
+		left: 0;
+	}
+}
+.customer-account-edit {
+	.my-account {
+		.fieldset{
+			width:100%;
+		}
+		.form-list li.control{
+			margin:15px 0 18px;
+		}
+		.buttons-set p.required{
+			float:left;
+			clear:none;
+		}
+	}
+}
+
+/*Address Book*/
+.customer-address-index{
+	.my-account {
+		.col2-set .col-2,
+		.col2-set .col-1{
+			padding-left:0px;
+			width:100%;
+			h2, h3{ text-transform:uppercase}
+		}
+		.col2-set .col-2{
+			width: 46%;
+			float: left;
+			margin-top: 30px;
+		}
+		.addresses-primary{
+			ol{
+				margin-bottom:0;
+				oveflow:hidden;
+				
+				li.item{
+					width:46%;
+					margin-right:4%;
+					float:left;
+				}
+			}
+		}
+		.col-1 li.item, .col-2{
+			border: 1px solid;
+			position: relative;
+			h2, h3{
+				border-bottom: 1px solid;
+				margin: 0;
+				padding: 15px 20px;
+				
+			}
+			address, p{
+				padding: 20px;
+				margin-bottom: 0;
+			}
+			p{
+				padding-top: 0;
+				font-size: 85%;
+			}
+			.item.empty p{
+				font-size: 100%;
+				padding-top: 20px;
+			}
+		}	
+		
+	}
+}
+/*MY ORDERS*/
+.sales-order-view .my-account .col2-set h2{
+	background: none;
+}
+/*Account Page*/
+.my-account{
+	.pager{
+		margin:10px 0 10px;
+		.amount{
+			margin:7px 10px 0 0;
+			font-weight:normal;
+			strong{ font-weight:500}
+		}
+		label{
+			text-transform: none;
+		}
+		.limiter{
+			margin:0;
+			label{ font-size:100%;}
+		}
+	}
+}
+/*Account wishlist*/
+.my-wishlist {
+	textarea{ 
+		width:90%; 
+		margin-top:5px;
+	}
+	.cart-cell button.button{
+		margin-top:5px;
+		margin-bottom:5px
+	}
+}
+
+/*Account button set*/
+.customer-address-index,
+.sales-order-history{
+	.my-account{
+		.buttons-set{
+			/*padding-left:20px;*/
+		}
+	}
+}
+
+.customer-address-form{
+	.fieldset{
+		width:100%
+	}
+}
+
+/*My wishlist*/
+.data-table a.product-image img{ width:auto; height:auto}
+#wishlist-table{
+	 .cart-cell {
+		.link-edit{
+			float:left;
+			clear:both;
+			margin-top:10px;
+		}
+		input.qty{
+
+		}
+	}
+}
+/*New Billing Agreement*/
+.sales-billing-agreement-index{
+	.box-content .form-list{
+		margin-top: 10px;
+		button{
+			margin-top: 10px;
+		}
+	}
+}
