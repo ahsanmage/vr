@@ -1,0 +1,58 @@
+/* ============================================ *
+ * Login, Register, Forgot Password
+ * ============================================ */
+
+ /* ================ Login ==================== */
+ .account-login{
+	.page-title{
+		margin-bottom:15px;
+	}
+	h2{
+		text-transform:uppercase;
+		position: relative;
+		padding-bottom: 25px;
+		&:after{
+			@include line-title();
+			left: 0;
+		}
+	}
+	.col2-set{
+		padding:0 20px;
+	}
+	.form-list{
+		width:90%;
+	}
+	.buttons-set{
+		button.button{
+		}
+		a{
+			clear: left; 
+			margin-top:14px;
+		}
+	}
+ }
+ 
+  /* ================ Register ==================== */
+.account-create{
+	.fieldset{
+		float:none; 
+		width:100%;
+		margin-bottom:25px;
+		.legend{
+			text-transform:uppercase;
+		}
+	}
+	form{
+		display:block;
+		margin-left:20px;
+	}
+	h2{
+		text-transform:uppercase;
+		position: relative;
+		padding-bottom: 25px;
+		&:after{
+			@include line-title();
+			left: 0;
+		}
+	}
+}

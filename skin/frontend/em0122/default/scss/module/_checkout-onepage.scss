@@ -1,0 +1,151 @@
+/* ============================================ *
+ * Checkout - One Page
+ * ============================================ */
+.opc-col .discount{
+	label{
+		text-transform:uppercase;
+		margin-bottom:8px;
+	}
+}
+
+#checkout-review-submit{
+	.f-left{
+	}
+}
+
+#opc-payment .form-list .v-fix:first-child,
+.sp-methods .form-list .v-fix:first-child{ margin-right:4%;}
+#opc-payment .form-list .v-fix,
+.sp-methods .form-list .v-fix { width:48%}
+
+/* ============================================ *
+ * One Step Checkout 
+ * ============================================ */
+.opc{
+	.section{
+		&.allow:hover .step-title,&.allow:hover .step-title a{
+			cursor:pointer;
+		}
+		&.allow.active .step-title,&.allow.active .step-title a{
+			cursor:default;
+		}
+	}
+	.step-title{
+		@include transition1;
+		margin-bottom:10px;
+		.title-box{
+			overflow:hidden;
+		}
+		.number{
+			float:left; 
+			display:none;
+		}
+		h2{
+			float:left;
+		}
+		a{
+			@include transition1();
+			font-size:0;
+			float:right;
+			cursor:default;
+			&:before{
+				@include font-awesome(\f067,15px);
+				margin-top:5px;
+			}
+		}
+	}
+	.active{
+		border: 1px solid;
+		margin-bottom: 10px;
+		.step-title a{
+			&:before{
+				@include font-awesome(\f068,15px);
+			}
+		}
+	}
+	.step{
+		padding-top:15px;
+		margin-bottom:30px;
+		margin-left:20px;
+		&#checkout-step-review{margin-right:20px;}
+		h3{
+			margin-bottom:1em;
+			&.product-name{
+				text-transform: uppercase;
+				margin-bottom: 0;
+			}
+		}
+		p{ margin-bottom:0.5em;}
+		ul{ margin-bottom:1em; clear:left;}
+		.buttons-set{ margin:0;}
+	}
+	ul.form-list > li{
+		margin-bottom:0.5em;
+		&.wide{
+			margin-right:3%;
+		}
+	}
+	.form-list li.control{
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.tool-tip{
+		top:auto!important;
+		bottom:200px;
+	}
+	p.required{ padding-top:0;}
+	#checkout-step-login{
+		h3{
+			text-transform:uppercase;
+		}
+		.col-2{
+			h4{
+				float:left;
+				margin-bottom:8px;
+			}
+			.form-list{
+				width:90%;
+			}
+		}
+		.col-1{
+			strong{font-weight:normal;}
+		}
+		ul.ul li:before{
+			content:"+";
+			padding-right:5px;
+		}
+		.buttons-set a{
+			font-size:85%;
+			margin-top:14px;
+		}
+	}
+	#checkout-step-shipping_method .sp-methods{ 
+		dt{
+			float:left;
+		}
+		label{
+			margin-left: 10px;
+		}
+	}
+	#checkout-step-payment{
+		dt{
+		}
+		#payment_form_ccsave{
+			width:380px;
+		}
+	}
+	#checkout-review-submit{
+		.button.button{
+			float:right;
+			margin-right:0;
+		}
+		.please-wait{
+			float:right;
+		}
+		.f-left{
+			float:right!important;
+			clear:both;
+		}
+	}
+	
+}

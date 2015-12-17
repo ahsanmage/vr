@@ -1,0 +1,511 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+?>
+<?php  $setting = Mage::helper('themeframework/settings');?>
+<?php $_typeHeader = Mage::helper('themeframework/settings')->getGeneral_HeaderStyle(); ?>
+<?php $_checkMobile = Mage::helper('themeframework/settings')->checkMobilePhp(); ?>
+<?php $_showOnPC =  Mage::helper('themeframework/settings')->getGeneral_HeaderMobile();?>
+<?php if ($_checkMobile || $_showOnPC):?>
+<div class="em-header-type-mobile visible-xs mb_active">
+	<div class="em-header-mobile-container">	
+		<div class="em-header-mobile-top">
+			<div class="em-header-mobile-extend col-xs-7">
+				<div class="em-toggle-menu-control-open ">
+					<div class="toggle-menu-wrapper hidden">
+						<div class="em-language-currency">
+							<?php echo $this->getChildHtml('store_language_mobile') ?>
+							<?php echo $this->getChildHtml('currency_mobile') ?>
+						</div>
+						<div class="em-top-links">                
+							<ul class="top-header-link links">
+								<?php if (Mage::getSingleton('customer/session')->isLoggedIn()!=0): ?> 
+									<li class="first">
+										<a title="<?php echo $this->__('My Account')?>" class="account-link" href="<?php echo $this->getBaseUrl()?>customer/account/" ><i class="fa fa-user"></i><span><?php echo $this->__('Your Account') ?></span></a>
+									</li>
+									<li>
+										<a title="<?php echo $this->__('Log out')?>" class='account-link' href=" <?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_LINK).'customer/account/logout' ?>"><i class="fa fa-sign-out"></i><span><?php echo $this->__('Log out')?></span></a>;
+									</li>
+								<?php else:?>
+									<li class="first">
+										<a title="<?php echo $this->__('Log In')?>" class="login-link" href="<?php echo $this->getBaseUrl()?>customer/account/login/" ><i class="fa fa-sign-in"></i><span><?php echo $this->__('Log In') ?></span></a>
+									</li>
+									<li>
+										<a title="<?php echo $this->__('Sign up')?>" class='signup-link' href=" <?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_LINK).'customer/account/logout' ?>"><i class="fa fa-pencil"></i><span><?php echo $this->__('Sign up')?></span></a>
+									</li>
+								<?php endif;?>		
+								<li class="last">
+									<a href="<?php echo $this->getBaseUrl()?>checkout/cart" class="checkout-link"><i class="fa fa-shopping-cart"></i><span><?php echo $this->__('Cart') ?></span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="mobile-main-menu toggle-menu">
+							<div class="em-top-menu">
+								<?php echo $this->getChildHtml('topMenuMobile') ?>
+							</div>   
+						</div>
+						<div class="mobile-block">
+							<?php echo $this->getChildHtml('em_area_header_mobile') ?>
+						</div>
+					</div>
+					<div class="btn-header-mobile-top"><i class="fa fa-bars"></i></div>
+				</div>
+			</div>
+			<div class="em-logo col-xs-10 text-center"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></div>
+			<div class="em-act col-xs-7">
+				<div class="em-account"><a href="<?php echo $this->getBaseUrl()?>customer/account/" class="link-to-account"><span class="em-icon icon-account"><span class="fa fa-fw">&#xf007;</span></span></a></div>
+				<div class="em-top-cart"><?php echo $this->getChildHtml('cart_sidebar_mobile'); ?></div>
+			</div>
+		</div>
+		<div class="em-header-mobile-bottom">
+			<div class="em-top-search"><?php echo $this->getChildHtml('topSearchMobile') ;?></div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	//<![CDATA[	 
+	
+		function emToogleMobile() {
+			var btnMobile = jQuery('div.em-toggle-menu-control-open .btn-header-mobile-top');
+			var divPanel = jQuery('.toggle-menu-wrapper');
+			var divPanel2 = jQuery('.em-header-mobile-extend');
+			jQuery("#bg_fade_header").hide();
+			btnMobile.click(function() {
+				if (!(divPanel.is(':visible'))) {
+					divPanel.removeClass('hidden').addClass('show');					
+					divPanel2.addClass('mb-click');
+					jQuery("#bg_fade_header").show();
+				} else {
+					divPanel.addClass('hidden').removeClass('show');
+					divPanel2.removeClass('mb-click');
+					jQuery("#bg_fade_header").hide();
+				}
+		   });
+		};
+		jQuery(document).ready(function() {    
+			if($('bg_fade_header') == null) {
+				var screen = new Element('div', {'id': 'bg_fade_header'});
+				document.body.appendChild(screen);
+			} 
+			 emToogleMobile();
+		 });
+		 jQuery(window).resize(function() {
+			var divPanel = jQuery('.toggle-menu-wrapper');
+			var divPanel2 = jQuery('.em-header-mobile-extend');
+			var wi = jQuery(window).width();
+			if (wi > 768) {
+				divPanel.addClass('hidden').removeClass('show');
+				divPanel2.removeClass('mb-click');
+				jQuery("#bg_fade_header").hide();
+			}
+		});
+	//]]>
+</script>
+<?php endif;?>
+<?php if(!$_checkMobile ):?>
+<?php if($_typeHeader=='style01'):?>
+<div class="em-header-type em-header-style01 <?php if($_showOnPC):?> enable-mobile<?php endif;?> ">
+    <div class="em-header-container">
+    	<div class="em-header-top">
+			<div class="container">
+				<div class="row">
+					<div class="em-header-top-left pull-left col-sm-6 hidden-xs">            
+						<div class="em-top-content mb-center">
+							<?php echo $this->getChildHtml('em_area_header_01') ;?>
+						</div>
+					</div>
+				
+					<div class="em-header-top-right  pull-right col-sm-18">
+						<div id="cartpos"></div>
+						<div class="em-top-cart pull-right"><?php echo $this->getChildHtml('cart_sidebar'); ?></div>
+						<div class="em-language-currency">
+							<?php echo $this->getChildHtml('store_language') ?>
+							<?php echo $this->getChildHtml('currency') ?>
+						</div>
+						<div class="em-top-links box-padding">                
+							<?php echo $this->getChildHtml('topLinks') ;?>
+						</div>
+						<p class="welcome-msg hidden-xs hidden-sm hidden-md"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="clearfix"></div>
+                
+        
+        <div class="em-header-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="em-header-bottom-left text-left col-sm-6">
+						<div class="em-logo"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></div>
+					</div>
+					<div class="em-header-bottom-center text-right col-sm-18">
+						<div id="searchpos"></div>
+						<div class="em-top-search"><?php echo $this->getChildHtml('topSearch') ;?></div>
+						<div id="navpos"></div>
+						<div class="em-top-menu pull-right a-left">
+							<div class="em-menu-top">
+								<?php if($setting->getGeneral_FreezedTopMenu()): ?>
+									<div class="em-logo-sticky" style="display:none"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></div>
+								<?php endif;?>
+								<?php echo $this->getChildHtml('topMenu') ?>
+							</div>
+						</div>   
+					</div>
+				</div>
+			</div>
+        </div>   
+    </div>
+</div>
+<?php elseif($_typeHeader=='style02'):?>
+<div class="em-header-type em-header-style02 <?php if($_showOnPC):?> enable-mobile <?php endif;?>">
+    <div class="em-header-container">
+		<div class="em-header-top">
+			<div class="container">
+				<div class="row">
+					<div class="em-header-top-left pull-left col-sm-8 hidden-xs">            
+						<div class="em-top-content mb-center">
+							<?php echo $this->getChildHtml('em_area_header_01') ;?>
+						</div>	
+					</div>
+				
+					<div class="em-header-top-right  pull-right col-sm-16">
+						<div id="cartpos"></div>
+						<div class="em-top-cart pull-right"><?php echo $this->getChildHtml('cart_sidebar'); ?></div>
+						<div class="em-language-currency">
+							<?php echo $this->getChildHtml('store_language') ?>
+							<?php echo $this->getChildHtml('currency') ?>
+						</div>
+						<div class="em-top-links box-padding">                
+							<?php echo $this->getChildHtml('topLinks') ;?>
+						</div>
+						<p class="welcome-msg hidden-xs hidden-sm hidden-md"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p>
+					</div>
+				</div>
+			</div>
+        </div>
+		
+        <div class="clearfix"></div>
+                
+        <div class="em-header-middle">
+			<div class="container">
+				<div class="row">
+					<div class="a-center em-header-middle-center col-sm-24">
+						<?php if($setting->getGeneral_FreezedTopMenu()): ?>
+							<div class="em-logo-sticky" style="display:none"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></div>
+						<?php endif;?>
+						<div class="em-logo"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img  src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></div>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="clearfix"></div>
+		
+        <div class="em-header-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-24">
+						<div class="em-header-bottom-left">
+							<div id="navpos"></div>
+							<div class="em-top-menu pull-right a-left">
+								<div class="em-menu-top">
+									<?php if($setting->getGeneral_FreezedTopMenu()): ?>
+										<div class="em-logo-sticky" style="display:none"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></div>
+									<?php endif;?>
+									<?php echo $this->getChildHtml('topMenu') ?>
+								</div>
+							</div>   
+						</div>
+						<div class="em-header-bottom-right">
+							<div id="searchpos"></div>
+							<div class="em-top-search pull-left"><?php echo $this->getChildHtml('topSearch') ;?></div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>  
+    </div>
+</div>
+
+<?php elseif($_typeHeader=='style03'):?>
+<div class="em-header-type em-header-style03 <?php if($_showOnPC):?>enable-mobile<?php endif;?>">
+    <div class="em-header-container">
+		<div class="em-header-top">
+			<div class="container">
+				<div class="row">
+					<div class="em-header-top-left pull-left col-sm-8 hidden-xs">            
+						<div class="em-top-content mb-center">
+							<?php echo $this->getChildHtml('em_area_header_01') ;?>
+						</div>	
+					</div>
+				
+					<div class="em-header-top-right  pull-right col-sm-16">
+						<div class="em-language-currency">
+							<?php echo $this->getChildHtml('store_language') ?>
+							<?php echo $this->getChildHtml('currency') ?>
+						</div>
+						<div class="em-top-links box-padding">                
+							<?php echo $this->getChildHtml('topLinks') ;?>
+						</div>
+						<p class="welcome-msg hidden-xs hidden-sm hidden-md"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p>
+					</div>
+				</div>
+			</div>
+        </div>
+		
+        <div class="clearfix"></div>
+                
+        <div class="em-header-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="em-header-bottom-left text-left col-sm-5">
+						<div class="em-logo"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></div>
+					</div>
+					<div class="em-header-bottom-center text-center col-sm-16">
+						<div id="searchpos"></div>
+						<div class="em-top-search"><?php echo $this->getChildHtml('topSearch') ;?></div>
+						<div id="navpos"></div>
+						<div class="em-top-menu pull-right a-left">
+							<div class="em-menu-top">
+								<?php if($setting->getGeneral_FreezedTopMenu()): ?>
+									<div class="em-logo-sticky" style="display:none"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></div>
+								<?php endif;?>
+								<?php echo $this->getChildHtml('topMenu') ?>
+							</div>
+						</div>        
+					</div>
+					<div class="em-header-bottom-right-02 text-right mb-center col-sm-3">
+						<div id="cartpos"></div>
+						<div class="em-top-cart pull-right"><?php echo $this->getChildHtml('cart_sidebar'); ?></div>
+					</div>
+				</div>
+			</div>
+        </div> 
+        <div class="clearfix"></div> 
+    </div>
+</div>
+
+<?php elseif($_typeHeader=='style04'):?>
+<div class="em-header-type em-header-style04 <?php if($_showOnPC):?>enable-mobile<?php endif;?>">
+    <div class="em-header-container">
+		<div class="em-header-top hidden-xs">
+			<div class="container">
+				<div class="row">
+					<div class="em-header-top-left col-sm-16">
+						<p class="welcome-msg hidden-xs hidden-sm hidden-md"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p>
+					</div>
+					<div class="em-header-top-right col-sm-8 text-right">            
+						<?php echo $this->getChildHtml('em_area_header_01') ;?>
+					</div>
+				</div>
+			</div>
+        </div>
+		
+        <div class="clearfix"></div>
+		
+        <div class="em-header-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="em-header-bottom-left text-left col-sm-5">
+						<div class="em-logo"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></div>
+					</div>
+					<div class="em-header-bottom-right col-sm-19">
+						<div class="em-header-bottom-right-top">
+							<div id="cartpos"></div>
+							<div class="em-top-cart pull-right"><?php echo $this->getChildHtml('cart_sidebar'); ?></div>
+							<div class="em-language-currency pull-right">
+								<?php echo $this->getChildHtml('store_language') ?>
+								<?php echo $this->getChildHtml('currency') ?>
+							</div>
+							<div class="em-top-links box-padding pull-right">                
+								<?php echo $this->getChildHtml('topLinks') ;?>
+							</div>
+						</div>
+						
+						<div class="em-header-bottom-right-bottom pull-right">
+							<div id="searchpos"></div>
+							<div class="em-top-search pull-right"><?php echo $this->getChildHtml('topSearch') ;?></div>
+							<div id="navpos"></div>
+							<div class="em-top-menu pull-right a-left">
+								<div class="em-menu-top">
+									<?php if($setting->getGeneral_FreezedTopMenu()): ?>
+										<div class="em-logo-sticky" style="display:none"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></div>
+									<?php endif;?>
+									<?php echo $this->getChildHtml('topMenu') ?>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>  
+    </div>
+</div>
+
+<?php elseif($_typeHeader=='style05'):?>
+<div class="em-header-type em-header-style05 <?php if($_showOnPC):?>enable-mobile<?php endif;?>">
+    <div class="em-header-container">
+    	<div class="em-header-top">
+			<div class="container">
+				<div class="row">
+					<div class="em-header-top-left text-left pull-left col-sm-8">            
+						<div class="em-logo"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></div>
+					</div>
+				
+					<div class="em-header-top-right  pull-right col-sm-16">
+						<div class="em-header-top-right-top hidden-xs">
+							<?php echo $this->getChildHtml('em_area_header_01') ;?>
+						</div>
+						<div class="em-header-top-right-bottom">
+							<div class="em-language-currency">
+							<?php echo $this->getChildHtml('store_language') ?>
+							<?php echo $this->getChildHtml('currency') ?>
+							</div>
+							<div class="em-top-links box-padding">                
+								<?php echo $this->getChildHtml('topLinks') ;?>
+							</div>
+							<p class="welcome-msg hidden-xs hidden-sm hidden-md"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="clearfix"></div>
+                
+        
+        <div class="em-header-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="em-header-bottom-left text-left col-sm-17">
+						<div id="searchpos"></div>
+						<div class="em-top-search pull-left a-left"><?php echo $this->getChildHtml('topSearch') ;?></div>
+						<div id="navpos"></div>
+						<div class="em-top-menu pull-left a-left">
+							<div class="em-menu-top">
+								<?php if($setting->getGeneral_FreezedTopMenu()): ?>
+									<div class="em-logo-sticky" style="display:none"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></div>
+								<?php endif;?>
+								<?php echo $this->getChildHtml('topMenu') ?>
+							</div>
+						</div>    
+					</div>
+					<div class="em-header-bottom-right text-right col-sm-7">
+						<div id="cartpos"></div>
+						<div class="em-top-cart pull-right"><?php echo $this->getChildHtml('cart_sidebar'); ?></div>
+					</div>
+				</div>
+			</div>
+        </div>   
+    </div>
+</div>
+<?php elseif($_typeHeader=='style06'):?>
+<div class="em-header-type em-header-style06 <?php if($_showOnPC):?>enable-mobile<?php endif;?>">
+    <div class="em-header-container">
+		<div class="em-header-top">
+			<div class="container">
+				<div class="row">
+					<div class="em-header-top-left pull-left col-sm-8 hidden-xs">            
+						<div class="em-top-content mb-center">
+							<?php echo $this->getChildHtml('em_area_header_01') ;?>
+						</div>	
+					</div>
+				
+					<div class="em-header-top-right  pull-right col-sm-16">
+						<div class="em-language-currency">
+							<?php echo $this->getChildHtml('store_language') ?>
+							<?php echo $this->getChildHtml('currency') ?>
+						</div>
+						<div class="em-top-links box-padding">                
+							<?php echo $this->getChildHtml('topLinks') ;?>
+						</div>
+						<p class="welcome-msg hidden-xs hidden-sm hidden-md"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p>
+					</div>
+				</div>
+			</div>
+        </div>
+		
+        <div class="clearfix"></div>
+		<div class="em-header-middle">
+			<div class="container">
+				<div class="row">
+					<div class="em-header-middle-left text-left col-sm-5">
+						<div class="em-logo"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></div>
+					</div>
+					<div class="em-header-middle-right text-center col-sm-19">
+						<div id="cartpos"></div>
+						<div class="em-top-cart pull-right"><?php echo $this->getChildHtml('cart_sidebar'); ?></div>
+						<div class="em-top-block pull-right"><?php echo $this->getChildHtml('em_area_header_02'); ?></div>
+						<div id="searchpos"></div>
+						<div class="em-top-search pull-right"><?php echo $this->getChildHtml('topSearch') ;?></div>      
+					</div>
+					
+				</div>
+			</div>
+        </div> 
+        <?php
+			/* Check Homepage */
+			$page = Mage::app()->getFrontController()->getRequest()->getRouteName();
+			$homePage = false;
+			if($page =='cms'){
+				$cmsSingletonIdentifier = Mage::getSingleton('cms/page')->getIdentifier();
+				$homeIdentifier = Mage::app()->getStore()->getConfig('web/default/cms_home_page');
+				if($cmsSingletonIdentifier === $homeIdentifier){
+					$homePage = true;
+				}
+			}
+			/* End Check Homepage */   
+		?>
+		
+        <div class="em-header-bottom">
+			<div id="navpos"></div>
+			<div class="em-top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="em-header-bottom-left top-menu-left text-left col-sm-6">
+							<?php if($setting->getGeneral_FreezedTopMenu()): ?>
+								<div class="em-logo-sticky" style="display:none"><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></div>
+							<?php endif;?>
+							<?php 
+								if(($homePage==true)&&($setting->getGeneral_FreezedTopMenu()==1)|| ($homePage==false))
+									echo $this->getChildHtml('topMenuLeft') ;
+							?>
+						</div>
+						<div class="em-header-bottom-right text-left col-sm-18">								
+							<div class="em-menu-top">
+								<?php echo $this->getChildHtml('topMenu') ?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div> 
+        <div class="clearfix"></div> 
+    </div>
+</div>
+<?php endif;?>
+<?php endif;?>

@@ -1,0 +1,228 @@
+@mixin hideText(){
+    font-size:0; 
+ 	display: inline-block;
+	text-indent: -99999px;
+	overflow: hidden;
+	vertical-align: middle;
+	text-align: left;}
+
+@mixin boxCenter(){
+    text-align:center;
+    display:inline-block;
+}
+
+
+@mixin changeIcon($width, $height, $animal, $bkg-position){
+	width:$width;
+	height:$height;
+	background-image: url('../images/#{$animal}.png');
+	background-position:$bkg-position;
+	background-repeat:no-repeat;
+}
+
+@mixin before_after_icon($hoz, $px_hoz, $ver, $px_ver){
+	content:"";
+	position:absolute;
+	#{$hoz}:$px_hoz;
+	#{$ver}:$px_ver;
+}
+
+@mixin arrow_dropdown($px_hoz, $px_ver, $arrow_size){
+	width: 0;
+	height: 0;
+	content: "";
+	position: absolute;
+	top: $px_hoz;
+	right: $px_ver;
+	border: $arrow_size solid transparent;
+	border-top-color: #000000;
+}
+
+@mixin transform-opacity{
+	-moz-transition: opacity 1s, -moz-transition 1s;
+	-webkit-transition: opacity 1s, -webkit-transform 1s;
+	-o-transition: opacity 1s, -o-transition 1s;
+	transition: opacity 1s, transform 1s;
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+@mixin transition1{
+	-moz-transition: all 400ms ease;
+	-webkit-transition: all 400ms ease;
+	-o-transition: all 400ms ease;
+	transition: all 400ms ease;
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+@mixin scale($scale){
+	transform: scale($scale);
+	-moz-transform: scale($scale);
+	-webkit-transform: scale($scale);
+}
+
+@mixin border-radius($radius){
+	-moz-border-radius:$radius; 
+	-webkit-border-radius:$radius; 
+	border-radius:$radius;
+}
+// Opacity
+@mixin opacity-extention($opacity) {
+  opacity: $opacity !important;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100) !important;
+  filter: #{alpha(opacity=$opacity-ie)} !important;
+}
+//rototate
+@mixin rotate($degree){
+	-moz-transform:$degree; 
+	-webkit-transform:$degree; 
+	transform: rotate($degree);
+}
+@mixin font-awesome($font,$font-size){
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;	
+	content:"#{$font}";
+	font-size:$font-size;
+}
+
+@mixin position_style($position_value, $hoz, $px_hoz, $ver, $px_ver){
+	position:$position_value;
+	#{$hoz}:$px_hoz;
+	#{$ver}:$px_ver;
+}
+
+
+
+/*$max-content-width: value screen*/
+/*Category product*/
+@mixin grid_column($i, $g){
+    @if $g !=0{
+    width:($max-content-width - ($i * $g)) / $i;
+    margin: 0 $g+ px;
+    }
+    @else{
+        width:$max-content-width / $i;
+    }
+}
+
+@mixin column($i, $g){
+    @if $g !=0{
+        @media (max-width: $max-content-width){
+            width:($max-content-width - ($i * $g)) / $i;
+            margin: 0 $g+ px;
+        }
+    }
+    @else{
+        width:$max-content-width / $i;
+    }
+}
+
+
+
+/*button style*/
+@mixin button_icon1($width, $height, $animal, $bkg-position) {
+	@include hideText();
+	width:$width;
+	height:$height;
+	background-image: url('/images/#{$animal}.png');
+	background-position:$bkg-position;
+	border:1px solid #cdcdcd;
+	overflow: visible;
+	cursor: pointer;
+}
+
+@mixin button_text() {
+	overflow: visible;
+	width: auto;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	display:inline-block;
+}
+
+@mixin button_text_icon($padding-left, $animal, $bkg-position) {
+	padding-left:$padding-left;
+	background-position:$bkg-position;
+	background-image: url('/images/#{$animal}.png');
+	overflow: visible;
+	width: auto;
+	cursor: pointer;
+}
+@mixin line-title(){
+	content: '';
+	position: absolute;
+	width: 30px;
+	border-top: 2px solid;
+	bottom: 17px;
+	right: auto;
+	left: 48%;
+}
+@mixin icon-footer(){
+	background: url(../images/icons.png) 0px 0px no-repeat;
+	content:'';
+	display: inline-block;
+	width: 16px; 
+	height: 14px;
+	position: absolute;
+	left: 0;
+	top: 2px;
+}
+@mixin icon-next-pre-home(){
+	position: static;
+	.owl-buttons{
+		div{
+			display: none;
+			height: 50px;
+			position: absolute;
+			top: 30%;
+		}
+		.owl-prev{
+			left: 0;
+			&:before{
+				font-size: 30px;
+				margin: 7px;
+			}
+		}
+		.owl-next{
+			right: 0;
+			&:before{
+				font-size: 30px;
+				margin: 7px;
+			}
+		}
+	}
+}
+
+@mixin boxshadow1(){
+	box-shadow:0px 0px 5px #ccc;
+	-moz-box-shadow:0px 0px 5px #ccc ;
+	-webkit-box-shadow:0px 0px 5px #ccc ;
+}
+@mixin boxshadow2(){
+	box-shadow:0px 2px 5px #ebebeb;
+	-moz-box-shadow:0px 2px 5px #ebebeb ;
+	-webkit-box-shadow:0px 2px 5px #ebebeb ;
+}
+@mixin parallax(){
+	background-image: url(../images/banner-parallax.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	overflow: hidden;
+	background-size: cover!important;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	text-align: center;
+	filter: inherit;
+}

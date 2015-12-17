@@ -1,0 +1,87 @@
+/*========== Data Table ==========*/
+#wishlist-table{ display:inline-block; overflow:inherit}
+table colgroup, .data-table colgroup {
+    width: 100%;
+}
+.data-table tbody ul.productlabels_icons .label{
+	text-align: center;
+}
+.data-table { 
+	width:100%;
+	th{
+		white-space:nowrap;  
+		padding:15px 20px; 
+		text-transform:uppercase;
+		border-width: 1px;
+		border-style:solid;
+	}
+	tr{
+		td{
+			padding:10px 20px; 
+			border-width: 1px;
+			border-style:solid;
+			em{
+				font-style:normal;
+			}
+		}
+		
+	}
+	thead th {  
+		border-width: 1px;
+		border-style:solid;
+	}
+	tbody .label {  
+		display:table-cell;
+		vertical-align:middle;
+		text-align:left;
+	}
+}
+@mixin border-table(){
+	.data-table { 
+		tr{
+			td{
+				/*border-left-width:0;
+				border-right-width:0;
+				&:first-child{
+					border-left-width:1px;
+				}
+				&.last{
+					border-right-width:1px;
+				}*/
+			}
+			
+		}
+		
+	}
+}
+.my-account{
+	@include border-table();
+}
+
+#checkout-step-review{
+	@include border-table();
+	.data-table{
+		tr td,th{
+			padding-left:10px; 
+			padding-right:10px;
+		}
+		tfoot tr{
+			td{
+				border:none;
+				vertical-align: bottom;
+				&.last{
+					text-align:left!important
+				}
+			}
+			&.first td{
+				padding-top:17px;
+			}
+			&.last td{
+				padding-top:0px;
+			}
+		}
+	}
+}
+.cart{
+	@include border-table();
+}

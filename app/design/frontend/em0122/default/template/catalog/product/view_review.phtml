@@ -1,0 +1,274 @@
+<?php
+	/**
+	 * Magento
+	 *
+	 * NOTICE OF LICENSE
+	 *
+	 * This source file is subject to the Academic Free License (AFL 3.0)
+	 * that is bundled with this package in the file LICENSE_AFL.txt.
+	 * It is also available through the world-wide-web at this URL:
+	 * http://opensource.org/licenses/afl-3.0.php
+	 * If you did not receive a copy of the license and are unable to
+	 * obtain it through the world-wide-web, please send an email
+	 * to license@magento.com so we can send you a copy immediately.
+	 *
+	 * DISCLAIMER
+	 *
+	 * Do not edit or add to this file if you wish to upgrade Magento to newer
+	 * versions in the future. If you wish to customize Magento for your
+	 * needs please refer to http://www.magento.com for more information.
+	 *
+	 * @category    design
+	 * @package     base_default
+	 * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
+	 * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+	 */
+	
+	/**
+	 * Product view template
+	 *
+	 * @see Mage_Catalog_Block_Product_View
+	 * @see Mage_Review_Block_Product_View
+	 */
+?>
+<?php 
+	$_helper = $this->helper('catalog/output');	
+	$setting = Mage::helper('themeframework/settings');
+    $_displayRelated = $setting->getRelated_Display();
+    $_positionRelated = $setting->getRelated_Position();
+    $_displayUpsell = $setting->getUpsell_Display();
+    $_product = $this->getProduct();
+    list($_prev_prod, $_next_prod) = Mage::helper('themeframework/product')->getPreviousNextProducts($_product);
+    $_pageLayout = substr((str_replace(array('page/','.phtml'),'',Mage::app()->getLayout()->getBlock('root')->getTemplate())),0,1);
+    switch($_pageLayout){
+        case 3:            
+            $_PrimaryColumnWidth = $setting->getProductDetail_PrimaryThreeColumnWidth(12);
+            $_SecondaryColumnWidth = $setting->getProductDetail_SecondaryThreeColumnWidth(12);
+            $_TertiaryColumnWidth = $setting->getProductDetail_TertiaryThreeColumnWidth(24);                   
+            break;
+        case 2:
+            $_PrimaryColumnWidth = $setting->getProductDetail_PrimaryTwoColumnWidth(9);
+            $_SecondaryColumnWidth = $setting->getProductDetail_SecondaryTwoColumnWidth(9);
+            $_TertiaryColumnWidth = $setting->getProductDetail_TertiaryTwoColumnWidth(6);  
+            break;
+        default:
+            $_PrimaryColumnWidth = $setting->getProductDetail_PrimaryColumnWidth(9);
+            $_SecondaryColumnWidth = $setting->getProductDetail_SecondaryColumnWidth(9);
+            $_TertiaryColumnWidth = $setting->getProductDetail_TertiaryColumnWidth(6);  
+            break;
+    }
+?>
+<script type="text/javascript">
+	var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
+</script>
+<div id="messages_product_view"><?php echo $this->getMessagesBlock()->toHtml() ?></div>
+<div class="product-view">
+	<div class="product-essential">
+		<form action="<?php echo $this->getSubmitUrl($_product, array('_secure' => $this->_isSecure())) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+			<?php echo $this->getBlockHtml('formkey') ?>
+			<div class="no-display">
+				<input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
+				<input type="hidden" name="related_product" id="related-products-field" value="" />
+			</div>
+			<div class="product-view-detail">
+				<div class="em-product-view row">
+                    <div class="em-product-view-primary em-product-img-box col-sm-<?php echo $_PrimaryColumnWidth ?> first">
+						<div class="product-img-box">
+							<?php echo $this->getChildHtml('media') ?>
+						</div>
+                    </div>
+					<div class="em-product-view-secondary em-product-shop col-sm-<?php echo ($_SecondaryColumnWidth + $_TertiaryColumnWidth) ?>">
+						<div class="product-shop">
+							<?php if($_prev_prod != NULL): ?>
+							<a href="<?php echo $_prev_prod->getProductUrl(); ?>" class="prev" title="<?php echo $this->__('Previous Product') ?>"><?php echo $this->__('Previous') ?></a>
+							<?php endif; ?>
+                            
+							<?php if($_next_prod != NULL): ?>
+							<a href="<?php echo $_next_prod->getProductUrl(); ?>" class="next" title="<?php echo $this->__('Next Product' ) ?>"><?php echo $this->__('Next' ) ?></a>
+							<?php endif; ?>
+                            
+							<div class="product-name">
+								<h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
+							</div>
+                            
+							<?php if($setting->getProductDetail_ShowSku()): ?>
+							<p class="sku"><?php echo $this->__('SKU:') ?> <?php echo $_product->getSKU()?></p>
+							<?php endif; ?>
+                            
+							<?php if ($this->canEmailToFriend()): ?>
+							<p class="email-friend"><a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
+							<?php endif; ?>
+                            
+							<?php if ($_product->isAvailable()): ?>
+							<p class="availability in-stock"><?php echo $this->__('Availability:') ?> <span><?php echo $this->__('In stock') ?></span></p>
+							<?php else: ?>
+							<p class="availability out-of-stock"><?php echo $this->__('Availability:') ?> <span><?php echo $this->__('Out of stock') ?></span></p>
+							<?php endif; ?>
+                            
+							<?php echo $this->getReviewsSummaryHtml($_product, false, true)?>                        
+							<?php echo $this->getChildHtml('alert_urls') ?>
+                            
+							<?php if ($_product->getShortDescription()):?>
+							<div class="short-description">
+								<h2><?php echo $this->__('Quick Overview') ?></h2>
+								<div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
+							</div>
+							<?php endif;?>
+                            
+							<?php echo $this->getChildHtml('short_des_after'); ?>               
+							<?php echo $this->getChildHtml('product_type_data') ?>
+							<?php echo $this->getTierPriceHtml() ?>
+                            
+							<!--product saleoff-->								
+							<?php // clock countdown code : ?>
+							<?php if(Mage::helper('core')->isModuleEnabled('EM_Multidealpro')): ?>
+                                <?php if(Mage::helper("multidealpro")->getHtmlClock($_product)):?>
+                                    <?php $saleoff	=	Mage::helper('themeframework/settings')->getPercentOff($_product) ?>
+    								<?php if($saleoff !== 0): ?>
+    								<?php echo $saleoff ?>
+    								<?php endif ?>                                    
+								    <?php echo Mage::helper("multidealpro")->getHtmlClock($_product); ?>
+                                <?php endif;?>
+							<?php endif ?>
+                            
+							<?php if (!$this->hasOptions()):?>
+							<div class="add-to-box">
+								<?php if($_product->isSaleable()): ?>
+								<?php echo $this->getChildHtml('addtocart') ?>
+								<?php endif;?>
+							</div>
+							<?php echo $this->getChildHtml('extra_buttons') ?>
+							<?php elseif (!$_product->isSaleable()): ?>
+							<div class="add-to-box">
+								<?php echo $this->getChildHtml('addto') ?>
+							</div>
+							<?php endif; ?>
+                            
+							<?php echo $this->getChildHtml('other');?>
+							<?php echo $this->getChildHtml('extrahint') ?>               
+							<?php if ($_product->isSaleable() && $this->hasOptions()):?>
+							<?php echo $this->getChildChildHtml('container1', '', true, true) ?>
+							<?php endif;?>               
+						</div>
+					</div>
+				</div>					
+				<div class="clearer"></div>
+				<?php if ($_product->isSaleable() && $this->hasOptions()):?>
+				<?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+				<?php endif;?>            
+			</div>
+		</form>
+		<script type="text/javascript">
+			//<![CDATA[
+			    var productAddToCartForm = new VarienForm('product_addtocart_form');
+			    productAddToCartForm.submit = function(button, url) {
+			        if (this.validator.validate()) {
+			            var form = this.form;
+			            var oldUrl = form.action;
+			
+			            if (url) {
+			               form.action = url;
+			            }
+			            var e = null;
+			            try {
+			                this.form.submit();
+			            } catch (e) {
+			            }
+			            this.form.action = oldUrl;
+			            if (e) {
+			                throw e;
+			            }
+			
+			            if (button && button != 'undefined') {
+			                button.disabled = true;
+			            }
+			        }
+			    }.bind(productAddToCartForm);
+			
+			    productAddToCartForm.submitLight = function(button, url){
+			        if(this.validator) {
+			            var nv = Validation.methods;
+			            delete Validation.methods['required-entry'];
+			            delete Validation.methods['validate-one-required'];
+			            delete Validation.methods['validate-one-required-by-name'];
+			            // Remove custom datetime validators
+			            for (var methodName in Validation.methods) {
+			                if (methodName.match(/^validate-datetime-.*/i)) {
+			                    delete Validation.methods[methodName];
+			                }
+			            }
+			
+			            if (this.validator.validate()) {
+			                if (url) {
+			                    this.form.action = url;
+			                }
+			                this.form.submit();
+			            }
+			            Object.extend(Validation.methods, nv);
+			        }
+			    }.bind(productAddToCartForm);
+			//]]>
+		</script>
+	</div>
+	<!-- Add button share facebook -->
+	<?php if ($setting->getProductDetail_DisableSocial()): ?>
+	<a title="<?php echo $this->__('Toggle Block Social') ?>" href="#" class="visible-sm visible-md visible-lg dc-toggle"><?php echo $this->__('Toggle Block Social') ?></a>
+	<div id="social-share" class="visible-sm visible-md visible-lg"></div>	
+	<script type="text/javascript">
+		jQuery(document).ready(function($){
+		    jQuery('#social-share').dcSocialShare({
+		        buttons: "<?php echo implode(',',$setting->getProductDetail_Buttons(array('facebook','plusone','twitter','pinterest'))) ?>",
+		        align: 'right',
+    			size: 'vertical',
+    			txtPrint: 'Print',
+    			txtEmail: 'Email',
+    			twitterId: '',
+    			email: '',
+    			url: document.URL.split('#')[0],
+    			title: document.title,
+    			description: $('meta[name=description]').attr("content"),
+    			classWrapper: 'dcssb-float',
+    			classContent: 'dcssb-content',
+    			location: '',   
+    			offsetAlign: 20,
+    			center: 0,
+    			speedFloat: 1500,
+    			speed: 600,
+    			floater: false,
+    			autoClose: false,
+    			loadOpen: true,
+    			easing: 'easeOutQuint',
+    			classOpen: 'dc-open',
+    			classClose: 'dc-close',
+    			classToggle: 'dc-toggle'
+		    });
+		    jQuery('.dc-toggle').click(function(){
+		       $(this).toggleClass('icon_hide_social'); 
+		    });
+            var top = (jQuery(window).height() - jQuery('.dcssb-float').height())/2;
+            jQuery('.dcssb-float').css({top: top+'px'});
+            jQuery('.dc-toggle').css({top: top-11+'px'});            
+		});
+	</script>
+	<?php endif; ?>
+    
+	<div class="em-product-info">
+		<div class="em-product-details">
+			<div class="em-line-01 em-details-tabs product-collateral">
+				<div class="em-details-tabs-content">
+					<?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
+					<div class="box-collateral em-line-01 <?php echo "box-{$alias}"?>">
+						<?php if ($title = $this->getChildData($alias, 'title')):?>
+						<h2><?php echo $this->escapeHtml($title); ?></h2>
+						<?php endif;?>
+						<?php echo $html; ?>
+					</div>
+					<?php endforeach;?>
+					<?php echo $this->getChildHtml('product_additional_data') ?>
+					<?php echo $this->getChildHtml('product_additional_collateral') ?> 
+				</div>
+			</div>
+			<?php echo $this->getChildHtml('review_list') ?>
+		</div>
+	</div>
+</div>

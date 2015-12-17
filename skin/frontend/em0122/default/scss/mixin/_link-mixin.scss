@@ -1,0 +1,167 @@
+/* ============================================ *
+ * Link
+ * ============================================ */
+@mixin text-link(){
+	display:inline;
+    float:left;
+    ul{
+        margin:0;
+        display:inline;
+        li{
+            margin:0 0px 10px;
+			padding:0 9px;
+			float:left;
+			position:relative;
+			display:inline;
+			font-size:95%;
+            a{
+                @include transition1;
+				text-transform:uppercase;
+            }
+			
+        }
+    }	
+}
+@mixin line-link(){
+	ul li{
+		&:before{
+			border-right:1px solid;
+			content:"";
+			width:1px;
+			height:9px;
+			position:absolute;
+			top:5px;
+		}
+	}
+}
+@mixin link-left(){
+    ul{
+        li{
+            margin:0 10px 0px 0;
+			padding:15px 10px;
+			float:left;
+			position:relative;
+			display:inline;
+			font-size:80%;
+			&:before{
+				right:0;
+			}
+			&.last{
+				margin-right:0;
+				&:before{
+					border-right:0;
+				}
+			}
+        }
+    }	
+}
+
+@mixin link-right{
+	float:right;
+	ul{
+		float:right;
+		li{
+			margin:7px 0 10px 10px;
+			padding:0 0 0 10px;
+			float:left;
+			&:before{
+				left:0;
+			}
+			&.first{
+				margin-left:0;
+				padding-left:0;
+				&:before{
+					border-right:0;
+				}
+			}
+		}
+	}
+}
+@mixin link-center{
+	float:none;
+	ul{
+		float:none;
+		width:100%;
+		text-align:center;
+		display:inline-block;
+		li{
+			margin:0 0px 10px;
+			padding:0 10px;
+			float:none;
+			display:inline-block;
+			&:before{
+				left:0;
+			}
+			&.first{
+				margin-left:0;
+				padding-left:0;
+				&:before{
+					border-right:0;
+				}
+			}
+			&.last{
+				margin-right:0;
+				padding-right:0;
+			}
+		}
+	}
+}
+@mixin link-vertical(){
+	ul{
+		li{
+			float:left;
+			width:100%;
+			clear:both;
+			> a{
+				width:100%;
+				float:left;
+			}
+		}
+	}
+}
+@mixin icon-link(){
+	ul{
+		li{
+			> a{
+				&:before{
+					@include font-awesome(\f101,12px);
+					margin-right:5px;
+				}
+			}
+		}
+	}
+}
+
+@mixin effect-link(){
+    ul{
+		display:inline-block;
+		margin:0 0 10px;
+        li{
+            margin:8px 0;
+            padding:0;
+            a{
+				margin:0;
+                padding:0 10px;
+                @include transition1;
+                &:hover{
+                    margin:-8px 0;
+                    padding:8px 10px;
+					background:#000;
+					color:#fff;
+                    }
+            }
+        }
+    }
+}
+@mixin effect-link01(){
+	ul{
+		li{
+			a{@include transition1();}
+			&:hover{
+				a{
+					margin-left:5px;
+				}
+			}
+		}
+	}
+}

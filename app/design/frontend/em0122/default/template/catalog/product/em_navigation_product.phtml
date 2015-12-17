@@ -1,0 +1,14 @@
+<?php
+	$_product = $this->getLayout()->getBlockSingleton('catalog/product_view')->getProduct();
+	$setting = Mage::helper('themeframework/settings');
+	list($_prev_prod, $_next_prod) = Mage::helper('themeframework/product')->getPreviousNextProducts($_product);
+?>
+<div class="product-navigation">
+	<?php if($_prev_prod != NULL): ?>
+	<a href="<?php echo $_prev_prod->getProductUrl(); ?>" class="prev" title="<?php echo $this->__('Previous Product') ?>"><?php echo $this->__('Previous') ?></a>
+	<?php endif; ?>
+
+	<?php if($_next_prod != NULL): ?>
+	<a href="<?php echo $_next_prod->getProductUrl(); ?>" class="next" title="<?php echo $this->__('Next Product' ) ?>"><?php echo $this->__('Next' ) ?></a>
+	<?php endif; ?>
+</div>

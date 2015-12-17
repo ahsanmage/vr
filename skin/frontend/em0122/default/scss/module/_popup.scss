@@ -1,0 +1,144 @@
+/* ============================================ *
+ * Popup Login/Newsletter/Advertising/Add To Wishlist/Compare
+ * ============================================ */
+/*popup login*/
+.popup-content{
+	> div {
+		//width:900px;
+		padding:25px;
+	}
+	.em-line-01{
+		margin-bottom: 0;
+	}
+	.em-block-ads .em-block-title{
+		display: none;
+	}
+	.block-ads-content{
+		position: relative;
+		> div+div{
+			position: absolute;
+			bottom: 40px;
+			left: 0;
+			right: 0;
+			text-align: center;
+			strong{
+				text-transform: uppercase;
+			}
+		}
+		p, img{
+			margin: 0;
+		}
+	}
+}
+.popup-content{
+	.popup-subscribe{
+		text-align: center;
+		.em-line-01 .em-block-title{
+			margin-bottom: 0;
+		}
+		p.h3{
+			position: relative;
+			padding-bottom: 25px;
+			&:after{
+				@include line-title();
+				left: 49%;
+			}
+		}
+	}
+}
+.popup-content{
+	.em-account-popup{
+		width:600px;
+		padding:10px 25px;
+		margin: auto;
+		text-align: center;
+		.login-title{
+			text-transform:uppercase;
+			position: relative;
+			padding-bottom: 25px;
+			&:after{
+				@include line-title();
+				left: 47%;
+			}
+		}
+		p.required{
+			text-align: center;
+		}
+		.form-list label{
+			float: none;
+		}
+		input.input-text{
+			height: 50px;
+		}
+		.action-forgot{
+			padding-top:15px;
+			.actions{
+				button{
+					float: none;
+				}
+			}
+			.login_forgotpassword{
+				a{
+					text-transform:capitalize;
+				}
+				p{
+					margin-bottom:0;
+					display: inline-block;
+					margin-right: 20px;
+				}
+			}
+		}
+		.form-list{
+			li{
+				width:100%;
+				margin-right:0;
+			}
+			p.required{
+				font-size:85%;
+				padding:0;
+				margin:0;
+			}
+		}	
+	}
+	#show_popup{
+		margin-right: 5px;
+		margin-top: -2px;
+	}
+}
+/*end popup login*/
+
+/*popup addtoContainer*/
+#addtoContainer{
+	@include position_style(fixed, left, 37%, top, 30px);
+	width: 400px;
+	padding:20px;
+	background: #fff;
+	z-index: 9999;
+	border:2px solid #a1a1a1;
+	text-align:center;
+	@include border-radius(5px);
+	.back{
+		@include changeIcon(38px, 38px, btn_popup-close, 0 0);
+		@include hideText();
+		@include position_style(absolute, right, -15px, top, -15px)
+	}
+	.row2 a.btn_ajaxaddto{
+		display:inline-block;
+		padding: 10px 25px;
+		text-transform: uppercase;
+		margin:10px 5px 5px;
+		border:1px solid;
+		@include transition1;
+	}
+}
+/*end popup addtoContainer*/
+@media (max-width: 450px) {
+  .popup-content{
+		> div {
+			padding:0 0 2em 0;
+			overflow:hidden;
+		}
+		.popup-subscribe p.h3:after{ left:44%;}
+		.newsletter-boder-input-act .block-subscribe{ width:100%; margin-bottom:0;}
+	}
+}

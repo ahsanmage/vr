@@ -1,0 +1,30 @@
+/*Style*/
+/*Change Icon*/
+/*color text * color text hover*/
+/*========================= Functions==================*/
+/*Change Font*/
+/*Change Text Color*/
+/*Change Line*/
+/*Change Background Color*/
+/*Change Background Image Color*/
+/*Change Background Image Color*/
+/*Change Color-Border-Background Color*/
+/*Change Color-Font-Font-size*/
+/*.changeBkgImg (@name){
+	@condition: ~`@{name}.indexOf("blank.gif")`;
+    .changeBkgWithCondition(@name;@condition);
+   
+}*/
+/*Change Width*/
+/*Change Height*/
+/*Change Background Position*/
+/*Change Opacity*/
+/*===================Functions Default==========================*/
+/*Center-align a block level element*/
+/* Sizing shortcuts*/
+/*Requires inline-block or block for proper styling*/
+/*Single side border-radius*/
+/*shadow*/
+/*gradient*/
+/*Linear Gradient - Top to Bottom (this is default)*/
+/*Linear Gradient - Left to Right*/

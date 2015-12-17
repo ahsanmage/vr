@@ -1,0 +1,356 @@
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     default_default
+ * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+/* ============================================ *
+ * Footer
+ * ============================================ */
+
+/* -------------------------------------------- *
+ * Footer
+ */
+
+.em-footer-container{
+	display: inline-block;
+	width: 100%;
+	address{
+		line-height:1.35;
+		margin-bottom:5px;
+		text-align: left;
+		clear:left;
+	}
+	.em-address{margin-bottom:30px;}
+	.em-footer-address > ul{
+		clear:both;
+		margin-bottom:0;
+	}
+}
+
+.em-payment{
+	text-align:right; 
+	margin-top: 40px;
+	.em-payment-icon{margin-bottom:10px;}
+}
+
+.em-area-footer{
+		text-align:center;
+	}
+
+.em-payment-icon.em-visa
+{
+	@include changeIcon(42px, 23px, icons, -135px -212px);
+	@include transition1;
+}
+
+.em-payment-icon.em-master
+{
+	@include changeIcon(42px, 23px, icons, -44px -212px);
+	@include transition1;
+}
+
+.em-payment-icon.em-paypal{
+	@include changeIcon(42px, 23px, icons, 0px -212px);
+	@include transition1;
+}
+.em-payment-icon.em-express{
+	@include changeIcon(42px, 23px, icons, -90px -212px);
+	@include transition1;
+}
+.em-payment-icon.em-dhl{
+	@include changeIcon(42px, 23px, icons, -181px -212px);
+	@include transition1;
+}
+.em-payment-icon.em-ups{
+	@include changeIcon(42px, 23px, icons, -211px 0px);
+	@include transition1;
+}
+.em-payment-icon.em-fedex{
+	@include changeIcon(42px, 23px, icons, -254px 0px);
+	@include transition1;
+}
+
+.footer {
+    clear: both;
+    width: 100%;
+
+}
+
+
+
+/*twitter*/
+.twitter-tweet{
+	width:100%!important;
+}
+
+/*social border*/
+.em-social-border{
+	.em-social-icon{
+		padding:6px;
+		border:1px solid;
+		display:inline-block;
+	}
+}
+
+/*social layout3*/
+.wrapper-em-social{
+	margin-right:30px;
+}
+
+/*fuild container*/
+.wrapper-footer-fluild{
+	.container-footer{
+		padding-top:20px;
+		.inner-footer > .row:first-child{
+			border-bottom:2px solid;
+			padding-bottom:20px;
+			margin-bottom:20px;
+		}
+	}
+}
+
+
+/*footer link*/
+/*add icon after text link*/
+.em-footer-address{
+	@include text-link();
+	@include line-link();
+	/*@include effect-link();*/
+	margin-top: 25px;
+	ul{
+		display: inline;
+		li{
+			&:first-child{
+				padding-left: 0;
+				&:before{
+					border-right: 0;
+				}
+			}
+			&:before{
+				left: 0;
+			}
+		}
+	}
+}
+.footer-links{
+	//@include link-vertical();
+	//@include icon-link();
+	//@include effect-link01();
+	display:inline-block;
+	width:100%;
+}
+.em-links-line{ 
+	/*@extend .em-top-links;*/
+	@include text-link();
+	@include link-center();
+	@include effect-link();
+}
+.wrapper-main-bottom{
+	border-top: 1px solid;
+	.container-main-bottom{
+		padding-top: 35px;
+		padding-bottom: 25px;
+		div{
+			.em-line-01{
+				.em-widget-title{
+					margin-bottom: 0;
+					h3{
+						position: relative;
+						&:after{
+							@include line-title();
+							left: 0;
+							top: 27px;
+						}
+					}
+				}
+				.widget .em-widget-products{
+					li.item{
+						border-bottom: 1px solid;
+						margin-top: 10px;
+						&.last{
+							border-bottom: none;
+						}
+					}
+				}
+			}
+		}
+		.product-name a{
+			text-transform: none;
+		}
+		.owl-theme .owl-controls .owl-buttons div{
+			width: 23px;
+			margin-left: 0 !important;
+			&:before{
+				padding: 0;
+			}
+		}
+		.owl-carousel .owl-item{
+		}
+	}
+}
+/*rtl*/
+.em-rtl .wrapper-main-bottom .container-main-bottom div .em-line-01 .em-widget-title h3:after{
+	left: auto;
+	right: 0;
+}
+.wrapper-footer-top{
+	.container-footer-top{
+		.em-area-13{
+			margin: 65px 0;
+			div.first{
+				.em-block-title p.h6:after{
+					position: static;
+				}				
+			}
+			ul.em-links{
+				padding-left: 0;
+			}
+			> div > div{
+				padding-bottom: 20px;
+				.em-block-title p.h6{
+					position: relative;
+					padding: 0 0 25px;
+					&:after{
+						@include line-title();
+						left:0;
+						top: 27px;
+					}
+				}
+				.em-block-content{
+					address{
+						margin-top: 30px;
+						margin-bottom: 10px;
+						position: relative;
+						&:before{
+							/*@include icon-footer();
+							background-position: -0px -170px;*/
+							@include font-awesome(\f041,14px);
+							margin-right: 20px;
+						}
+					}
+					p.em-phone{
+						position: relative;
+						&:before{
+							/*@include icon-footer();
+							background-position: -32px -170px;*/
+							@include font-awesome(\f095,14px);
+							margin-right: 17px;
+						}
+					}
+					p.em-email{
+						position: relative;
+						&:before{
+							/*@include icon-footer();
+							background-position: -63px -170px;*/
+							@include font-awesome(\f0e0,14px);
+							margin-right: 16px;
+						}
+					}
+				}
+				.em-social a span{
+					border: 1px solid;
+					width: 30px;
+					height: 30px;
+					padding: 6px 8px;
+					margin-bottom:1px;
+				}
+			}
+			.em-newsletter{
+				.actions{
+					top: -2px;
+					right: 10px;
+					button.button{
+						@include button_icon(12px,auto,\f1d8,20px);
+						background: transparent;
+						border: transparent;
+					}
+				}
+				input.input-text{
+					padding: 5px 20px;
+				}
+			}
+			.col-sm-24{
+				> .em-newsletter, > .logo-footer{
+					display: block;
+					text-align: center;
+				}
+				> .em-newsletter{
+					margin-top: 25px;
+					border-bottom: 1px solid;
+					> p{
+						margin-bottom: 12px;
+					}
+					.block-subscribe{
+						width: 50%;
+						margin: auto;
+						input.input-text{
+							border: 1px solid;
+							height: 50px;
+							margin-bottom: 30px;
+							padding: 5px 50px 5px 30px;
+						}
+						.actions{
+							top: 3px;
+							right: 20px;
+							button.button{
+								@include button_icon(12px,auto,\f1d8,20px);
+								background: transparent;
+								border: transparent;
+							}
+						}
+					}
+				}
+			}
+			.block-tags{
+				.block-title, .block-content .actions{
+					display: none;
+				}
+			}
+			.em-recent-tweets{
+				padding: 0;
+				li.em-recent-tweets-item{
+					padding: 0 40px 20px;
+					margin-bottom: 20px;
+					border-bottom: 1px solid;
+					&:last-child{
+						border-bottom: none;
+						padding-bottom: 0;
+						margin-bottom: 0;
+					}
+				}
+				p.h5{
+					&:before{
+						@include font-awesome("\f099",15px);
+						padding: 7px;
+						position: absolute;
+						left: 0px;
+					}
+				}
+				span.time-stamp{
+					font-style: italic;
+					font-size: 85%;
+				}
+			}
+		}
+	}
+}

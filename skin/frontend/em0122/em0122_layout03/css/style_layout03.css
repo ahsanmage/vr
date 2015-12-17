@@ -1,0 +1,84 @@
+.rev_slider_wrapper .tp-rightarrow.default, .rev_slider_wrapper .tp-leftarrow.default{
+		background-image: url("../images/icons-layout03.png");
+}
+.cms-index-index .page{
+	position: relative;
+}
+.cms-index-index .page .wrapper-header{
+	position: absolute;
+	top: 0;
+	z-index: 20;
+	width: 100%;
+}
+.cms-index-index .em-header-top{
+	position: relative;
+	z-index: 99;
+}
+.cms-index-index .wrapper-header{
+	background: transparent;
+}
+.cms-index-index .wrapper-header .em-header-top{ 
+	/*background: url(../images/bkg-top-header.png) 0 0 repeat transparent;*/
+}
+.em-area-02 .banner-center .desc{
+	top: auto !important;
+	bottom: 10%;
+	left:40%;
+}
+.wrapper-main-parallax, .em-box-custom .wrapper-main-parallax .container-main-parallax, .wrapper-main-top, .em-box-custom .wrapper-main-top .container{
+	background-image: url(../images/banner-parallax.png)
+}
+.wrapper-main-top, .em-box-custom .wrapper-main-top .container{
+	background-image: url(../images/banner-parallax1.png)
+}
+/*.cms-index-index .em-wrapper-main{
+	text-align: center;
+}*/
+.em-wrapper-main a.em-sample-button{
+	margin-bottom: 0;
+}
+.em-area-07 .em-line-01 .em-latest-news .em-latest-news-item .em-blog-item{
+	height: auto !important;
+}
+.wrapper-main-bottom{
+	display: none;
+}
+.wrapper-footer-top .container-footer-top .em-area-13 > div > div .em-block-content address:before{
+	padding: 6px 9px;
+}
+.wrapper-footer-top .container-footer-top .em-area-13 > div > div .em-block-content p.em-phone:before{
+	padding: 6px 8px 6px 7px;
+}
+.wrapper-footer-top .container-footer-top .em-area-13 > div > div .em-block-content p.em-email:before{
+	padding: 6px;
+}
+.wrapper-footer-top .container-footer-top .em-area-13{
+	border-bottom: 1px solid;
+	margin-bottom: 0;
+}
+.wrapper-footer-top .container-footer-top .em-area-13 div.first .em-newsletter .em-block-title p.h6:after {
+	position: absolute;
+}
+.wrapper-footer-top .container-footer-top .em-area-13 div.first > div.em-block-title p.h6{
+	padding: 0;
+}
+.em-newsletter {
+	padding-top: 20px;
+	margin-top: 20px;
+	border-top: 1px solid;
+}
+.block-subscribe{
+	margin-bottom: 20px;
+}
+@media (max-width:767px){
+	.cms-index-index .wrapper-header{
+		background: none;
+	}
+	.cms-index-index .page .wrapper-header{
+		position: static;
+	}
+}
+.em-logo .logo{
+	margin-top:30px;
+}
+.em-wrapper-main .em-brand{ margin-top:20px;}

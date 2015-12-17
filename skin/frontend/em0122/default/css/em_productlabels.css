@@ -1,0 +1,92 @@
+/**
+ * EM ProductLabels
+ *
+ * @license commercial software
+ * @copyright (c) 2012 Codespot Software JSC - EMThemes.com. (http://www.emthemes.com)
+ */
+
+
+.product-img-box { position:relative; }
+.product-view .box-up-sell .products-grid td div.td { position:relative; }
+
+
+.productlabels_icons { position:relative; z-index:1}
+.product-img-box .productlabels_icons { z-index:10; }
+.productlabels_icons .label > span{ padding:7px 0; display:block; text-align:center}
+.productlabels_icons .label, .sale_off {display:block; text-transform:uppercase; border-radius:0; position:absolute; width: 65px; height: 65px;}
+.productlabels_icons .label:before, .sale_off:before{position:absolute; left:0; 
+content: "";
+border-style: solid;
+display: block;
+width: 0;}
+.productlabels_icons .label.new{
+	left: 0;
+}
+.productlabels_icons .label.new:before{
+	border-width: 65px 65px 0 0px;
+}
+.productlabels_icons .label.new p{
+	padding: 5px 22px 22px 5px;
+	transform: rotate(-43deg);
+	-moz-transform: rotate(-43deg); 
+	-webkit-transform: rotate(-43deg); 
+}
+.productlabels_icons .label.sale, .sale_off{
+	right: 0;
+}
+.productlabels_icons .label.sale:before, .sale_off:before{
+	border-width: 65px 0 0 65px;
+}
+.productlabels_icons .label.sale p{
+	padding: 5px 5px 18px 18px;
+	transform: rotate(41deg);
+	-moz-transform: rotate(41deg); 
+	-webkit-transform: rotate(41deg); 
+}
+.productlabels_icons .label.hot{
+	right: 0;
+}
+.productlabels_icons .label.hot:before{
+	border-width: 0 65px 65px 0px;
+}
+.productlabels_icons .label.hot p{
+	padding: 40px 12px 12px 10px;
+	transform: rotate(47deg);
+	-moz-transform: rotate(47deg); 
+	-webkit-transform: rotate(47deg); 
+}
+.productlabels_icons .label:after {/*position:absolute; right:-6px; 
+content: "";
+top:0;
+border-width: 0 6px 6px 0;
+border-style: solid;
+border-color: #000 transparent;
+display: block;
+width: 0;*/}
+.productlabels_icons .label > p{margin:0; position: relative;}
+.productlabels_icons .nobg { background:none; width:auto; height:auto; }
+
+.productlabels_icons .orange { background-position:0 0 }
+.productlabels_icons .yellow { background-position:0 -60px }
+.productlabels_icons .blue { background-position:0 -120px }
+.productlabels_icons .violet { background-position:0 -180px }
+.productlabels_icons .red { background-position:0 -240px }
+.productlabels_icons .black { background-position:0 -300px }
+.productlabels_icons .new { background-position:-213px 0}
+.productlabels_icons .special { background-position:-213px -63px }
+.productlabels_icons .hot { background-position:-213px -128px }
+.em_sidebar .products-list .productlabels_icons .label{ width:39px; height:39px; padding-top:6px; font-size:90%}
+.em_sidebar .products-list .productlabels_icons .new { background-position:-112px 0}
+.em_sidebar .products-list .productlabels_icons .special { background-position:-112px -46px }
+.em_sidebar .products-list .productlabels_icons .hot { background-position:-112px -93px }
+
+/*=================================== wrapper-main-bottom */
+.wrapper-main-bottom .productlabels_icons .label{text-align:center; font-size:90%}
+.wrapper-main-bottom .productlabels_icons .label.sale,.wrapper-main-bottom  .sale_off{width:53px; height:53px;}
+.wrapper-main-bottom .productlabels_icons .label.sale p{padding:0 0 0 18px; margin-right:-10px;}
+.wrapper-main-bottom .productlabels_icons .label.sale:before,.wrapper-main-bottom .sale_off:before{ border-width: 43px 0 0 44px; }
+.wrapper-main-bottom .productlabels_icons .label:before,.wrapper-main-bottom  .sale_off:before{ right:0; left:auto;}
+
+.wrapper-main-bottom .productlabels_icons .label.new{width:45px; height:45px;}
+.wrapper-main-bottom .productlabels_icons .label.new p{padding:0; text-align:left; margin-left:-2px;}
+.wrapper-main-bottom .productlabels_icons .label.new:before{border-width:44px 45px 0 0;}

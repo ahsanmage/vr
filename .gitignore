@@ -1,0 +1,12 @@
+app/etc/local.xml
+media/catalog/product/cache/*
+media/tmp/*
+errors/local.xml
+var/*
+downloader/*
+.htaccess
+!*/.htaccess
+.htpasswd
+nbproject/*
+.idea
+.project
