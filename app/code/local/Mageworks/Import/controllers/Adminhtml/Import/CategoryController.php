@@ -13,8 +13,15 @@ class Mageworks_Import_Adminhtml_Import_CategoryController extends Mage_Adminhtm
 				$helper = Mage::helper('mageworks_import/category');
 				$category = Mage::getModel('catalog/category');
 
-				$categoryPath = $this->getRequest()->getPost('path');
+				$categoryPath = "Default Category/".$this->getRequest()->getPost('path');
 				$categoryName = $this->getRequest()->getPost('name');
+                                $name_from_path = explode("/", $categoryPath);
+                                $name_from_path =   end($name_from_path);
+                                
+                                echo "path:".$categoryPath   =   str_replace("/$name_from_path", '', $categoryPath);
+                                
+                                echo "name:".$categoryName   = ucwords(strtolower($name_from_path));
+                                        
 				$catid = $helper->getCategoryIdFromPath($categoryPath, $categoryName);
 				if (is_array($catid)) {
 					$error = Mage::helper('mageworks_import')->__('Path provided is not a valid one.');
@@ -36,6 +43,9 @@ class Mageworks_Import_Adminhtml_Import_CategoryController extends Mage_Adminhtm
 						if (isset($attribute['importfn'])) {
 							$category->$attribute['importfn']($attribute['field'], $fieldvalue);
 						} else {
+                                                        if($attribute['field']== "name"){
+                                                            $fieldvalue =   $categoryName;
+                                                        }
 							$category->setData($attribute['field'], $fieldvalue);
 						}
 					}
