@@ -22,7 +22,7 @@ class Mageworks_Import_Helper_Category extends Mage_Core_Helper_Abstract
 				->addFieldToFilter('level', $level);
 		$collection->getSelect()->where("path like '".implode('/', $this->_pathids)."/%'");
 		foreach($collection as $category) {
-			if ($category->getName() == $catname) {
+			if (strtolower($category->getName()) == strtolower($catname)) {
 				$this->_pathids[] = $category->getId();
 				$pathid = true;
 				break;
