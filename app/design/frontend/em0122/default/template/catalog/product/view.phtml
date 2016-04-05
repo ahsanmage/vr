@@ -78,7 +78,9 @@
                     </div>
 					<div class="em-product-view-secondary em-product-shop col-sm-<?php echo $_SecondaryColumnWidth ?>">
 						<div class="product-shop">
-                            
+                                                        <div class="product-brand">
+								<h1 <?php if(Mage::helper('themeframework/settings')->getSnippets_Enable()): ?>itemprop="name"<?php endif;?>><?php echo Mage::getModel('catalog/product')->load($_product->getId())->getAttributeText("brand"); ?></h1>
+							</div>
 							<div class="product-name">
 								<h1 <?php if(Mage::helper('themeframework/settings')->getSnippets_Enable()): ?>itemprop="name"<?php endif;?>><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
 							</div>
@@ -155,7 +157,26 @@
 							<?php echo $this->getChildHtml('extrahint') ?>               
 							<?php if ($_product->isSaleable() && $this->hasOptions()):?>
 							<?php echo $this->getChildChildHtml('container1', '', true, true) ?>
-							<?php endif;?>               
+							<?php endif;?>   
+                                                                
+                                                        <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                                                        <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+                                                        <?php endif;?> 
+                                                                
+                                                        <div class="em-line-01 em-details-tabs product-collateral">
+                                                                <div class="em-details-tabs-content">
+                                                                        <?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
+                                                                        <div class="box-collateral em-line-01 <?php echo "box-{$alias}"?>">
+                                                                                <?php if ($title = $this->getChildData($alias, 'title')):?>
+                                                                                <h2><?php echo $this->escapeHtml($title); ?></h2>
+                                                                                <?php endif;?>
+                                                                                <?php echo $html; ?>
+                                                                        </div>
+                                                                        <?php endforeach;?>
+                                                                        <?php //echo $this->getChildHtml('product_additional_data') ?>
+                                                                        <?php //echo $this->getChildHtml('product_additional_collateral') ?> 
+                                                                </div>
+                                                        </div>       
 						</div>
 					</div>
                     <?php if($this->getChildHtml('staticblock') || $this->getChildHtml('brandlogo') || ($_positionRelated!='beside_tabs' && $_displayRelated!='disable') ):?>
@@ -191,9 +212,7 @@
 					<?php endif;?>
 				</div>					
 				<div class="clearer"></div>
-				<?php if ($_product->isSaleable() && $this->hasOptions()):?>
-				<?php echo $this->getChildChildHtml('container2', '', true, true) ?>
-				<?php endif;?>            
+				           
 			</div>
 		</form>
 		<script type="text/javascript">
@@ -304,20 +323,7 @@
     
 	<div class="em-product-info <?php if($_positionRelated=='beside_tabs' && $_displayRelated!='disable' && $_pageLayout!=3):?>row<?php endif;?>">
 		<div class="em-product-details <?php if($_positionRelated=='beside_tabs' && $_displayRelated!='disable' && $_pageLayout!=3):?>col-sm-18 first<?php endif;?>">
-			<div class="em-line-01 em-details-tabs product-collateral">
-				<div class="em-details-tabs-content">
-					<?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
-					<div class="box-collateral em-line-01 <?php echo "box-{$alias}"?>">
-						<?php if ($title = $this->getChildData($alias, 'title')):?>
-						<h2><?php echo $this->escapeHtml($title); ?></h2>
-						<?php endif;?>
-						<?php echo $html; ?>
-					</div>
-					<?php endforeach;?>
-					<?php echo $this->getChildHtml('product_additional_data') ?>
-					<?php echo $this->getChildHtml('product_additional_collateral') ?> 
-				</div>
-			</div>
+			
 			<?php if($_displayUpsell!='disable'):?>
     			<?php if($_displayUpsell=='replace' || ( $_displayUpsell=='replace_empty' && !($this->getChildHtml('upsell_products'))) ):?>
     			     <?php echo $this->getChildHtml('replace.upsell') ?>
