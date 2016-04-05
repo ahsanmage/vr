@@ -78,7 +78,9 @@
                     </div>
 					<div class="em-product-view-secondary em-product-shop col-sm-<?php echo $_SecondaryColumnWidth ?>">
 						<div class="product-shop">
-                            
+                                                        <div class="product-brand">
+								<h1 <?php if(Mage::helper('themeframework/settings')->getSnippets_Enable()): ?>itemprop="name"<?php endif;?>><?php echo Mage::getModel('catalog/product')->load($_product->getId())->getAttributeText("brand"); ?></h1>
+							</div>
 							<div class="product-name">
 								<h1 <?php if(Mage::helper('themeframework/settings')->getSnippets_Enable()): ?>itemprop="name"<?php endif;?>><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
 							</div>
