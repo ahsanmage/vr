@@ -28,7 +28,7 @@
 <?php $buttonTitle = $this->__('Add to Cart'); ?>
 <?php if($_product->isSaleable()): ?>
     <div class="add-to-cart">
-        <?php if(!$_product->isGrouped()): ?>
+        <?php /*if(!$_product->isGrouped()): ?>
         <label for="qty"><?php echo $this->__('Qty:') ?></label>
 		<div class="qty_cart">
 		<div class="qty-ctl">
@@ -39,7 +39,7 @@
 			<button title="increase" onclick="changeQty(1); return false;" class="increase">increase</button>
 		</div>
 		</div>
-        <?php endif; ?>
+        <?php endif; */?>
         <div class="button_addto">
 			<button type="button" title="<?php echo $buttonTitle ?>" id="product-addtocart-button" class="button btn-cart btn-cart-detail" onclick="productAddToCartForm.submit(this)"><span><span><?php echo $buttonTitle ?></span></span></button>
 			<?php echo $this->getLayout()->getBlock('product.info.addto')->toHtml()?>
