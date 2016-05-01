@@ -222,7 +222,7 @@ class EM_Filterproducts_Block_List extends Mage_Catalog_Block_Product_Abstract i
      * @return Mage_Catalog_Model_Resource_Product_Collection
      */
     protected function getFilterFeatured($products){	//	Special Attribute
-		$products->addAttributeToFilter($this->getFeatureChoosed(), array('gt' => 0)); 
+                $products->addAttributeToFilter('em_featured',array("eq"=>1));
 		return $products;
 	}
 

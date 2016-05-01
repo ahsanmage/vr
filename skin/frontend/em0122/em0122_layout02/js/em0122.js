@@ -547,7 +547,7 @@
         stickyElement('.em-top-cart','#cartpos',EM.SETTING.STICKY_CART,'cart-fixed-right');
         stickyElement('.em-top-search','#searchpos',EM.SETTING.STICKY_SEARCH,'search-fixed-right');      
 		DecorateVideo();
-		fixHeaderTop();
+		//fixHeaderTop();
     });
 
     //Load Function

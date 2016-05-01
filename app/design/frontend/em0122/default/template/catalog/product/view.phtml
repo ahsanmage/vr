@@ -79,11 +79,19 @@
 					<div class="em-product-view-secondary em-product-shop col-sm-<?php echo $_SecondaryColumnWidth ?>">
 						<div class="product-shop">
                                                         <div class="product-brand">
-								<h1 <?php if(Mage::helper('themeframework/settings')->getSnippets_Enable()): ?>itemprop="name"<?php endif;?>><?php echo Mage::getModel('catalog/product')->load($_product->getId())->getAttributeText("brand"); ?></h1>
+								<h2 <?php if(Mage::helper('themeframework/settings')->getSnippets_Enable()): ?>itemprop="name"<?php endif;?>><?php echo Mage::getModel('catalog/product')->load($_product->getId())->getAttributeText("brand"); ?></h2>
 							</div>
 							<div class="product-name">
 								<h1 <?php if(Mage::helper('themeframework/settings')->getSnippets_Enable()): ?>itemprop="name"<?php endif;?>><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
 							</div>
+                                                        <?php if ($_product->getShortDescription()):?>
+							<div class="short-description">
+								<h2><?php echo $this->__('Quick Overview') ?></h2>
+								<div class="std" <?php if(Mage::helper('themeframework/settings')->getSnippets_Enable() && Mage::helper('themeframework/settings')->getSnippets_Description()): ?>itemprop="description"<?php endif;?>><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
+							</div>
+							<?php endif;?>
+                                                        
+							<?php echo $this->getChildHtml('short_des_after'); ?>    
 							<?php if(Mage::helper('themeframework/settings')->getSnippets_Enable() && Mage::helper('themeframework/settings')->getSnippets_Price()): ?>
 				                                <?php if($_product->getTypeId() == "bundle"): ?>
 				                                    <div itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
@@ -92,13 +100,13 @@
 				                                <?php endif; ?>
 				                            	<meta itemprop="priceCurrency" content="<?php echo $currency_code = Mage::app()->getStore()->getCurrentCurrencyCode(); ?>"/>
 				                            		<?php echo $this->getChildHtml('product_type_data') ?>
-				                            		<?php echo $this->getTierPriceHtml() ?>
+				                            		<?php //echo $this->getTierPriceHtml() ?>
 				                            	</div>
 				                            <?php else:?>
 				                                <?php echo $this->getChildHtml('product_type_data') ?>
 				                            	<?php echo $this->getTierPriceHtml() ?>
 				                            <?php endif;?>
-							
+							<?php /*
 							<?php echo $this->getReviewsSummaryHtml($_product, 'aggregate', true)?>     
 							
 							<?php if ($_product->isAvailable()): ?>
@@ -115,16 +123,9 @@
 							
                                                
 							<?php echo $this->getChildHtml('alert_urls') ?>
-                            
-							<?php if ($_product->getShortDescription()):?>
-							<div class="short-description">
-								<h2><?php echo $this->__('Quick Overview') ?></h2>
-								<div class="std" <?php if(Mage::helper('themeframework/settings')->getSnippets_Enable() && Mage::helper('themeframework/settings')->getSnippets_Description()): ?>itemprop="description"<?php endif;?>><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
-							</div>
-							<?php endif;?>
-                            
-							<?php echo $this->getChildHtml('short_des_after'); ?>               
-                            
+                                                        <?php */ ?>
+							           
+                                                        <?php /* ?>
 							<!--product saleoff-->								
 							<?php // clock countdown code : ?>
 							<?php if(Mage::helper('core')->isModuleEnabled('EM_Multidealpro')): ?>
@@ -136,7 +137,7 @@
 								    <?php echo Mage::helper("multidealpro")->getHtmlClock($_product); ?>
                                 <?php endif;?>
 							<?php endif ?>
-                            
+                                                        <?php */ ?>
 							<?php if (!$this->hasOptions()):?>
 							<div class="add-to-box">
 								<?php if($_product->isSaleable()): ?>
@@ -174,12 +175,12 @@
                                                                         </div>
                                                                         <?php endforeach;?>
                                                                         <?php //echo $this->getChildHtml('product_additional_data') ?>
-                                                                        <?php //echo $this->getChildHtml('product_additional_collateral') ?> 
+                                                                        <?php echo $this->getChildHtml('product_additional_collateral') ?> 
                                                                 </div>
                                                         </div>       
 						</div>
 					</div>
-                    <?php if($this->getChildHtml('staticblock') || $this->getChildHtml('brandlogo') || ($_positionRelated!='beside_tabs' && $_displayRelated!='disable') ):?>
+                    <?php /*if($this->getChildHtml('staticblock') || $this->getChildHtml('brandlogo') || ($_positionRelated!='beside_tabs' && $_displayRelated!='disable') ):?>
 					<div class="em-product-view-tertiary em-product-block col-sm-<?php echo $_TertiaryColumnWidth ?> last">
 						<?php echo $this->getChildHtml('brandlogo') ?>
                         
@@ -209,7 +210,7 @@
     						<?php endif;?>
 						<?php endif;?>
 					</div>
-					<?php endif;?>
+					<?php endif;*/?>
 				</div>					
 				<div class="clearer"></div>
 				           
