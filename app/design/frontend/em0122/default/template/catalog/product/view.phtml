@@ -163,7 +163,13 @@
                                                         <?php if ($_product->isSaleable() && $this->hasOptions()):?>
                                                         <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
                                                         <?php endif;?> 
-                                                                
+                                                        <?php if(Mage::helper('core')->isModuleEnabled("AddThis_SharingTool")){
+                                                        ?>
+                                                        <div class="addthis_toolbox addthis_default_style ">
+                                                            <a class="addthis_button_facebook"></a>
+                                                            <a class="addthis_button_twitter"></a>
+                                                        </div>
+                                                        <?php }?>
                                                         <div class="em-line-01 em-details-tabs product-collateral">
                                                                 <div class="em-details-tabs-content">
                                                                         <?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
