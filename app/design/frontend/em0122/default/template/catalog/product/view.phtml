@@ -63,7 +63,14 @@
 <div id="messages_product_view"><?php echo $this->getMessagesBlock()->toHtml() ?></div>
 <div class="product-view" <?php if(Mage::helper('themeframework/settings')->getSnippets_Enable()): ?>itemscope itemtype="http://schema.org/Product"<?php endif;?>>
 	<div class="product-essential">
-    <form action="<?php echo $this->getSubmitUrl($_product, array('_secure' => $this->_isSecure())) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+    <?php $_storeId = Mage::app()->getStore()->getId(); ?>
+    <?php $_isActive = Mage::getStoreConfig('outofstocksubscription/mail/active', $_storeId); ?>
+    <?php if(!$_product->isSaleable() && $_isActive): ?>
+    	<?php $_url = $this->getUrl('outofstocksubscription') ?>
+    <?php else: ?>
+    	<?php $_url = $this->getSubmitUrl($_product, array('_secure' => $this->_isSecure())); ?>
+    <?php endif; ?>
+    <form action="<?php echo $_url; ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
 			<?php echo $this->getBlockHtml('formkey') ?>
 			<div class="no-display">
 				<input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
@@ -153,7 +160,7 @@
 								<p class="email-friend"><a title="<?php echo $this->__('Email to a Friend') ?>" href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
 								<?php endif; ?>
 							<?php endif; ?>
-                            
+                                                        
 							<?php echo $this->getChildHtml('other');?>
 							<?php echo $this->getChildHtml('extrahint') ?>               
 							<?php if ($_product->isSaleable() && $this->hasOptions()):?>
@@ -170,6 +177,33 @@
                                                             <a class="addthis_button_twitter"></a>
                                                         </div>
                                                         <?php }?>
+                                                        <?php if(!$_product->isSaleable() && $_isActive): ?>
+                                                                    <table width="100%" class="outofstocksubscription">
+                                                                            <tr>
+                                                                                    <td colspan="2" style="padding-bottom:5px;">
+                                                                                            <strong><?php echo $this->__('Product Out of Stock Subscription') ?></strong>
+                                                                                    </td>
+                                                                            </tr>            			
+                                                                            <tr>
+                                                                                    <td style="padding-bottom:5px;"><?php echo $this->__('Email') ?></td>
+                                                                                    <td>
+                                                                                            <input type="text" id="subscription_email" name="subscription_email" value="" style="width:200px;" class="input-text required-entry validate-email" />
+                                                                                    </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                    <td>&nbsp;</td>
+                                                                                    <td style="font-size:10px;">
+                                                                                            (<?php echo $this->__("Notify me when this product is back in stock") ?>)
+                                                                                    </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                    <td style="">&nbsp;</td>
+                                                                                    <td>
+                                                                                            <button onclick="productAddToCartForm.submit();" class="button btn-cart" type="button"><span><span><?php echo $this->__('Subscribe') ?></span></span></button>
+                                                                                    </td>
+                                                                            </tr>
+                                                                    </table>
+                                                        <?php endif; ?>
                                                         <div class="em-line-01 em-details-tabs product-collateral">
                                                                 <div class="em-details-tabs-content">
                                                                         <?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
