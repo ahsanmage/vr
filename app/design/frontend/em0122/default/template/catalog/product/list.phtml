@@ -90,6 +90,9 @@
                 <?php // Product description ?>
                 <div class="product-shop">
                     <div class="f-fix">
+                        <!--brand name-->
+                        <h2 class="product-brand"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo Mage::getModel('catalog/product')->load($_product->getId())->getAttributeText("brand"); ?>"><?php echo Mage::getModel('catalog/product')->load($_product->getId())->getAttributeText("brand"); ?></a></h2>
+                                    
                         <?php $_productNameStripped = $this->stripTags($_product->getName(), null, true); ?>
                         <!--product name-->
                         <?php if (Mage::helper('themeframework/settings')->getProductsList_ShowProductName()):?>
