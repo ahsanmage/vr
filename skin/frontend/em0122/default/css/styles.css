@@ -18,3 +18,23 @@
 .special-price .price{color:#c04a62 !important;}
 .products-list .product-shop .actions{margin-top: 20px !important;}
 .capital {text-transform: uppercase;}
+#size_guide_box{
+  background: #fff none repeat scroll 0 0;
+  border-radius: 2px;
+  box-shadow: 0 0 5px #6a6a6a;
+  display: block;
+  height: auto;
+  max-height: none;
+  min-height: 77px;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  z-index: 999999;
+}
+#size_guide_box h2{font-size:22px; text-transform: uppercase;font-weight:400;}
+#size_guide_box .size-guide-text{font-size:20px; text-transform: uppercase;font-weight:400;}
+.size_conversion_close{
+  float: right;
+  font-weight: bold;
+}
+.size_guide{padding-left:20px;text-decoration:underline;}

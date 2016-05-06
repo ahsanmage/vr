@@ -69,5 +69,12 @@
             decorateProductCollateralTabs();
         }
         ScrollToReview();
+        jQuery('.size_guide').click(function() {
+            jQuery('#size_guide_box').show();
+        });
+        jQuery('.size_conversion_close').click(function() {
+            jQuery('#size_guide_box').hide();
+        });
+
     });
 })(jQuery);
