@@ -15,7 +15,8 @@
 }
 .product-brand{font-size:1em;font-weight:bold;letter-spacing:0px;}
 .product-shop .f-fix h2{margin:0 0 2px}
-.special-price .price{color:#c04a62 !important;}
+.special-price .price{color:#e40c2b !important;}
+.old-price .price{color:#666666 !important;}
 .products-list .product-shop .actions{margin-top: 20px !important;}
 .capital {text-transform: uppercase;}
 #size_guide_box{
