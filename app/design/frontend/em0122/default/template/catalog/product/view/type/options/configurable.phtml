@@ -55,7 +55,7 @@
             <dd<?php if ($_attribute->decoratedIsLast){?> class="last"<?php }?>>
                 <div class="input-box">
                     <select name="super_attribute[<?php echo $_attribute->getAttributeId() ?>]" id="attribute<?php echo $_attribute->getAttributeId() ?>" class="required-entry super-attribute-select">
-                        <option><?php echo $this->__('Choose an Option...') ?></option>
+                        <option><?php echo $this->__('Choose an option...') ?></option>
                       </select>
                   </div>
             </dd>
@@ -81,8 +81,9 @@
             <dd<?php if ($_attribute->decoratedIsLast){?> class="last"<?php }?>>
                 <div class="input-box">
                     <select name="super_attribute[<?php echo $_attribute->getAttributeId() ?>]" id="attribute<?php echo $_attribute->getAttributeId() ?>" class="required-entry super-attribute-select">
-                        <option><?php echo $this->__('Choose an Option...') ?></option>
+                        <option><?php echo $this->__('Choose an option...') ?></option>
                       </select>
+                    <a class="size_guide">Size Guide</a>
                   </div>
             </dd>
         <?php endforeach; ?>
@@ -123,3 +124,15 @@
         </script>
     <?php endif;?>
 <?php endif;?>
+<?php if($_product->getData("sizeguide_id")){
+    $blockid='sizeguide-'.$_product->getData("sizeguide_id");
+    ?>
+    <div id="size_guide_box" style="display: none">
+        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId($blockid)->toHtml(); ?>
+    </div>
+
+<?php } else { ?>
+<div id="size_guide_box" style="display: none">
+    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('size-guide')->toHtml() ?>
+</div>
+<?php } ?>
