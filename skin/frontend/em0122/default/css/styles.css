@@ -40,3 +40,11 @@
 }
 .size_guide{padding-left:20px;text-decoration:underline;}
 .outofstocksubscription tr td{border-bottom:none !important;}
+.rcp_products li {
+  display: inline-block;
+  list-style: outside none none;
+  text-align: center;
+  vertical-align: top;
+  padding-right:10px;
+}
+.rcp_title{text-transform: uppercase;}
