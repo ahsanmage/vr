@@ -204,6 +204,39 @@
                                                                             </tr>
                                                                     </table>
                                                         <?php endif; ?>
+                                                        <?php
+                                                        /* Related color products */
+                                                        $related_color_products_content	=	strip_tags($_product->getRelatedColorProducts());
+                                                        $related_color_products_ids	=	explode(",", $related_color_products_content);
+                                                        $a=0;
+                                                        if(count($related_color_products_ids)>0){?>
+                                                            <div class="related_color_products">
+                                                                <div class="rcp_title"><?php echo $this->__("Available Colors"); ?></div>
+                                                                <ul class="rcp_products">
+                                                                    <?php
+                                                                    foreach ($related_color_products_ids as $k=>$product_id){
+                                                                        if($a==6){break;}
+                                                                        $product		=	Mage::getModel('catalog/product')->load($product_id);
+                                                                        $mh_color               =	$product->getAttributeText("color");
+                                                                        $mh_url 		= 	$product->getProductUrl();
+                                                                        ?>
+
+                                                                        <li>
+                                                                            <a href="<?php echo $mh_url;?>" class="each_mh_prod" >
+                                                                                <p><?php echo $mh_color;?></p>
+                                                                            </a>
+                                                                        </li>
+                                                                        <?php
+                                                                        $a++;
+                                                                    }
+                                                                    ?>
+
+                                                                </ul>
+                                                            </div>
+                                                        <?php
+                                                        }
+                                                        /* Related color products End*/
+                                                        ?>
                                                         <div class="em-line-01 em-details-tabs product-collateral">
                                                                 <div class="em-details-tabs-content">
                                                                         <?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
