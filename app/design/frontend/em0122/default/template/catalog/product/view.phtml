@@ -209,7 +209,7 @@
                                                         $related_color_products_content	=	strip_tags($_product->getRelatedColorProducts());
                                                         $related_color_products_ids	=	explode(",", $related_color_products_content);
                                                         $a=0;
-                                                        if(count($related_color_products_ids)>0){?>
+                                                        if(count($related_color_products_ids)>0 && !empty($related_color_products_content)){?>
                                                             <div class="related_color_products">
                                                                 <div class="rcp_title"><?php echo $this->__("Available Colors"); ?></div>
                                                                 <ul class="rcp_products">
