@@ -52,6 +52,17 @@
                     <input name="telephone" id="telephone" title="<?php echo Mage::helper('core')->quoteEscape(Mage::helper('contacts')->__('Telephone')) ?>" value="" class="input-text" type="text" />
                 </div>
             </li>
+            <li>
+                <label for="subject"><?php echo Mage::helper('contacts')->__('Contacting For') ?></label>
+                <div class="input-box">
+                    <select name="subject" id="subject" style="width:200px"> 
+                        <option value="" selected>--Select--</option> 
+                        <option value="APPLY FOR A JOB">APPLY FOR A JOB</option> 
+                        <option value="PROPOSE YOUR BRAND">PROPOSE YOUR BRAND</option> 
+                        <option value="TRACK YOUR ORDER">TRACK YOUR ORDER</option> 
+                    </select>
+                </div>
+            </li>
             <li class="wide">
                 <label for="comment" class="required"><em>*</em><?php echo Mage::helper('contacts')->__('Comment') ?></label>
                 <div class="input-box">
