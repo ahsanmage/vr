@@ -219,11 +219,13 @@
                                                                         $product		=	Mage::getModel('catalog/product')->load($product_id);
                                                                         $mh_color               =	$product->getAttributeText("color");
                                                                         $mh_url 		= 	$product->getProductUrl();
+                                                                        $mh_color               =       strtolower($mh_color);
+                                                                        $mh_src                 =       Mage::getBaseUrl('media')."wysiwyg/swatches/$mh_color.png";
                                                                         ?>
 
                                                                         <li>
                                                                             <a href="<?php echo $mh_url;?>" class="each_mh_prod" >
-                                                                                <p><?php echo $mh_color;?></p>
+                                                                                <p><img style="height:30px;width:30px;" alt="<?php echo $mh_color;?>" src="<?php echo $mh_src;?>"/></p>
                                                                             </a>
                                                                         </li>
                                                                         <?php
