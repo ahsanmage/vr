@@ -87,9 +87,9 @@
     			<?php foreach ($this->getItemCollection()->getItems() as $item): ?>
     			<li class="item">
     				<div class="product-item">
-    					<a href="<?php echo $item->getProductUrl() ?>" title="<?php echo $this->escapeHtml($item->getName()) ?>" class="product-image">
+    					<a href="<?php echo $item->getProductUrl() ?>" title="<?php echo $this->escapeHtml($item->getName()) ?>" class="product-images">
     					<?php Mage::helper('productlabels')->display($item);?>
-    					<img class="img-responsive" src="<?php echo $this->helper('catalog/image')->init($item, 'small_image')->resize($widthImage, $heightImage) ?>" width="<?php echo $widthImage ?>" height="<?php echo $heightImage ?>" alt="<?php echo $this->escapeHtml($item->getName()) ?>" />
+    					<img class="img-responsive" src="<?php echo $this->helper('catalog/image')->init($item, 'image')->resize($widthImage, $heightImage) ?>" width="<?php echo $widthImage ?>" height="<?php echo $heightImage ?>" alt="<?php echo $this->escapeHtml($item->getName()) ?>" />
     					<span class="bkg-hover"></span>
 						</a>
     					<div class="product-details product-shop <?php echo $_classAlignCenter ?>">

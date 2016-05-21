@@ -47,10 +47,14 @@
             </div>
         </div>
     <?php else:?>
+    <?php 
+    $currencies    = $this->getCurrencies();
+    ksort($currencies);
+    ?>
     <div class="toolbar-switch em-currency-style02 block-currency">
         <div class="toolbar-title">
             <select id="em-hoverUl-currency" name="currency" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Select Your Currency')) ?>" onchange="setLocation(this.value)">
-            <?php foreach ($this->getCurrencies() as $_code => $_name): ?>
+            <?php foreach ($currencies as $_code => $_name): ?>
                 <option value="<?php echo $this->getSwitchCurrencyUrl($_code) ?>"<?php if($_code==$this->getCurrentCurrencyCode()): ?> selected="selected"<?php endif; ?>>
                     <?php echo $_code ?>
                 </option>
