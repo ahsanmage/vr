@@ -55,20 +55,9 @@
 						<?php echo $this->getChildHtml('media_quickshop') ?>
 					</div>
 					<div class="product-shop col-sm-<?php echo 23-$setting->getProductDetail_PrimaryColumnWidth(9)?>">
-					 
-						<div class="product-name">
-							<h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
-						</div>
-						<p class="sku"><?php echo $this->__('SKU:') ?> <?php echo $_product->getSKU()?></p>
-						<?php if ($this->canEmailToFriend()): ?>
-						<p class="email-friend"><a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
-						<?php endif; ?>
-						<?php if ($_product->isAvailable()): ?>
-						<p class="availability in-stock"><?php echo $this->__('Availability:') ?> <span><?php echo $this->__('In stock') ?></span></p>
-						<?php else: ?>
-						<p class="availability out-of-stock"><?php echo $this->__('Availability:') ?> <span><?php echo $this->__('Out of stock') ?></span></p>
-						<?php endif; ?>
-						<?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
+                                                <div class="product-brand">
+                                                        <h2 <?php if(Mage::helper('themeframework/settings')->getSnippets_Enable()): ?>itemprop="name"<?php endif;?>><?php echo Mage::getModel('catalog/product')->load($_product->getId())->getAttributeText("brand"); ?></h2>
+                                                </div>
 						<?php echo $this->getChildHtml('alert_urls') ?>
 						<?php if ($_product->getShortDescription()):?>
 						<div class="short-description">
@@ -83,10 +72,6 @@
 						<?php $saleoff  =   Mage::helper('themeframework/settings')->getPercentOff($_product) ?>
 						<?php if($saleoff !== 0): ?>
 						<?php echo $saleoff ?>
-						<?php endif ?>
-						<?php // clock countdown code : ?>
-						<?php if(Mage::helper('core')->isModuleEnabled('EM_Multidealpro')): ?>
-						<?php echo Mage::helper("multidealpro")->getHtmlClock($_product); ?>
 						<?php endif ?>
 						<?php if (!$this->hasOptions()):?>
 						<div class="add-to-box">
