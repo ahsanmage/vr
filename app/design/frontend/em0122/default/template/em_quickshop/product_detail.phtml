@@ -69,10 +69,7 @@
 						<?php echo $this->getChildHtml('product_type_data') ?>
 						<?php echo $this->getTierPriceHtml() ?>
 						<!--product saleoff-->
-						<?php $saleoff  =   Mage::helper('themeframework/settings')->getPercentOff($_product) ?>
-						<?php if($saleoff !== 0): ?>
-						<?php echo $saleoff ?>
-						<?php endif ?>
+						
 						<?php if (!$this->hasOptions()):?>
 						<div class="add-to-box">
 							<?php if($_product->isSaleable()): ?>
