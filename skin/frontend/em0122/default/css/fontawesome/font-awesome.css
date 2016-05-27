@@ -232,6 +232,7 @@
 
 .fa-star:before {
   content: "\f005";
+  color:red;
 }
 
 .fa-star-o:before {

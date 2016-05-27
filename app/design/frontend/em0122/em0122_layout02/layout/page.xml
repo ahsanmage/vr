@@ -139,7 +139,6 @@ Default layout, loads most of the pages
                     <label>Page Header</label>
                     <action method="setElementClass"><value>top-container</value></action>
                 </block>                                
-                <block type="page/html_welcome" name="welcome" as="welcome"/>
                 
                 <block type="core/text_list" name="em_area_header_01" as="em_area_header_01" translate="label">
                     <label>EM Area Header 01</label>
