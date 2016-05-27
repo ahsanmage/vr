@@ -40,12 +40,21 @@
 		</div>
 		</div>
         <?php endif; */?>
+        <select class="input-text qty" name="qty" id="qty">
+            <option value="1">QUANTITY</option>
+            <?php $i = 1 ?>
+            <?php do { ?>
+            <option value="<?php echo $i?>">
+            <?php echo $i?>
+            <?php $i++ ?>
+            </option>
+            <?php } while ($i <= 10) ?>
+        </select>
+        <br><br><br>
         <div class="button_addto">
 			<button type="button" title="<?php echo $buttonTitle ?>" id="product-addtocart-button" class="button btn-cart btn-cart-detail" onclick="productAddToCartForm.submit(this)"><span><span><?php echo $buttonTitle ?></span></span></button>
 			<?php echo $this->getLayout()->getBlock('product.info.addto')->toHtml()?>
-			<?php if ( $this->getLayout()->getBlockSingleton('catalog/product_view')->canEmailToFriend()): ?>
-				<p class="email-friend"><a title="<?php echo $this->__('Email to a Friend') ?>" href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
-			<?php endif; ?>
+			
 		</div>
         <?php echo $this->getChildHtml('', true, true) ?>
     </div>

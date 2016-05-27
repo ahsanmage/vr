@@ -38,4 +38,15 @@
 <?php if($_compareUrl) : ?>
     <li><span class="separator">|</span> <a href="<?php echo $_compareUrl ?>" title="<?php echo $this->__('Add to Compare') ?>" class="link-compare"><?php echo $this->__('Add to Compare') ?></a></li>
 <?php endif; ?>
+    
+<?php if(Mage::helper('core')->isModuleEnabled("AddThis_SharingTool")){
+?>
+
+    <li><a class="addthis_button_facebook"><img src="https://image.freepik.com/free-icon/facebook-letter-logo_318-40258.png" width="10" height="10" /></a></li>
+    <li><a class="addthis_button_twitter"><img src="https://image.freepik.com/free-icon/twitter-logo_318-40459.png" width="10" height="10" /></a></li>
+    <li><a class="addthis_button_instagram"><img src="https://image.freepik.com/free-icon/instagram-social-network-logo-of-photo-camera_318-64651.png" width="10" height="10" /></a></li>
+<?php }?>
+    <?php if ( $this->getLayout()->getBlockSingleton('catalog/product_view')->canEmailToFriend()): ?>
+				<p class="email-friend"><a title="<?php echo $this->__('Email to a Friend') ?>" href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
+			<?php endif; ?>
 </ul>
