@@ -25,7 +25,7 @@
  */
 ?>
 <?php $_product = $this->getProduct(); ?>
-<?php $buttonTitle = $this->__('Add to Cart'); ?>
+<?php if($_product->getStockItem()->getQty()>0 || $_product->isConfigurable()):$buttonTitle = $this->__('Add to Cart'); else: $buttonTitle = $this->__('Pre Order'); endif; ?>
 <?php if($_product->isSaleable()): ?>
     <div class="add-to-cart">
         <?php /*if(!$_product->isGrouped()): ?>

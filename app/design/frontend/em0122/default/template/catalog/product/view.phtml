@@ -199,9 +199,6 @@
 								<div class="add-to-box">
 									<?php echo $this->getChildHtml('addto') ?>
 								</div>
-								<?php if ($this->canEmailToFriend()): ?>
-								<p class="email-friend"><a title="<?php echo $this->__('Email to a Friend') ?>" href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
-								<?php endif; ?>
 							<?php endif; ?>
                                                         
 							<?php echo $this->getChildHtml('other');?>
@@ -217,7 +214,7 @@
                                                                     <table width="100%" class="outofstocksubscription">
                                                                             <tr>
                                                                                     <td colspan="2" style="padding-bottom:5px;">
-                                                                                            <strong><?php echo $this->__('Product Out of Stock Subscription') ?></strong>
+                                                                                        <strong style="text-transform:uppercase;"><?php echo $this->__('Out of Stock Subscription') ?></strong>
                                                                                     </td>
                                                                             </tr>            			
                                                                             <tr>
