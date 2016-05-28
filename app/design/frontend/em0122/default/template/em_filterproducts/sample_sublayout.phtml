@@ -61,23 +61,7 @@
 									<?php Mage::helper('productlabels')->display($_product);?>
 									<?php endif;?>
 								<?php endif; ?>
-								<div class="product-shop">
-									<div class="f-fix">
-										<div class="em-btn-addto">
-											<!--product add to compare-wishlist-->
-											<?php if($this->getShowFrontend('addto')):?>
-											<ul class="add-to-links em-element-display-hover">
-												<?php if ($this->helper('wishlist')->isAllow()) : ?>
-												<li><a href="<?php echo $this->getAddToWishlistUrl($_product) ?>" class="link-wishlist" title="<?php echo $this->__('Add to Wishlist') ?>"><?php echo $this->__('Add to Wishlist') ?></a></li>
-												<?php endif; ?>
-												<?php if($_compareUrl=$this->getAddToCompareUrl($_product)): ?>
-												<li><span class="separator">|</span> <a href="<?php echo $_compareUrl ?>" class="link-compare" title="<?php echo $this->__('Add to Compare') ?>"><?php echo $this->__('Add to Compare') ?></a></li>
-												<?php endif; ?>
-											</ul>
-											<?php endif; ?>
-										</div>
-									</div>
-								</div>
+								
 							</div>
 						</div>
 					<div class="product-shop">
