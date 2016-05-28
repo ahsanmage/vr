@@ -92,13 +92,7 @@ Default layout, loads most of the pages
                 </block>
 
                 <block type="checkout/cart_coupon" name="checkout.cart.coupon" as="coupon" template="checkout/cart/coupon.phtml"/>
-                <block type="checkout/cart_shipping" name="checkout.cart.shipping" as="shipping" template="checkout/cart/shipping.phtml"/>
                 
-                <block type="core/text_list" name="checkout.cart.replace.crosssell" as="replace.crosssell" translate="label">
-					<label>Shopping Cart Sample Block Replace With Crosssell</label>
-				</block>
-                <block type="themeframework/cart_crosssell" name="checkout.cart.crosssell" as="crosssell" template="checkout/cart/crosssell.phtml"/>
-
                 <block type="checkout/cart_totals" name="checkout.cart.totals" as="totals" template="checkout/cart/totals.phtml"/>
             </block>
         </reference>

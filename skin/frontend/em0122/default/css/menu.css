@@ -448,6 +448,7 @@ a.arrow span {
 .em_nav .hnav .menu-item-depth-0 > .em-catalog-navigation > li.level0 > a.arrow:before {
   content: '\f107';
   font-size: 14px;
+  display: none;
 }
 .em_nav .hnav .menu-item-depth-0 > a span,
 .em_nav .hnav .menu-item-depth-0 > .em-catalog-navigation > li.level0 > a span {

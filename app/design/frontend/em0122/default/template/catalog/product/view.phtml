@@ -113,6 +113,49 @@
 				                                <?php echo $this->getChildHtml('product_type_data') ?>
 				                            	<?php echo $this->getTierPriceHtml() ?>
 				                            <?php endif;?>
+                                                            <?php
+                                                            /* Simple Product Size */
+                                                            $simple_size	=	$_product->getAttributeText('size');
+                                                            $a=0;
+                                                            if(!empty($simple_size) && !$_product->isConfigurable()){?>
+                                                                <div class="simple_size_products">
+                                                                        <select>
+                                                                             <option><?php echo $simple_size;?></option>
+                                                                        </select>
+                                                                </div>
+                                                            <?php
+                                                            }
+                                                            /* Simple Product Size End*/
+                                                            ?>
+                                                            <?php
+                                                            /* Related color products */
+                                                            $related_color_products_content	=	strip_tags($_product->getRelatedColorProducts());
+                                                            $related_color_products_ids	=	explode(",", $related_color_products_content);
+                                                            $a=0;
+                                                            if(count($related_color_products_ids)>0 && !empty($related_color_products_content)){?>
+                                                                <div class="related_color_products">
+                                                                        <select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+                                                                            <option>COLOR</option>
+                                                                        <?php
+                                                                        foreach ($related_color_products_ids as $k=>$product_id){
+                                                                            if($a==6){break;}
+                                                                            $product		=	Mage::getModel('catalog/product')->load($product_id);
+                                                                            $mh_color               =	$product->getAttributeText("color");
+                                                                            $mh_url 		= 	$product->getProductUrl();
+                                                                            $mh_src                 =       Mage::getBaseUrl('media')."wysiwyg/swatches/$mh_color.png";
+                                                                            ?>
+                                                                             <option value="<?php echo $product->getProductUrl();?>"><?php echo $mh_color;?></option>
+
+                                                                            <?php
+                                                                            $a++;
+                                                                        }
+                                                                        ?>
+                                                                        </select>
+                                                                </div>
+                                                            <?php
+                                                            }
+                                                            /* Related color products End*/
+                                                            ?>
 							<?php /*
 							<?php echo $this->getReviewsSummaryHtml($_product, 'aggregate', true)?>     
 							
@@ -156,9 +199,6 @@
 								<div class="add-to-box">
 									<?php echo $this->getChildHtml('addto') ?>
 								</div>
-								<?php if ($this->canEmailToFriend()): ?>
-								<p class="email-friend"><a title="<?php echo $this->__('Email to a Friend') ?>" href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
-								<?php endif; ?>
 							<?php endif; ?>
                                                         
 							<?php echo $this->getChildHtml('other');?>
@@ -170,18 +210,11 @@
                                                         <?php if ($_product->isSaleable() && $this->hasOptions()):?>
                                                         <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
                                                         <?php endif;?> 
-                                                        <?php if(Mage::helper('core')->isModuleEnabled("AddThis_SharingTool")){
-                                                        ?>
-                                                        <div class="addthis_toolbox addthis_default_style ">
-                                                            <a class="addthis_button_facebook"></a>
-                                                            <a class="addthis_button_twitter"></a>
-                                                        </div>
-                                                        <?php }?>
                                                         <?php if(!$_product->isSaleable() && $_isActive): ?>
                                                                     <table width="100%" class="outofstocksubscription">
                                                                             <tr>
                                                                                     <td colspan="2" style="padding-bottom:5px;">
-                                                                                            <strong><?php echo $this->__('Product Out of Stock Subscription') ?></strong>
+                                                                                        <strong style="text-transform:uppercase;"><?php echo $this->__('Out of Stock Subscription') ?></strong>
                                                                                     </td>
                                                                             </tr>            			
                                                                             <tr>
@@ -204,41 +237,7 @@
                                                                             </tr>
                                                                     </table>
                                                         <?php endif; ?>
-                                                        <?php
-                                                        /* Related color products */
-                                                        $related_color_products_content	=	strip_tags($_product->getRelatedColorProducts());
-                                                        $related_color_products_ids	=	explode(",", $related_color_products_content);
-                                                        $a=0;
-                                                        if(count($related_color_products_ids)>0 && !empty($related_color_products_content)){?>
-                                                            <div class="related_color_products">
-                                                                <div class="rcp_title"><?php echo $this->__("Available Colors"); ?></div>
-                                                                <ul class="rcp_products">
-                                                                    <?php
-                                                                    foreach ($related_color_products_ids as $k=>$product_id){
-                                                                        if($a==6){break;}
-                                                                        $product		=	Mage::getModel('catalog/product')->load($product_id);
-                                                                        $mh_color               =	$product->getAttributeText("color");
-                                                                        $mh_url 		= 	$product->getProductUrl();
-                                                                        $mh_color               =       strtolower($mh_color);
-                                                                        $mh_src                 =       Mage::getBaseUrl('media')."wysiwyg/swatches/$mh_color.png";
-                                                                        ?>
-
-                                                                        <li>
-                                                                            <a href="<?php echo $mh_url;?>" class="each_mh_prod" >
-                                                                                <p><img style="height:30px;width:30px;" alt="<?php echo $mh_color;?>" src="<?php echo $mh_src;?>"/></p>
-                                                                            </a>
-                                                                        </li>
-                                                                        <?php
-                                                                        $a++;
-                                                                    }
-                                                                    ?>
-
-                                                                </ul>
-                                                            </div>
-                                                        <?php
-                                                        }
-                                                        /* Related color products End*/
-                                                        ?>
+                                                        
                                                         <div class="em-line-01 em-details-tabs product-collateral">
                                                                 <div class="em-details-tabs-content">
                                                                         <?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>

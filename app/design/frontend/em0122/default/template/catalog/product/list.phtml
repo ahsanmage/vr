@@ -120,12 +120,11 @@
     					<?php endif ?>
     
                         <!--product description-->
-                        <?php if (Mage::helper('themeframework/settings')->getProductsList_ShowDesc()): ?>
+                        <?php //if (Mage::helper('themeframework/settings')->getProductsList_ShowDesc()): ?>
                             <div class="desc std">
-                                <?php echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?>
-                                <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $_productNameStripped ?>" class="link-learn"><?php echo $this->__('Learn More') ?></a>
+                                <?php echo Mage::getModel('catalog/product')->load($_product->getId())->getDescription();?>
                             </div> 
-                        <?php endif ?> 
+                        <?php //endif ?> 
     					
                         <!--product price-->
                         <?php if (Mage::helper('themeframework/settings')->getProductsList_ShowPrice()): ?>
@@ -136,14 +135,15 @@
                         <?php if($_product->isSaleable()): ?>
     						<!--show button add to cart-->
                             <?php if (Mage::helper('themeframework/settings')->getProductsList_ShowAddtocart()): ?>
-                                <button type="button" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Add to Cart')) ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
+                                <?php if($_product->getStockItem()->getQty()>0 || $_product->isConfigurable()):$buttonTitle = $this->__('Add to Cart'); else: $buttonTitle = $this->__('Pre Order'); endif; ?>
+                                <button type="button" title="<?php echo Mage::helper('core')->quoteEscape($buttonTitle) ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $buttonTitle; ?></span></span></button>
                             <?php endif ?>
                         <?php else: ?>
                             <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
                         <?php endif; ?>
     
                         <!--show button add to compare-wishlist-->
-                        <?php if (Mage::helper('themeframework/settings')->getProductsList_ShowAddto()): ?> 
+                        <?php /*if (Mage::helper('themeframework/settings')->getProductsList_ShowAddto()): ?> 
                             <ul class="add-to-links">
                                 <?php if ($this->helper('wishlist')->isAllow()) : ?>
                                     <li><a href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>" class="link-wishlist" title="<?php echo $this->__('Add to Wishlist') ?>"><?php echo $this->__('Add to Wishlist') ?></a></li>
@@ -152,7 +152,7 @@
                                     <li><span class="separator">|</span> <a href="<?php echo $_compareUrl ?>" class="link-compare" title="<?php echo $this->__('Add to Compare') ?>"><?php echo $this->__('Add to Compare') ?></a></li>
                                 <?php endif; ?>
                             </ul>
-                        <?php endif ?>
+                        <?php endif */ ?>
     					</div>
                     </div>
                 </div>
@@ -319,14 +319,15 @@
 												<?php if($_product->isSaleable()): ?>
 													<!--show button add to cart-->
 													<?php if (Mage::helper('themeframework/settings')->getProductsGrid_ShowAddtocart()): ?>
-														<button type="button" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Add to Cart')) ?>" class="button btn-cart <?php if (Mage::helper('themeframework/settings')->getProductsGrid_ShowAddtocart()==2): ?>em-element-display-hover<?php endif;?>" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
+                                                                                                        <?php if($_product->getStockItem()->getQty()>0 || $_product->isConfigurable()):$buttonTitle = $this->__('Add to Cart'); else: $buttonTitle = $this->__('Pre Order'); endif; ?>
+														<button type="button" title="<?php echo $buttonTitle; ?>" class="button btn-cart <?php if (Mage::helper('themeframework/settings')->getProductsGrid_ShowAddtocart()==2): ?>em-element-display-hover<?php endif;?>" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $buttonTitle; ?></span></span></button>
 													<?php endif; ?>
 												<?php else: ?>
 													<p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
 												<?php endif; ?>
 					
 												<!--show button add to compare-wishlist-->
-												<?php if (Mage::helper('themeframework/settings')->getProductsGrid_ShowAddto()): ?> 
+												<?php /*if (Mage::helper('themeframework/settings')->getProductsGrid_ShowAddto()): ?> 
 													<ul class="add-to-links <?php if (Mage::helper('themeframework/settings')->getProductsGrid_ShowAddto() == 2): ?>em-element-display-hover<?php endif;?>">
 														<?php if ($this->helper('wishlist')->isAllow()) : ?>
 															<li><a href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>" class="link-wishlist" title="<?php echo $this->__('Add to Wishlist') ?>"><?php echo $this->__('Add to Wishlist') ?></a></li>
@@ -335,7 +336,7 @@
 															<li><a href="<?php echo $_compareUrl ?>" class="link-compare" title="<?php echo $this->__('Add to Compare') ?>"><?php echo $this->__('Add to Compare') ?></a></li>
 														<?php endif; ?>
 													</ul>
-												<?php endif; ?>
+												<?php endif;*/ ?>
 											</div>
 										<?php endif;?>   
 									</div>

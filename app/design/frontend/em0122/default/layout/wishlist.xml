@@ -34,9 +34,15 @@ Default layout, loads most of the pages
 
     <default>
         <!-- Hiep -->
-        <reference name="top.links.wishlist">
-            <block type="wishlist/links" name="wishlist_link" />
-            <action method="addLinkBlock"><blockName>wishlist_link</blockName></action>
+        <reference name="top.links">
+            <block type="wishlist/links" name="wishlist_link">
+            <action method="setBeforeText">
+                <beforeText><![CDATA[<i class="fa fa-star"></i>]]>    </beforeText>
+            </action>
+        </block>
+        <action method="addLinkBlock">
+            <blockName>wishlist_link</blockName>
+        </action>
         </reference>
 
         <!-- Mage_Wishlist -->

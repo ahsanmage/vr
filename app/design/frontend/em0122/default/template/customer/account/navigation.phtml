@@ -32,7 +32,20 @@
         <ul>
             <?php $_links = $this->getLinks(); ?>
             <?php $_index = 1; ?>
-            <?php $_count = count($_links); ?>
+            <?php $_count = count($_links); /* Add or Remove Account Left Navigation Links Here -*/
+           
+      unset($_links['tags']); /* My Tags */
+      unset($_links['invitations']); /* My Invitations */
+      unset($_links['reviews']);  /* Reviews */
+      unset($_links['enterprise_customerbalance']); /* Store Credit */
+      unset($_links['OAuth Customer Tokens']); /* My Applications */
+      unset($_links['enterprise_reward']); /* Reward Points */
+      unset($_links['giftregistry']); /* Gift Registry */
+      unset($_links['downloadable_products']); /* My Downloadable Products */
+      unset($_links['recurring_profiles']); /* Recurring Profiles */
+      unset($_links['billing_agreements']); /* Billing Agreements */
+      unset($_links['enterprise_giftcardaccount']); /* Gift Card Link */
+?>
             <?php foreach ($_links as $_link): ?>
                 <?php $_last = ($_index++ >= $_count); ?>
                 <?php if ($this->isActive($_link)): ?>

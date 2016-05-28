@@ -69,7 +69,49 @@
 						<?php echo $this->getChildHtml('product_type_data') ?>
 						<?php echo $this->getTierPriceHtml() ?>
 						<!--product saleoff-->
-						
+						<?php
+                                                            /* Simple Product Size */
+                                                            $simple_size	=	$_product->getAttributeText('size');
+                                                            $a=0;
+                                                            if(!empty($simple_size) && !$_product->isConfigurable()){?>
+                                                                <div class="simple_size_products">
+                                                                        <select>
+                                                                             <option><?php echo $simple_size;?></option>
+                                                                        </select>
+                                                                </div>
+                                                            <?php
+                                                            }
+                                                            /* Simple Product Size End*/
+                                                            ?>
+                                                            <?php
+                                                            /* Related color products */
+                                                            $related_color_products_content	=	strip_tags($_product->getRelatedColorProducts());
+                                                            $related_color_products_ids	=	explode(",", $related_color_products_content);
+                                                            $a=0;
+                                                            if(count($related_color_products_ids)>0 && !empty($related_color_products_content)){?>
+                                                                <div class="related_color_products">
+                                                                        <select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+                                                                            <option>COLOR</option>
+                                                                        <?php
+                                                                        foreach ($related_color_products_ids as $k=>$product_id){
+                                                                            if($a==6){break;}
+                                                                            $product		=	Mage::getModel('catalog/product')->load($product_id);
+                                                                            $mh_color               =	$product->getAttributeText("color");
+                                                                            $mh_url 		= 	$product->getProductUrl();
+                                                                            $mh_src                 =       Mage::getBaseUrl('media')."wysiwyg/swatches/$mh_color.png";
+                                                                            ?>
+                                                                             <option value="<?php echo $product->getProductUrl();?>"><?php echo $mh_color;?></option>
+
+                                                                            <?php
+                                                                            $a++;
+                                                                        }
+                                                                        ?>
+                                                                        </select>
+                                                                </div>
+                                                            <?php
+                                                            }
+                                                            /* Related color products End*/
+                                                            ?>
 						<?php if (!$this->hasOptions()):?>
 						<div class="add-to-box">
 							<?php if($_product->isSaleable()): ?>
@@ -147,17 +189,20 @@
     </div>
   
     
-    <!--div class="em-line-01 details_tab product-collateral">
-        <?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
-        <div class="box-collateral <?php echo "box-{$alias}"?>">
-            <?php if ($title = $this->getChildData($alias, 'title')):?>
-            <h2><?php echo $this->escapeHtml($title); ?></h2>
-            <?php endif;?>
-            <?php echo $html; ?>
-        </div>
-        <?php endforeach;?>
-              
-    </div-->
+    <div class="em-line-01 em-details-tabs product-collateral">
+                                                                <div class="em-details-tabs-content">
+                                                                        <?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
+                                                                        <div class="box-collateral em-line-01 <?php echo "box-{$alias}"?>">
+                                                                                <?php if ($title = $this->getChildData($alias, 'title')):?>
+                                                                                <h2><?php echo $this->escapeHtml($title); ?></h2>
+                                                                                <?php endif;?>
+                                                                                <?php echo $html; ?>
+                                                                        </div>
+                                                                        <?php endforeach;?>
+                                                                        <?php echo $this->getChildHtml('product_additional_data') ?>
+                                                                        <?php echo $this->getChildHtml('product_additional_collateral') ?> 
+                                                                </div>
+                                                        </div>   
 </div>
 <script type="text/javascript">
 //<![CDATA[

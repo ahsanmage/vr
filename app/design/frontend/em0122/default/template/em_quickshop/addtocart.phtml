@@ -25,10 +25,10 @@
  */
 ?>
 <?php $_product = $this->getProduct(); ?>
-<?php $buttonTitle = $this->__('Add to Cart'); ?>
+<?php if($_product->getStockItem()->getQty()>0 || $_product->isConfigurable()):$buttonTitle = $this->__('Add to Cart'); else: $buttonTitle = $this->__('Pre Order'); endif; ?>
 <?php if($_product->isSaleable()): ?>
     <div class="add-to-cart">
-        <?php if(!$_product->isGrouped()): ?>
+        <?php /*if(!$_product->isGrouped()): ?>
         <label for="qty"><?php echo $this->__('Qty:') ?></label>
 		<div class="qty_cart">
 		<div class="qty-ctl">
@@ -39,22 +39,43 @@
 			<button title="increase" onclick="qs_changeQty(1); return false;" class="increase">increase</button>
 		</div>
 		</div>
-        <?php endif; ?>
+        <?php endif; */ ?>
+        <select class="input-text qty" name="qty" id="qty">
+            <option value="1">QUANTITY</option>
+            <?php $i = 1 ?>
+            <?php do { ?>
+            <option value="<?php echo $i?>">
+            <?php echo $i?>
+            <?php $i++ ?>
+            </option>
+            <?php } while ($i <= 10) ?>
+        </select>
+        <br><br><br>
         <div class="button_addto">
 			<button type="button" title="<?php echo $buttonTitle ?>" class="button btn-cart btn-cart-detail" onclick="qs_productAddToCartForm.submit(this)"><span><span><?php echo $buttonTitle ?></span></span></button>
 			
-			<?php $_wishlistSubmitUrl = $this->helper('wishlist')->getAddUrl($_product); ?>
-		<ul class="add-to-links">
-		<?php
-			$_compareUrl = $this->helper('quickshop/compare')->getAddUrl($_product);
-		?>
-		<?php if ($this->helper('wishlist')->isAllow()) : ?>
-			<li><a href="<?php echo $_wishlistSubmitUrl ?>" onclick="qs_productAddToCartForm.submitLight(this, '<?php echo $_wishlistSubmitUrl ?>'); return false;" title="<?php echo $this->__('Add to Wishlist') ?>" class="link-wishlist"><span><span><?php echo $this->__('Wishlist') ?></span></span></a></li>
-		<?php endif; ?>
-		<?php if($_compareUrl) : ?>
-			<li><span class="separator">|</span> <a href="<?php echo $_compareUrl ?>" title="<?php echo $this->__('Add to Compare') ?>" class="link-compare"><span><span><?php echo $this->__('Compare') ?></span></span></a></li>
-		<?php endif; ?>
-		</ul>
+			<ul class="add-to-links">
+<?php if ($this->helper('wishlist')->isAllow()) : ?>
+    <li><a title="<?php echo $this->__('Add to Wishlist') ?>" href="<?php echo $_wishlistSubmitUrl ?>" onclick="productAddToCartForm.submitLight(this, this.href); return false;" class="link-wishlist"><?php echo $this->__('Add to Wishlist') ?></a></li>
+<?php endif; ?>
+<?php
+    $_compareUrl = $this->helper('catalog/product_compare')->getAddUrl($_product);
+?>
+<?php if($_compareUrl) : ?>
+    <li><span class="separator">|</span> <a href="<?php echo $_compareUrl ?>" title="<?php echo $this->__('Add to Compare') ?>" class="link-compare"><?php echo $this->__('Add to Compare') ?></a></li>
+<?php endif; ?>
+    
+<?php if(Mage::helper('core')->isModuleEnabled("AddThis_SharingTool")){
+?>
+
+    <li><a class="addthis_button_facebook"><img src="https://image.freepik.com/free-icon/facebook-letter-logo_318-40258.png" width="10" height="10" /></a></li>
+    <li><a class="addthis_button_twitter"><img src="https://image.freepik.com/free-icon/twitter-logo_318-40459.png" width="10" height="10" /></a></li>
+    <li><a class="addthis_button_instagram"><img src="https://image.freepik.com/free-icon/instagram-social-network-logo-of-photo-camera_318-64651.png" width="10" height="10" /></a></li>
+<?php }?>
+    <?php if ( $this->getLayout()->getBlockSingleton('catalog/product_view')->canEmailToFriend()): ?>
+				<p class="email-friend"><a title="<?php echo $this->__('Email to a Friend') ?>" href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
+			<?php endif; ?>
+</ul>
 		</div>
         <?php echo $this->getChildHtml('', true, true) ?>
     </div>

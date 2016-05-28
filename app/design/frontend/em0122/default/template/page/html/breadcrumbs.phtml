@@ -32,9 +32,9 @@
 	</div>
     <ul>
         <?php foreach($crumbs as $_crumbName=>$_crumbInfo): ?>
-			<?php if($_crumbName == 'home'):?>
-				<?php $_crumbInfo['link'] = Mage::getBaseUrl(); ?>
-			<?php endif;?>
+			<?php if($_crumbName != 'home'):?>
+				<?php //$_crumbInfo['link'] = Mage::getBaseUrl(); ?>
+			
             <li class="<?php echo $_crumbName ?>" <?php if($_crumbInfo['link']): ?> <?php if(Mage::helper('themeframework/settings')->getSnippets_Enable() && Mage::helper('themeframework/settings')->getSnippets_Breadcrumbs()): ?>itemscope itemtype="http://data-vocabulary.org/Breadcrumb"<?php endif;?><?php endif;?>>
             <?php if($_crumbInfo['link']): ?>
                 <a href="<?php echo $_crumbInfo['link'] ?>" title="<?php echo $this->escapeHtml($_crumbInfo['title']) ?>" <?php if(Mage::helper('themeframework/settings')->getSnippets_Enable() && Mage::helper('themeframework/settings')->getSnippets_Breadcrumbs()): ?><?php if($_crumbInfo['link']): ?> itemprop="url"<?php endif;?><?php endif;?>><span <?php if(Mage::helper('themeframework/settings')->getSnippets_Enable() && Mage::helper('themeframework/settings')->getSnippets_Breadcrumbs()): ?><?php if($_crumbInfo['link']): ?>itemprop="title"<?php endif;?><?php endif;?>><?php echo $this->escapeHtml($_crumbInfo['label']) ?></span></a>
@@ -54,6 +54,7 @@
                 <span class="separator">/ </span>
             <?php endif; ?>
             </li>
+            <?php endif;?>
         <?php endforeach; ?>
     </ul>
 </div>
