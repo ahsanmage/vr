@@ -216,7 +216,10 @@ Product view
 				<action method="setTierPriceTemplate">
 					<template>catalog/product/view/tierprices.phtml</template>
 				</action>
-                
+                <block type="core/text_list" name="product.info.replace.related" as="replace.related" translate="label">
+					<label>Product View Static Block Replace With Related Product</label>
+				</block>
+                                <block type="catalog/product_list_related" name="catalog.product.related.content" template="catalog/product/list/related_content.phtml" />
                 <block type="core/text_list" name="product.info.replace.upsell" as="replace.upsell" translate="label">
 					<label>Product View Static Block Replace Upsell Products Block</label>
 				</block>
