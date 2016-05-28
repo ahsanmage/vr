@@ -120,12 +120,11 @@
     					<?php endif ?>
     
                         <!--product description-->
-                        <?php if (Mage::helper('themeframework/settings')->getProductsList_ShowDesc()): ?>
+                        <?php //if (Mage::helper('themeframework/settings')->getProductsList_ShowDesc()): ?>
                             <div class="desc std">
-                                <?php echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?>
-                                <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $_productNameStripped ?>" class="link-learn"><?php echo $this->__('Learn More') ?></a>
+                                <?php echo Mage::getModel('catalog/product')->load($_product->getId())->getDescription();?>
                             </div> 
-                        <?php endif ?> 
+                        <?php //endif ?> 
     					
                         <!--product price-->
                         <?php if (Mage::helper('themeframework/settings')->getProductsList_ShowPrice()): ?>
@@ -143,7 +142,7 @@
                         <?php endif; ?>
     
                         <!--show button add to compare-wishlist-->
-                        <?php if (Mage::helper('themeframework/settings')->getProductsList_ShowAddto()): ?> 
+                        <?php /*if (Mage::helper('themeframework/settings')->getProductsList_ShowAddto()): ?> 
                             <ul class="add-to-links">
                                 <?php if ($this->helper('wishlist')->isAllow()) : ?>
                                     <li><a href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>" class="link-wishlist" title="<?php echo $this->__('Add to Wishlist') ?>"><?php echo $this->__('Add to Wishlist') ?></a></li>
@@ -152,7 +151,7 @@
                                     <li><span class="separator">|</span> <a href="<?php echo $_compareUrl ?>" class="link-compare" title="<?php echo $this->__('Add to Compare') ?>"><?php echo $this->__('Add to Compare') ?></a></li>
                                 <?php endif; ?>
                             </ul>
-                        <?php endif ?>
+                        <?php endif */ ?>
     					</div>
                     </div>
                 </div>
